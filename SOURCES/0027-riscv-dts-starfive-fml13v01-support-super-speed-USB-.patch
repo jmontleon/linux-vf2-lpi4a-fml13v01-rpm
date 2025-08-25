@@ -1,0 +1,41 @@
+From 715d7e669a2db9dee4d3659cdbe529ad516724cb Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Mon, 4 Nov 2024 15:57:00 +0800
+Subject: [PATCH 27/46] riscv: dts: starfive: fml13v01: support super speed USB
+ device
+
+Add pcie0phy/usb_cdns3 configuration to support super speed USB
+device on the FML13V01 board.
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ arch/riscv/boot/dts/starfive/jh7110.dtsi | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/arch/riscv/boot/dts/starfive/jh7110.dtsi b/arch/riscv/boot/dts/starfive/jh7110.dtsi
+index 0ba74ef04679..6504d1c1f460 100644
+--- a/arch/riscv/boot/dts/starfive/jh7110.dtsi
++++ b/arch/riscv/boot/dts/starfive/jh7110.dtsi
+@@ -577,13 +577,15 @@ usb0: usb@10100000 {
+ 				 <&stgcrg JH7110_STGCLK_USB0_STB>,
+ 				 <&stgcrg JH7110_STGCLK_USB0_APB>,
+ 				 <&stgcrg JH7110_STGCLK_USB0_AXI>,
+-				 <&stgcrg JH7110_STGCLK_USB0_UTMI_APB>;
+-			clock-names = "lpm", "stb", "apb", "axi", "utmi_apb";
++				 <&stgcrg JH7110_STGCLK_USB0_UTMI_APB>,
++				 <&stgcrg JH7110_STGCLK_PCIE0_APB>;
++			clock-names = "lpm", "stb", "apb", "axi", "utmi_apb", "phy";
+ 			resets = <&stgcrg JH7110_STGRST_USB0_PWRUP>,
+ 				 <&stgcrg JH7110_STGRST_USB0_APB>,
+ 				 <&stgcrg JH7110_STGRST_USB0_AXI>,
+-				 <&stgcrg JH7110_STGRST_USB0_UTMI_APB>;
+-			reset-names = "pwrup", "apb", "axi", "utmi_apb";
++				 <&stgcrg JH7110_STGRST_USB0_UTMI_APB>,
++				 <&stgcrg JH7110_STGRST_PCIE0_APB>;
++			reset-names = "pwrup", "apb", "axi", "utmi_apb", "phy";
+ 			status = "disabled";
+ 
+ 			usb_cdns3: usb@0 {
+-- 
+2.51.0
+

@@ -1145,93 +1145,52 @@ Patch1: patch-%{patchversion}-redhat.patch
 
 
 
-Patch0002: v15-RESEND-22-23-PCI-starfive-Offload-the-NVMe-timeout-workaround-to-host-drivers..patch
-Patch0003: bpf-compile-error-fixes.patch
-
-
-
-
-
-Patch0201: 0001-dt-bindings-pinctrl-Add-thead-th1520-pinctrl-binding.patch
-Patch0202: 0002-pinctrl-Add-driver-for-the-T-Head-TH1520-SoC.patch
-Patch0203: 0003-pinctrl-thead1520-Fix-Null-pointer-dereference.patch
-Patch0204: 0004-pinctrl-th1520-Fix-return-value-for-unknown-pin-erro.patch
-Patch0205: 0005-pinctrl-th1520-Convert-thp-mutex-to-guarded-mutex.patch
-Patch0206: 0006-pinctrl-th1520-Convert-dt-child-node-loop-to-scoped-.patch
-Patch0207: 0007-pinctrl-th1520-Fix-pinconf-return-values.patch
-Patch0208: 0008-pinctrl-th1520-Update-pinmux-tables.patch
-Patch0209: 0009-pinctrl-th1520-Factor-out-casts.patch
-Patch0210: 0010-riscv-dts-thead-Add-TH1520-pin-control-nodes.patch
-Patch0211: 0011-riscv-dts-thead-Add-TH1520-GPIO-ranges.patch
-Patch0212: 0012-riscv-dts-thead-Adjust-TH1520-GPIO-labels.patch
-Patch0213: 0013-riscv-dts-thead-Add-Lichee-Pi-4M-GPIO-line-names.patch
-Patch0214: 0014-riscv-dts-thead-Add-TH1520-pinctrl-settings-for-UART.patch
-Patch0215: 0015-riscv-dtb-thead-Add-BeagleV-Ahead-LEDs.patch
-Patch0216: 0016-riscv-dts-thead-Add-missing-GPIO-clock-names.patch
-Patch0217: 0017-riscv-dts-thead-remove-enabled-property-for-spi0.patch
-Patch0218: 0018-mailbox-Introduce-support-for-T-head-TH1520-Mailbox-.patch
-Patch0219: 0019-dt-bindings-mailbox-Add-thead-th1520-mailbox-binding.patch
-Patch0220: 0020-riscv-dts-thead-Add-mailbox-node.patch
-Patch0221: 0021-dt-bindings-net-Add-T-HEAD-dwmac-support.patch
-Patch0222: 0022-net-stmmac-Add-glue-layer-for-T-HEAD-TH1520-SoC.patch
-Patch0223: 0023-riscv-dts-thead-Add-TH1520-ethernet-nodes.patch
-Patch0224: 0024-riscv-dts-thead-Add-TH1520-I2C-nodes.patch
-Patch0225: 0025-riscv-dts-thead-Enable-I2C-on-the-BeagleV-Ahead.patch
-Patch0226: 0026-dt-bindings-pwm-Add-T-HEAD-PWM-controller.patch
-Patch0227: 0027-pwm-add-T-HEAD-PWM-driver.patch
-Patch0228: 0028-riscv-dts-thead-Add-TH1520-PWM-node.patch
-Patch0229: 0029-riscv-dts-thead-Add-TH1520-PVT-node.patch
-Patch0230: 0030-riscv-dts-thead-Enable-Lichee-Pi-4A-PWM-fan.patch
-Patch0231: 0031-riscv-dts-thead-Add-Lichee-Pi-4A-SDIO0-pins.patch
-Patch0232: 0032-riscv-dts-thead-Add-BeagleV-Ahead-SDIO0-pins.patch
-Patch0233: 0033-dt-bindings-usb-Add-T-HEAD-TH1520-USB-controller.patch
-Patch0234: 0034-dt-bindings-gpio-dwapb-allow-gpio-hogs.patch
-Patch0235: 0035-usb-dwc3-add-T-HEAD-TH1520-usb-driver.patch
-Patch0236: 0036-riscv-dts-thead-Add-TH1520-USB-nodes.patch
-Patch0237: 0037-riscv-dts-thead-Add-Lichee-Pi-4A-IO-expansions.patch
-Patch0238: 0038-riscv-dts-thead-Enable-Lichee-Pi-4A-USB.patch
-Patch0239: 0039-riscv-dts-thead-Enable-Lichee-Pi-4A-UART1-3.patch
-Patch0240: 0040-riscv-dts-thead-Add-Lichee-Pi-4A-wifi-module.patch
-Patch0241: 0041-riscv-dts-thead-Add-Lichee-Pi-4A-bluetooth.patch
-Patch0242: 0042-riscv-dts-thead-Add-BeagleV-Ahead-wifi-module.patch
-Patch0243: 0043-dt-bindings-reset-Add-T-Head-TH1520-AON-and-AP-reset.patch
-Patch0244: 0044-reset-th1520-Add-driver-for-the-T-Head-TH1520-SoC.patch
-Patch0245: 0045-riscv-dts-thead-Add-TH1520-AON-and-AP-reset-controll.patch
-Patch0246: 0046-riscv-dts-thead-Add-various-TH1520-peripheral-resets.patch
-
-
-
-
-
-Patch0301: 0001-riscv-dts-starfive-fml13v01-enable-pcie1.patch
-Patch0302: 0002-riscv-configs-defconfig-Enable-Wi-Fi.patch
-Patch0303: 0003-riscv-configs-defconfig-enable-CONFIG_I2C_CHARDEV.patch
-Patch0304: 0004-Asoc-dwc-i2s-get-correct-platform_data-for-JH7110-So.patch
-Patch0305: 0005-Asoc-codecs-ES8326-Add-Starfive-JH7110-Soc-Support.patch
-Patch0306: 0006-riscv-defconfig-Enable-CONFIG_SND_SOC_ES8326.patch
-Patch0307: 0007-riscv-dts-starfive-fml13v01-add-es8326-sound-card.patch
-Patch0308: 0008-riscv-dts-starfive-fml13v01-support-super-speed-USB-.patch
-Patch0309: 0009-riscv-configs-defconfig-Enable-Bluetooth.patch
-Patch0310: 0010-driver-hid-i2c-hid-support-i2c-hid-touchpad.patch
-Patch0311: 0011-riscv-defconfig-add-starfive-drm-and-hdmi-config.patch
-Patch0312: 0012-dt-bindings-display-Add-YAML-schema-for-JH7110-displ.patch
-Patch0313: 0013-drm-bridge-add-common-api-for-inno-hdmi.patch
-Patch0314: 0014-drm-rockchip-hdmi-migrate-to-use-inno-hdmi-bridge-dr.patch
-Patch0315: 0015-drm-vs-Add-hardware-funcs-for-vs.patch
-Patch0316: 0016-drm-vs-add-vs-mode-config-init.patch
-Patch0317: 0017-drm-vs-add-vs-plane-api.patch
-Patch0318: 0018-drm-vs-add-ctrc-fun.patch
-Patch0319: 0019-drm-vs-add-vs-drm-master-driver.patch
-Patch0320: 0020-drm-vs-Innosilicon-HDMI-support.patch
-Patch0321: 0021-drm-vs-add-simple-dsi-encoder.patch
-Patch0322: 0022-drm-verisilicon-fix-the-compile-error.patch
-Patch0323: 0023-riscv-dts-starfive-add-hdmi-dts.patch
-Patch0324: 0024-dts-rst-fit-uboot-logo-start.patch
-Patch0325: 0025-drm-verisilicon-vs_drv-Fix-compile-error-memory-acce.patch
-Patch0326: 0026-Create-main.yml.patch
-Patch0327: 0027-Update-main.yml.patch
-Patch0328: split-dtsi-to-unbreak-vf2-cdns.patch
-Patch0329: restore-non-fml13v01-dtsis.patch
+Patch10001: 0001-PCI-starfive-Offload-the-NVMe-timeout-workaround-to-.patch
+Patch10002: 0002-riscv-dts-thead-Add-TH1520-I2C-nodes.patch
+Patch10003: 0003-riscv-dts-thead-Enable-I2C-on-the-BeagleV-Ahead.patch
+Patch10004: 0004-dt-bindings-pwm-Add-T-HEAD-PWM-controller.patch
+Patch10005: 0005-pwm-add-T-HEAD-PWM-driver.patch
+Patch10006: 0006-riscv-dts-thead-Add-TH1520-PWM-node.patch
+Patch10007: 0007-riscv-dts-thead-Add-TH1520-PVT-node.patch
+Patch10008: 0008-riscv-dts-thead-Enable-Lichee-Pi-4A-PWM-fan.patch
+Patch10009: 0009-riscv-dts-thead-Add-Lichee-Pi-4A-SDIO0-pins.patch
+Patch10010: 0010-riscv-dts-thead-Add-BeagleV-Ahead-SDIO0-pins.patch
+Patch10011: 0011-dt-bindings-usb-Add-T-HEAD-TH1520-USB-controller.patch
+Patch10012: 0012-dt-bindings-gpio-dwapb-allow-gpio-hogs.patch
+Patch10013: 0013-usb-dwc3-add-T-HEAD-TH1520-usb-driver.patch
+Patch10014: 0014-riscv-dts-thead-Add-TH1520-USB-nodes.patch
+Patch10015: 0015-riscv-dts-thead-Add-Lichee-Pi-4A-IO-expansions.patch
+Patch10016: 0016-riscv-dts-thead-Enable-Lichee-Pi-4A-USB.patch
+Patch10017: 0017-riscv-dts-thead-Enable-Lichee-Pi-4A-UART1-3.patch
+Patch10018: 0018-riscv-dts-thead-Add-Lichee-Pi-4A-wifi-module.patch
+Patch10019: 0019-riscv-dts-thead-Add-Lichee-Pi-4A-bluetooth.patch
+Patch10020: 0020-riscv-dts-thead-Add-BeagleV-Ahead-wifi-module.patch
+Patch10021: 0021-riscv-configs-defconfig-Enable-Wi-Fi.patch
+Patch10022: 0022-riscv-configs-defconfig-enable-CONFIG_I2C_CHARDEV.patch
+Patch10023: 0023-Asoc-dwc-i2s-get-correct-platform_data-for-JH7110-So.patch
+Patch10024: 0024-Asoc-codecs-ES8326-Add-Starfive-JH7110-Soc-Support.patch
+Patch10025: 0025-riscv-defconfig-Enable-CONFIG_SND_SOC_ES8326.patch
+Patch10026: 0026-riscv-dts-starfive-fml13v01-add-es8326-sound-card.patch
+Patch10027: 0027-riscv-dts-starfive-fml13v01-support-super-speed-USB-.patch
+Patch10028: 0028-riscv-configs-defconfig-Enable-Bluetooth.patch
+Patch10029: 0029-driver-hid-i2c-hid-support-i2c-hid-touchpad.patch
+Patch10030: 0030-riscv-defconfig-add-starfive-drm-and-hdmi-config.patch
+Patch10031: 0031-dt-bindings-display-Add-YAML-schema-for-JH7110-displ.patch
+Patch10032: 0032-drm-bridge-add-common-api-for-inno-hdmi.patch
+Patch10033: 0033-drm-rockchip-hdmi-migrate-to-use-inno-hdmi-bridge-dr.patch
+Patch10034: 0034-drm-vs-Add-hardware-funcs-for-vs.patch
+Patch10035: 0035-drm-vs-add-vs-mode-config-init.patch
+Patch10036: 0036-drm-vs-add-vs-plane-api.patch
+Patch10037: 0037-drm-vs-add-ctrc-fun.patch
+Patch10038: 0038-drm-vs-add-vs-drm-master-driver.patch
+Patch10039: 0039-drm-vs-Innosilicon-HDMI-support.patch
+Patch10040: 0040-drm-vs-add-simple-dsi-encoder.patch
+Patch10041: 0041-drm-verisilicon-fix-the-compile-error.patch
+Patch10042: 0042-riscv-dts-starfive-add-hdmi-dts.patch
+Patch10043: 0043-dts-rst-fit-uboot-logo-start.patch
+Patch10044: 0044-drm-verisilicon-vs_drv-Fix-compile-error-memory-acce.patch
+Patch10045: 0045-split-dtsi-to-unbreak-vf2-cdns.patch
+Patch10046: 0046-restore-non-fml13v01-dtsis.patch
 
 
 
@@ -2090,92 +2049,52 @@ ApplyOptionalPatch patch-%{patchversion}-redhat.patch
 
 
 
-ApplyOptionalPatch v15-RESEND-22-23-PCI-starfive-Offload-the-NVMe-timeout-workaround-to-host-drivers..patch
-ApplyOptionalPatch bpf-compile-error-fixes.patch
-
-
-
-
-#ApplyOptionalPatch 0001-dt-bindings-pinctrl-Add-thead-th1520-pinctrl-binding.patch
-#ApplyOptionalPatch 0002-pinctrl-Add-driver-for-the-T-Head-TH1520-SoC.patch
-#ApplyOptionalPatch 0003-pinctrl-thead1520-Fix-Null-pointer-dereference.patch
-#ApplyOptionalPatch 0004-pinctrl-th1520-Fix-return-value-for-unknown-pin-erro.patch
-#ApplyOptionalPatch 0005-pinctrl-th1520-Convert-thp-mutex-to-guarded-mutex.patch
-#ApplyOptionalPatch 0006-pinctrl-th1520-Convert-dt-child-node-loop-to-scoped-.patch
-#ApplyOptionalPatch 0007-pinctrl-th1520-Fix-pinconf-return-values.patch
-#ApplyOptionalPatch 0008-pinctrl-th1520-Update-pinmux-tables.patch
-#ApplyOptionalPatch 0009-pinctrl-th1520-Factor-out-casts.patch
-#ApplyOptionalPatch 0010-riscv-dts-thead-Add-TH1520-pin-control-nodes.patch
-#ApplyOptionalPatch 0011-riscv-dts-thead-Add-TH1520-GPIO-ranges.patch
-#ApplyOptionalPatch 0012-riscv-dts-thead-Adjust-TH1520-GPIO-labels.patch
-#ApplyOptionalPatch 0013-riscv-dts-thead-Add-Lichee-Pi-4M-GPIO-line-names.patch
-#ApplyOptionalPatch 0014-riscv-dts-thead-Add-TH1520-pinctrl-settings-for-UART.patch
-#ApplyOptionalPatch 0015-riscv-dtb-thead-Add-BeagleV-Ahead-LEDs.patch
-#ApplyOptionalPatch 0016-riscv-dts-thead-Add-missing-GPIO-clock-names.patch
-#ApplyOptionalPatch 0017-riscv-dts-thead-remove-enabled-property-for-spi0.patch
-#ApplyOptionalPatch 0018-mailbox-Introduce-support-for-T-head-TH1520-Mailbox-.patch
-#ApplyOptionalPatch 0019-dt-bindings-mailbox-Add-thead-th1520-mailbox-binding.patch
-#ApplyOptionalPatch 0020-riscv-dts-thead-Add-mailbox-node.patch
-#ApplyOptionalPatch 0021-dt-bindings-net-Add-T-HEAD-dwmac-support.patch
-#ApplyOptionalPatch 0022-net-stmmac-Add-glue-layer-for-T-HEAD-TH1520-SoC.patch
-#ApplyOptionalPatch 0023-riscv-dts-thead-Add-TH1520-ethernet-nodes.patch
-ApplyOptionalPatch 0024-riscv-dts-thead-Add-TH1520-I2C-nodes.patch
-ApplyOptionalPatch 0025-riscv-dts-thead-Enable-I2C-on-the-BeagleV-Ahead.patch
-ApplyOptionalPatch 0026-dt-bindings-pwm-Add-T-HEAD-PWM-controller.patch
-ApplyOptionalPatch 0027-pwm-add-T-HEAD-PWM-driver.patch
-ApplyOptionalPatch 0028-riscv-dts-thead-Add-TH1520-PWM-node.patch
-ApplyOptionalPatch 0029-riscv-dts-thead-Add-TH1520-PVT-node.patch
-ApplyOptionalPatch 0030-riscv-dts-thead-Enable-Lichee-Pi-4A-PWM-fan.patch
-ApplyOptionalPatch 0031-riscv-dts-thead-Add-Lichee-Pi-4A-SDIO0-pins.patch
-ApplyOptionalPatch 0032-riscv-dts-thead-Add-BeagleV-Ahead-SDIO0-pins.patch
-ApplyOptionalPatch 0033-dt-bindings-usb-Add-T-HEAD-TH1520-USB-controller.patch
-ApplyOptionalPatch 0034-dt-bindings-gpio-dwapb-allow-gpio-hogs.patch
-ApplyOptionalPatch 0035-usb-dwc3-add-T-HEAD-TH1520-usb-driver.patch
-ApplyOptionalPatch 0036-riscv-dts-thead-Add-TH1520-USB-nodes.patch
-ApplyOptionalPatch 0037-riscv-dts-thead-Add-Lichee-Pi-4A-IO-expansions.patch
-ApplyOptionalPatch 0038-riscv-dts-thead-Enable-Lichee-Pi-4A-USB.patch
-ApplyOptionalPatch 0039-riscv-dts-thead-Enable-Lichee-Pi-4A-UART1-3.patch
-ApplyOptionalPatch 0040-riscv-dts-thead-Add-Lichee-Pi-4A-wifi-module.patch
-ApplyOptionalPatch 0041-riscv-dts-thead-Add-Lichee-Pi-4A-bluetooth.patch
-ApplyOptionalPatch 0042-riscv-dts-thead-Add-BeagleV-Ahead-wifi-module.patch
-#ApplyOptionalPatch 0043-dt-bindings-reset-Add-T-Head-TH1520-AON-and-AP-reset.patch
-#ApplyOptionalPatch 0044-reset-th1520-Add-driver-for-the-T-Head-TH1520-SoC.patch
-#ApplyOptionalPatch 0045-riscv-dts-thead-Add-TH1520-AON-and-AP-reset-controll.patch
-#ApplyOptionalPatch 0046-riscv-dts-thead-Add-various-TH1520-peripheral-resets.patch
-
-
-
-
-
-#ApplyOptionalPatch 0001-riscv-dts-starfive-fml13v01-enable-pcie1.patch
-ApplyOptionalPatch 0002-riscv-configs-defconfig-Enable-Wi-Fi.patch
-ApplyOptionalPatch 0003-riscv-configs-defconfig-enable-CONFIG_I2C_CHARDEV.patch
-ApplyOptionalPatch 0004-Asoc-dwc-i2s-get-correct-platform_data-for-JH7110-So.patch
-ApplyOptionalPatch 0005-Asoc-codecs-ES8326-Add-Starfive-JH7110-Soc-Support.patch
-ApplyOptionalPatch 0006-riscv-defconfig-Enable-CONFIG_SND_SOC_ES8326.patch
-ApplyOptionalPatch 0007-riscv-dts-starfive-fml13v01-add-es8326-sound-card.patch
-ApplyOptionalPatch 0008-riscv-dts-starfive-fml13v01-support-super-speed-USB-.patch
-ApplyOptionalPatch 0009-riscv-configs-defconfig-Enable-Bluetooth.patch
-ApplyOptionalPatch 0010-driver-hid-i2c-hid-support-i2c-hid-touchpad.patch
-ApplyOptionalPatch 0011-riscv-defconfig-add-starfive-drm-and-hdmi-config.patch
-ApplyOptionalPatch 0012-dt-bindings-display-Add-YAML-schema-for-JH7110-displ.patch
-ApplyOptionalPatch 0013-drm-bridge-add-common-api-for-inno-hdmi.patch
-ApplyOptionalPatch 0014-drm-rockchip-hdmi-migrate-to-use-inno-hdmi-bridge-dr.patch
-ApplyOptionalPatch 0015-drm-vs-Add-hardware-funcs-for-vs.patch
-ApplyOptionalPatch 0016-drm-vs-add-vs-mode-config-init.patch
-ApplyOptionalPatch 0017-drm-vs-add-vs-plane-api.patch
-ApplyOptionalPatch 0018-drm-vs-add-ctrc-fun.patch
-ApplyOptionalPatch 0019-drm-vs-add-vs-drm-master-driver.patch
-ApplyOptionalPatch 0020-drm-vs-Innosilicon-HDMI-support.patch
-ApplyOptionalPatch 0021-drm-vs-add-simple-dsi-encoder.patch
-ApplyOptionalPatch 0022-drm-verisilicon-fix-the-compile-error.patch
-ApplyOptionalPatch 0023-riscv-dts-starfive-add-hdmi-dts.patch
-ApplyOptionalPatch 0024-dts-rst-fit-uboot-logo-start.patch
-ApplyOptionalPatch 0025-drm-verisilicon-vs_drv-Fix-compile-error-memory-acce.patch
-ApplyOptionalPatch 0026-Create-main.yml.patch
-ApplyOptionalPatch 0027-Update-main.yml.patch
-ApplyOptionalPatch split-dtsi-to-unbreak-vf2-cdns.patch
-ApplyOptionalPatch restore-non-fml13v01-dtsis.patch
+ApplyOptionalPatch 0001-PCI-starfive-Offload-the-NVMe-timeout-workaround-to-.patch
+ApplyOptionalPatch 0002-riscv-dts-thead-Add-TH1520-I2C-nodes.patch
+ApplyOptionalPatch 0003-riscv-dts-thead-Enable-I2C-on-the-BeagleV-Ahead.patch
+ApplyOptionalPatch 0004-dt-bindings-pwm-Add-T-HEAD-PWM-controller.patch
+ApplyOptionalPatch 0005-pwm-add-T-HEAD-PWM-driver.patch
+ApplyOptionalPatch 0006-riscv-dts-thead-Add-TH1520-PWM-node.patch
+ApplyOptionalPatch 0007-riscv-dts-thead-Add-TH1520-PVT-node.patch
+ApplyOptionalPatch 0008-riscv-dts-thead-Enable-Lichee-Pi-4A-PWM-fan.patch
+ApplyOptionalPatch 0009-riscv-dts-thead-Add-Lichee-Pi-4A-SDIO0-pins.patch
+ApplyOptionalPatch 0010-riscv-dts-thead-Add-BeagleV-Ahead-SDIO0-pins.patch
+ApplyOptionalPatch 0011-dt-bindings-usb-Add-T-HEAD-TH1520-USB-controller.patch
+ApplyOptionalPatch 0012-dt-bindings-gpio-dwapb-allow-gpio-hogs.patch
+ApplyOptionalPatch 0013-usb-dwc3-add-T-HEAD-TH1520-usb-driver.patch
+ApplyOptionalPatch 0014-riscv-dts-thead-Add-TH1520-USB-nodes.patch
+ApplyOptionalPatch 0015-riscv-dts-thead-Add-Lichee-Pi-4A-IO-expansions.patch
+ApplyOptionalPatch 0016-riscv-dts-thead-Enable-Lichee-Pi-4A-USB.patch
+ApplyOptionalPatch 0017-riscv-dts-thead-Enable-Lichee-Pi-4A-UART1-3.patch
+ApplyOptionalPatch 0018-riscv-dts-thead-Add-Lichee-Pi-4A-wifi-module.patch
+ApplyOptionalPatch 0019-riscv-dts-thead-Add-Lichee-Pi-4A-bluetooth.patch
+ApplyOptionalPatch 0020-riscv-dts-thead-Add-BeagleV-Ahead-wifi-module.patch
+ApplyOptionalPatch 0021-riscv-configs-defconfig-Enable-Wi-Fi.patch
+ApplyOptionalPatch 0022-riscv-configs-defconfig-enable-CONFIG_I2C_CHARDEV.patch
+ApplyOptionalPatch 0023-Asoc-dwc-i2s-get-correct-platform_data-for-JH7110-So.patch
+ApplyOptionalPatch 0024-Asoc-codecs-ES8326-Add-Starfive-JH7110-Soc-Support.patch
+ApplyOptionalPatch 0025-riscv-defconfig-Enable-CONFIG_SND_SOC_ES8326.patch
+ApplyOptionalPatch 0026-riscv-dts-starfive-fml13v01-add-es8326-sound-card.patch
+ApplyOptionalPatch 0027-riscv-dts-starfive-fml13v01-support-super-speed-USB-.patch
+ApplyOptionalPatch 0028-riscv-configs-defconfig-Enable-Bluetooth.patch
+ApplyOptionalPatch 0029-driver-hid-i2c-hid-support-i2c-hid-touchpad.patch
+ApplyOptionalPatch 0030-riscv-defconfig-add-starfive-drm-and-hdmi-config.patch
+ApplyOptionalPatch 0031-dt-bindings-display-Add-YAML-schema-for-JH7110-displ.patch
+ApplyOptionalPatch 0032-drm-bridge-add-common-api-for-inno-hdmi.patch
+ApplyOptionalPatch 0033-drm-rockchip-hdmi-migrate-to-use-inno-hdmi-bridge-dr.patch
+ApplyOptionalPatch 0034-drm-vs-Add-hardware-funcs-for-vs.patch
+ApplyOptionalPatch 0035-drm-vs-add-vs-mode-config-init.patch
+ApplyOptionalPatch 0036-drm-vs-add-vs-plane-api.patch
+ApplyOptionalPatch 0037-drm-vs-add-ctrc-fun.patch
+ApplyOptionalPatch 0038-drm-vs-add-vs-drm-master-driver.patch
+ApplyOptionalPatch 0039-drm-vs-Innosilicon-HDMI-support.patch
+ApplyOptionalPatch 0040-drm-vs-add-simple-dsi-encoder.patch
+ApplyOptionalPatch 0041-drm-verisilicon-fix-the-compile-error.patch
+ApplyOptionalPatch 0042-riscv-dts-starfive-add-hdmi-dts.patch
+ApplyOptionalPatch 0043-dts-rst-fit-uboot-logo-start.patch
+ApplyOptionalPatch 0044-drm-verisilicon-vs_drv-Fix-compile-error-memory-acce.patch
+ApplyOptionalPatch 0045-split-dtsi-to-unbreak-vf2-cdns.patch
+ApplyOptionalPatch 0046-restore-non-fml13v01-dtsis.patch
 
 
 

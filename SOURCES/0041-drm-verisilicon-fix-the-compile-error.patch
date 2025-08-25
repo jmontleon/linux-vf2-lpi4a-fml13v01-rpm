@@ -1,0 +1,92 @@
+From 46317a779c52b0fc66726d4d0f11dbb41c09f24a Mon Sep 17 00:00:00 2001
+From: keith <keith.zhao@starfivetech.com>
+Date: Mon, 23 Sep 2024 19:23:23 +0800
+Subject: [PATCH 41/46] drm: verisilicon: fix the compile error
+
+Fix the compile error for v6.11
+
+Signed-off-by: keith <keith.zhao@starfivetech.com>
+---
+ drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c | 4 ++--
+ drivers/gpu/drm/verisilicon/vs_drv.c             | 9 +++++----
+ drivers/gpu/drm/verisilicon/vs_simple_enc.c      | 4 ++--
+ 3 files changed, 9 insertions(+), 8 deletions(-)
+
+diff --git a/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c b/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
+index 24e2fbd93b4c..9128f4123c1f 100644
+--- a/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
++++ b/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
+@@ -449,11 +449,11 @@ static int starfive_hdmi_probe(struct platform_device *pdev)
+ 	return component_add(&pdev->dev, &starfive_hdmi_ops);
+ }
+ 
+-static int starfive_hdmi_remove(struct platform_device *pdev)
++static void starfive_hdmi_remove(struct platform_device *pdev)
+ {
+ 	component_del(&pdev->dev, &starfive_hdmi_ops);
+ 
+-	return 0;
++	return;
+ }
+ 
+ static const struct inno_hdmi_plat_data stf_inno_info = {
+diff --git a/drivers/gpu/drm/verisilicon/vs_drv.c b/drivers/gpu/drm/verisilicon/vs_drv.c
+index 2544e8a64f68..e13dcf0b5389 100644
+--- a/drivers/gpu/drm/verisilicon/vs_drv.c
++++ b/drivers/gpu/drm/verisilicon/vs_drv.c
+@@ -13,7 +13,8 @@
+ #include <drm/drm_crtc.h>
+ #include <drm/drm_crtc_helper.h>
+ #include <drm/drm_fb_helper.h>
+-#include <drm/drm_fbdev_generic.h>
++#include <drm/drm_fbdev_dma.h>
++
+ #include <drm/drm_file.h>
+ #include <drm/drm_gem_dma_helper.h>
+ #include <drm/drm_module.h>
+@@ -577,7 +578,7 @@ static int vs_drm_bind(struct device *dev)
+ 	if (ret)
+ 		goto err_unbind_all;
+ 
+-	drm_fbdev_generic_setup(drm_dev, 32);
++	drm_fbdev_dma_setup(drm_dev, 0);
+ 
+ 	return 0;
+ 
+@@ -653,10 +654,10 @@ static int vs_drm_platform_probe(struct platform_device *pdev)
+ 	return component_master_add_with_match(dev, &vs_drm_ops, match);
+ }
+ 
+-static int vs_drm_platform_remove(struct platform_device *pdev)
++static void vs_drm_platform_remove(struct platform_device *pdev)
+ {
+ 	component_master_del(&pdev->dev, &vs_drm_ops);
+-	return 0;
++	return;
+ }
+ 
+ #ifdef CONFIG_PM_SLEEP
+diff --git a/drivers/gpu/drm/verisilicon/vs_simple_enc.c b/drivers/gpu/drm/verisilicon/vs_simple_enc.c
+index d0b1755d77d2..d7859d91e170 100644
+--- a/drivers/gpu/drm/verisilicon/vs_simple_enc.c
++++ b/drivers/gpu/drm/verisilicon/vs_simple_enc.c
+@@ -161,14 +161,14 @@ static int vs_encoder_probe(struct platform_device *pdev)
+ 	return component_add(dev, &encoder_component_ops);
+ }
+ 
+-static int vs_encoder_remove(struct platform_device *pdev)
++static void vs_encoder_remove(struct platform_device *pdev)
+ {
+ 	struct device *dev = &pdev->dev;
+ 
+ 	component_del(dev, &encoder_component_ops);
+ 	dev_set_drvdata(dev, NULL);
+ 
+-	return 0;
++	return;
+ }
+ 
+ static const struct of_device_id simple_encoder_dt_match[] = {
+-- 
+2.51.0
+

@@ -1,0 +1,93 @@
+From 6c957565d539e1c7fdd7423aa9df65507e8f1bc7 Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Tue, 5 Nov 2024 11:34:32 +0800
+Subject: [PATCH 29/46] driver: hid: i2c-hid: support i2c-hid touchpad
+
+The FML13V01 board supports i2c-hid touchpad.
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ .../dts/starfive/jh7110-deepcomputing-fml13v01.dts | 14 ++++++++++++++
+ arch/riscv/configs/defconfig                       |  5 +++++
+ drivers/hid/i2c-hid/i2c-hid-of.c                   | 10 ++++++++++
+ 3 files changed, 29 insertions(+)
+
+diff --git a/arch/riscv/boot/dts/starfive/jh7110-deepcomputing-fml13v01.dts b/arch/riscv/boot/dts/starfive/jh7110-deepcomputing-fml13v01.dts
+index 21fa555e8232..565725bf38ef 100644
+--- a/arch/riscv/boot/dts/starfive/jh7110-deepcomputing-fml13v01.dts
++++ b/arch/riscv/boot/dts/starfive/jh7110-deepcomputing-fml13v01.dts
+@@ -53,6 +53,20 @@ es8326_audio_codec: es8326@19 {
+ 	};
+ };
+ 
++&i2c6 {
++	status = "okay";
++
++	touchpad: hid@2c {
++		compatible = "hid-over-i2c";
++		reg = <0x2c>;
++		hid-descr-addr = <0x0020>;
++		post-power-on-delay-ms = <200>;
++		irq-gpio = <&sysgpio 30 0>;
++		status = "okay";
++	};
++
++};
++
+ &i2srx {
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&i2srx_pins>;
+diff --git a/arch/riscv/configs/defconfig b/arch/riscv/configs/defconfig
+index 6564475dd809..29975b16ab9d 100644
+--- a/arch/riscv/configs/defconfig
++++ b/arch/riscv/configs/defconfig
+@@ -151,6 +151,7 @@ CONFIG_IWLDVM=m
+ CONFIG_IWLMVM=m
+ CONFIG_MT7921E=m
+ CONFIG_INPUT_MOUSEDEV=y
++CONFIG_INPUT_EVDEV=y
+ CONFIG_KEYBOARD_SUN4I_LRADC=m
+ CONFIG_SERIAL_8250=y
+ CONFIG_SERIAL_8250_CONSOLE=y
+@@ -210,6 +211,10 @@ CONFIG_SND_SOC_JH7110_TDM=m
+ CONFIG_SND_SOC_ES8326=m
+ CONFIG_SND_SOC_WM8978=m
+ CONFIG_SND_SIMPLE_CARD=m
++CONFIG_HID_MULTITOUCH=m
++CONFIG_I2C_HID_ACPI=m
++CONFIG_I2C_HID_OF=m
++CONFIG_I2C_HID_OF_ELAN=m
+ CONFIG_USB=y
+ CONFIG_USB_OTG=y
+ CONFIG_USB_XHCI_HCD=y
+diff --git a/drivers/hid/i2c-hid/i2c-hid-of.c b/drivers/hid/i2c-hid/i2c-hid-of.c
+index 57379b77e977..5925efaa074a 100644
+--- a/drivers/hid/i2c-hid/i2c-hid-of.c
++++ b/drivers/hid/i2c-hid/i2c-hid-of.c
+@@ -78,6 +78,7 @@ static int i2c_hid_of_probe(struct i2c_client *client)
+ {
+ 	struct device *dev = &client->dev;
+ 	struct i2c_hid_of *ihid_of;
++	struct gpio_desc *irq_gpio;
+ 	u16 hid_descriptor_address;
+ 	u32 quirks = 0;
+ 	int ret;
+@@ -131,6 +132,15 @@ static int i2c_hid_of_probe(struct i2c_client *client)
+ 	if (device_property_read_bool(dev, "touchscreen-inverted-y"))
+ 		quirks |= HID_QUIRK_Y_INVERT;
+ 
++	irq_gpio = devm_gpiod_get_optional(dev, "irq", GPIOD_IN);
++	if (!IS_ERR(irq_gpio)) {
++		client->irq = gpiod_to_irq(irq_gpio);
++		if (client->irq > 0) {
++			struct irq_data *irqd = irq_get_irq_data(client->irq);
++			irqd_set_trigger_type(irqd, IRQF_TRIGGER_FALLING);
++		}
++	}
++
+ 	return i2c_hid_core_probe(client, &ihid_of->ops,
+ 				  hid_descriptor_address, quirks);
+ }
+-- 
+2.51.0
+

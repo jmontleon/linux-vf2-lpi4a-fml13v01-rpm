@@ -1,0 +1,110 @@
+From a888246d89944df62aecdc9827cad1165ff39273 Mon Sep 17 00:00:00 2001
+From: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
+Date: Tue, 18 Jun 2024 09:42:39 +0200
+Subject: [PATCH 02/46] riscv: dts: thead: Add TH1520 I2C nodes
+
+Add nodes for the six I2C on the T-Head TH1520 RISCV SoC.
+
+Signed-off-by: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
+Reviewed-by: Drew Fustini <dfustini@tenstorrent.com>
+Link: https://lore.kernel.org/r/20240618-i2c-th1520-v3-2-3042590a16b1@bootlin.com
+Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+---
+ arch/riscv/boot/dts/thead/th1520.dtsi | 60 +++++++++++++++++++++++++++
+ 1 file changed, 60 insertions(+)
+
+diff --git a/arch/riscv/boot/dts/thead/th1520.dtsi b/arch/riscv/boot/dts/thead/th1520.dtsi
+index 93135e0f5a77..c2bf88c67458 100644
+--- a/arch/riscv/boot/dts/thead/th1520.dtsi
++++ b/arch/riscv/boot/dts/thead/th1520.dtsi
+@@ -383,6 +383,36 @@ uart3: serial@ffe7f04000 {
+ 			status = "disabled";
+ 		};
+ 
++		i2c0: i2c@ffe7f20000 {
++			compatible = "thead,th1520-i2c", "snps,designware-i2c";
++			reg = <0xff 0xe7f20000 0x0 0x4000>;
++			interrupts = <44 IRQ_TYPE_LEVEL_HIGH>;
++			clocks = <&clk CLK_I2C0>;
++			#address-cells = <1>;
++			#size-cells = <0>;
++			status = "disabled";
++		};
++
++		i2c1: i2c@ffe7f24000 {
++			compatible = "thead,th1520-i2c", "snps,designware-i2c";
++			reg = <0xff 0xe7f24000 0x0 0x4000>;
++			interrupts = <45 IRQ_TYPE_LEVEL_HIGH>;
++			clocks = <&clk CLK_I2C1>;
++			#address-cells = <1>;
++			#size-cells = <0>;
++			status = "disabled";
++		};
++
++		i2c4: i2c@ffe7f28000 {
++			compatible = "thead,th1520-i2c", "snps,designware-i2c";
++			reg = <0xff 0xe7f28000 0x0 0x4000>;
++			interrupts = <48 IRQ_TYPE_LEVEL_HIGH>;
++			clocks = <&clk CLK_I2C4>;
++			#address-cells = <1>;
++			#size-cells = <0>;
++			status = "disabled";
++		};
++
+ 		gpio@ffe7f34000 {
+ 			compatible = "snps,dw-apb-gpio";
+ 			reg = <0xff 0xe7f34000 0x0 0x1000>;
+@@ -481,6 +511,16 @@ padctrl0_apsys: pinctrl@ffec007000 {
+ 			thead,pad-group = <3>;
+ 		};
+ 
++		i2c2: i2c@ffec00c000 {
++			compatible = "thead,th1520-i2c", "snps,designware-i2c";
++			reg = <0xff 0xec00c000 0x0 0x4000>;
++			interrupts = <46 IRQ_TYPE_LEVEL_HIGH>;
++			clocks = <&clk CLK_I2C2>;
++			#address-cells = <1>;
++			#size-cells = <0>;
++			status = "disabled";
++		};
++
+ 		uart2: serial@ffec010000 {
+ 			compatible = "snps,dw-apb-uart";
+ 			reg = <0xff 0xec010000 0x0 0x4000>;
+@@ -492,6 +532,16 @@ uart2: serial@ffec010000 {
+ 			status = "disabled";
+ 		};
+ 
++		i2c3: i2c@ffec014000 {
++			compatible = "thead,th1520-i2c", "snps,designware-i2c";
++			reg = <0xff 0xec014000 0x0 0x4000>;
++			interrupts = <47 IRQ_TYPE_LEVEL_HIGH>;
++			clocks = <&clk CLK_I2C3>;
++			#address-cells = <1>;
++			#size-cells = <0>;
++			status = "disabled";
++		};
++
+ 		clk: clock-controller@ffef010000 {
+ 			compatible = "thead,th1520-clk-ap";
+ 			reg = <0xff 0xef010000 0x0 0x1000>;
+@@ -586,6 +636,16 @@ uart5: serial@fff7f0c000 {
+ 			status = "disabled";
+ 		};
+ 
++		i2c5: i2c@fff7f2c000 {
++			compatible = "thead,th1520-i2c", "snps,designware-i2c";
++			reg = <0xff 0xf7f2c000 0x0 0x4000>;
++			interrupts = <49 IRQ_TYPE_LEVEL_HIGH>;
++			clocks = <&clk CLK_I2C5>;
++			#address-cells = <1>;
++			#size-cells = <0>;
++			status = "disabled";
++		};
++
+ 		timer4: timer@ffffc33000 {
+ 			compatible = "snps,dw-apb-timer";
+ 			reg = <0xff 0xffc33000 0x0 0x14>;
+-- 
+2.51.0
+

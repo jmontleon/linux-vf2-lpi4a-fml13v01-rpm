@@ -1,0 +1,33 @@
+From 7f19e09ec80f07b66e0d04cb8194c58d8e3527fe Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Tue, 5 Nov 2024 10:51:08 +0800
+Subject: [PATCH 28/46] riscv: configs: defconfig: Enable Bluetooth
+
+Enable Bluetooth for the FML13V01 board.
+WiFi & Bluetooth Model: MT7922, MT7921, AX200, AX201.
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ arch/riscv/configs/defconfig | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/arch/riscv/configs/defconfig b/arch/riscv/configs/defconfig
+index 4e73ddc0b99d..6564475dd809 100644
+--- a/arch/riscv/configs/defconfig
++++ b/arch/riscv/configs/defconfig
+@@ -95,6 +95,12 @@ CONFIG_NET_CLS_CGROUP=m
+ CONFIG_NETLINK_DIAG=y
+ CONFIG_CGROUP_NET_PRIO=y
+ CONFIG_CAN=m
++CONFIG_BT=m
++CONFIG_BT_HIDP=m
++CONFIG_BT_HCIBTUSB=m
++CONFIG_BT_HCIBTUSB_MTK=y
++CONFIG_BT_HCIUART=m
++CONFIG_BT_HCIUART_INTEL=y
+ CONFIG_CFG80211=m
+ CONFIG_MAC80211=m
+ CONFIG_NET_9P=y
+-- 
+2.51.0
+

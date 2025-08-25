@@ -1,0 +1,42 @@
+From f25940837327007d6ed51ea2f85aa641cf1cd3db Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Mon, 14 Oct 2024 14:49:49 +0800
+Subject: [PATCH 23/46] Asoc: dwc: i2s: get correct platform_data for JH7110
+ Soc
+
+Fix bug on StarFive JH7110 Soc:
+probe with driver designware-i2s failed with error -110
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ sound/soc/dwc/dwc-i2s.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/sound/soc/dwc/dwc-i2s.c b/sound/soc/dwc/dwc-i2s.c
+index 28001e9857d9..259ec0ebff58 100644
+--- a/sound/soc/dwc/dwc-i2s.c
++++ b/sound/soc/dwc/dwc-i2s.c
+@@ -916,13 +916,19 @@ static int jh7110_i2stx0_clk_cfg(struct i2s_clk_config_data *config)
+ 
+ static int dw_i2s_probe(struct platform_device *pdev)
+ {
+-	const struct i2s_platform_data *pdata = pdev->dev.platform_data;
++	const struct i2s_platform_data *pdata;
+ 	struct dw_i2s_dev *dev;
+ 	struct resource *res;
+ 	int ret, irq;
+ 	struct snd_soc_dai_driver *dw_i2s_dai;
+ 	const char *clk_id;
+ 
++	if (!IS_ENABLED(CONFIG_OF) || !pdev->dev.of_node) {
++		pdata = pdev->dev.platform_data;
++	} else {
++		pdata = of_device_get_match_data(&pdev->dev);
++	}
++
+ 	dev = devm_kzalloc(&pdev->dev, sizeof(*dev), GFP_KERNEL);
+ 	if (!dev)
+ 		return -ENOMEM;
+-- 
+2.51.0
+
