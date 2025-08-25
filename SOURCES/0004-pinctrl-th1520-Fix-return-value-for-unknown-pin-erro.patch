@@ -1,0 +1,34 @@
+From aeb900737fea6db33212f8ef5ea237691c8a016c Mon Sep 17 00:00:00 2001
+From: Drew Fustini <dfustini@tenstorrent.com>
+Date: Tue, 8 Oct 2024 18:16:46 -0700
+Subject: [PATCH 04/47] pinctrl: th1520: Fix return value for unknown pin error
+
+Fix th1520_pinctrl_dt_node_to_map() to set the return value before
+jumping to free_configs when an unknown pin error occurs.
+
+Reported-by: Dan Carpenter <dan.carpenter@linaro.org>
+Closes: https://lore.kernel.org/r/202410022336.xyWlV0Tf-lkp@intel.com/
+Signed-off-by: Drew Fustini <dfustini@tenstorrent.com>
+Link: https://lore.kernel.org/20241008-th1520-pinctrl-fixes-v3-1-5b60db446a49@tenstorrent.com
+Signed-off-by: Linus Walleij <linus.walleij@linaro.org>
+(cherry picked from commit 7027e36f55f663c2248e8a2d67b94e34cab0ac7f)
+Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+---
+ drivers/pinctrl/pinctrl-th1520.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/drivers/pinctrl/pinctrl-th1520.c b/drivers/pinctrl/pinctrl-th1520.c
+index 9331f4462480..265a75a78d5a 100644
+--- a/drivers/pinctrl/pinctrl-th1520.c
++++ b/drivers/pinctrl/pinctrl-th1520.c
+@@ -499,6 +499,7 @@ static int th1520_pinctrl_dt_node_to_map(struct pinctrl_dev *pctldev,
+ 				nmaps = rollback;
+ 				dev_err(thp->pctl->dev, "%pOFn.%pOFn: unknown pin '%s'\n",
+ 					np, child, pinname);
++				ret = -EINVAL;
+ 				goto free_configs;
+ 			}
+ 
+-- 
+2.47.0
+

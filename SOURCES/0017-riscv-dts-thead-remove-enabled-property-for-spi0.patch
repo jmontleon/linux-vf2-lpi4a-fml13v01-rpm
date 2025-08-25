@@ -1,0 +1,44 @@
+From 5a158005a986c2994c31c4405b21e741a8e4d360 Mon Sep 17 00:00:00 2001
+From: Drew Fustini <dfustini@tenstorrent.com>
+Date: Mon, 14 Oct 2024 18:59:36 +0200
+Subject: [PATCH 17/47] riscv: dts: thead: remove enabled property for spi0
+
+There are currently no nodes that use spi0 so remove the enabled
+property for it in the beaglev ahead and lpi4a dts files. It can be
+re-enabled in the future if any peripherals will use it. The definition
+of spi0 remains in the th1520.dtsi file.
+
+Suggested-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+Signed-off-by: Drew Fustini <dfustini@tenstorrent.com>
+---
+ arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts | 4 ----
+ arch/riscv/boot/dts/thead/th1520-lichee-pi-4a.dts  | 4 ----
+ 2 files changed, 8 deletions(-)
+
+diff --git a/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts b/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts
+index c0cf9b086f81..86feb3df02c8 100644
+--- a/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts
++++ b/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts
+@@ -150,7 +150,3 @@ &uart0 {
+ 	pinctrl-0 = <&uart0_pins>;
+ 	status = "okay";
+ };
+-
+-&spi0 {
+-	status = "okay";
+-};
+diff --git a/arch/riscv/boot/dts/thead/th1520-lichee-pi-4a.dts b/arch/riscv/boot/dts/thead/th1520-lichee-pi-4a.dts
+index f60b1879192d..4020c727f09e 100644
+--- a/arch/riscv/boot/dts/thead/th1520-lichee-pi-4a.dts
++++ b/arch/riscv/boot/dts/thead/th1520-lichee-pi-4a.dts
+@@ -59,7 +59,3 @@ &uart0 {
+ 	pinctrl-0 = <&uart0_pins>;
+ 	status = "okay";
+ };
+-
+-&spi0 {
+-	status = "okay";
+-};
+-- 
+2.47.0
+

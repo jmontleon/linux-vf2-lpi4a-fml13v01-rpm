@@ -1,0 +1,27 @@
+From 010f3a261291412aecf3b3b24fd3f0fba3106fbd Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Mon, 14 Oct 2024 15:23:43 +0800
+Subject: [PATCH 06/27] riscv: defconfig: Enable CONFIG_SND_SOC_ES8326
+
+Add es8326 support for StarFive JH7110 soc framework mainboard.
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ arch/riscv/configs/defconfig | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/riscv/configs/defconfig b/arch/riscv/configs/defconfig
+index d4334795fdfd..1ee04b3d1aef 100644
+--- a/arch/riscv/configs/defconfig
++++ b/arch/riscv/configs/defconfig
+@@ -202,6 +202,7 @@ CONFIG_SND_DESIGNWARE_I2S=m
+ CONFIG_SND_SOC_STARFIVE=m
+ CONFIG_SND_SOC_JH7110_PWMDAC=m
+ CONFIG_SND_SOC_JH7110_TDM=m
++CONFIG_SND_SOC_ES8326=m
+ CONFIG_SND_SOC_WM8978=m
+ CONFIG_SND_SIMPLE_CARD=m
+ CONFIG_USB=y
+-- 
+2.48.1
+

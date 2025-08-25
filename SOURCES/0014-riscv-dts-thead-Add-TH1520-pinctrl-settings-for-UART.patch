@@ -1,0 +1,103 @@
+From ab64669fbb980c01cc4e96fa30c86fb0798b7a31 Mon Sep 17 00:00:00 2001
+From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+Date: Mon, 14 Oct 2024 09:40:30 -0700
+Subject: [PATCH 14/47] riscv: dts: thead: Add TH1520 pinctrl settings for
+ UART0
+
+Add pinctrl settings for UART0 used as the default debug console on
+both the Lichee Pi 4A and BeagleV Ahead boards.
+
+Acked-by: Linus Walleij <linus.walleij@linaro.org>
+Tested-by: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
+Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+Signed-off-by: Drew Fustini <dfustini@tenstorrent.com>
+---
+ .../boot/dts/thead/th1520-beaglev-ahead.dts   | 26 +++++++++++++++++++
+ .../boot/dts/thead/th1520-lichee-pi-4a.dts    | 26 +++++++++++++++++++
+ 2 files changed, 52 insertions(+)
+
+diff --git a/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts b/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts
+index 1a4154a6ff3b..0484fb390be4 100644
+--- a/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts
++++ b/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts
+@@ -61,6 +61,30 @@ &emmc {
+ 	status = "okay";
+ };
+ 
++&padctrl0_apsys {
++	uart0_pins: uart0-0 {
++		tx-pins {
++			pins = "UART0_TXD";
++			function = "uart";
++			bias-disable;
++			drive-strength = <3>;
++			input-disable;
++			input-schmitt-disable;
++			slew-rate = <0>;
++		};
++
++		rx-pins {
++			pins = "UART0_RXD";
++			function = "uart";
++			bias-pull-up;
++			drive-strength = <1>;
++			input-enable;
++			input-schmitt-enable;
++			slew-rate = <0>;
++		};
++	};
++};
++
+ &sdio0 {
+ 	bus-width = <4>;
+ 	max-frequency = <198000000>;
+@@ -68,6 +92,8 @@ &sdio0 {
+ };
+ 
+ &uart0 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&uart0_pins>;
+ 	status = "okay";
+ };
+ 
+diff --git a/arch/riscv/boot/dts/thead/th1520-lichee-pi-4a.dts b/arch/riscv/boot/dts/thead/th1520-lichee-pi-4a.dts
+index 58ad381fc1c3..f60b1879192d 100644
+--- a/arch/riscv/boot/dts/thead/th1520-lichee-pi-4a.dts
++++ b/arch/riscv/boot/dts/thead/th1520-lichee-pi-4a.dts
+@@ -30,7 +30,33 @@ chosen {
+ 	};
+ };
+ 
++&padctrl0_apsys {
++	uart0_pins: uart0-0 {
++		tx-pins {
++			pins = "UART0_TXD";
++			function = "uart";
++			bias-disable;
++			drive-strength = <3>;
++			input-disable;
++			input-schmitt-disable;
++			slew-rate = <0>;
++		};
++
++		rx-pins {
++			pins = "UART0_RXD";
++			function = "uart";
++			bias-disable;
++			drive-strength = <1>;
++			input-enable;
++			input-schmitt-enable;
++			slew-rate = <0>;
++		};
++	};
++};
++
+ &uart0 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&uart0_pins>;
+ 	status = "okay";
+ };
+ 
+-- 
+2.47.0
+

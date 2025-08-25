@@ -1,0 +1,46 @@
+From 5ec1cf7d00bff1785ebe774f69151bd00a813444 Mon Sep 17 00:00:00 2001
+From: Michal Wilczynski <m.wilczynski@samsung.com>
+Date: Thu, 31 Oct 2024 21:47:23 +0100
+Subject: [PATCH 20/47] riscv: dts: thead: Add mailbox node
+
+Add mailbox device tree node. This work is based on the vendor kernel [1].
+
+Link: https://github.com/revyos/thead-kernel.git [1]
+
+Signed-off-by: Michal Wilczynski <m.wilczynski@samsung.com>
+Link: https://lore.kernel.org/r/20241031204723.1149912-4-m.wilczynski@samsung.com
+Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+---
+ arch/riscv/boot/dts/thead/th1520.dtsi | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+diff --git a/arch/riscv/boot/dts/thead/th1520.dtsi b/arch/riscv/boot/dts/thead/th1520.dtsi
+index cd835aea07d2..e99985c3bf9c 100644
+--- a/arch/riscv/boot/dts/thead/th1520.dtsi
++++ b/arch/riscv/boot/dts/thead/th1520.dtsi
+@@ -549,6 +549,22 @@ timer7: timer@ffffc3303c {
+ 			status = "disabled";
+ 		};
+ 
++		mbox_910t: mailbox@ffffc38000 {
++			compatible = "thead,th1520-mbox";
++			reg = <0xff 0xffc38000 0x0 0x6000>,
++			      <0xff 0xffc40000 0x0 0x6000>,
++			      <0xff 0xffc4c000 0x0 0x2000>,
++			      <0xff 0xffc54000 0x0 0x2000>;
++			reg-names = "local", "remote-icu0", "remote-icu1", "remote-icu2";
++			clocks = <&clk CLK_MBOX0>, <&clk CLK_MBOX1>, <&clk CLK_MBOX2>,
++				 <&clk CLK_MBOX3>;
++			clock-names = "clk-local", "clk-remote-icu0", "clk-remote-icu1",
++				      "clk-remote-icu2";
++			interrupt-parent = <&plic>;
++			interrupts = <28 IRQ_TYPE_LEVEL_HIGH>;
++			#mbox-cells = <1>;
++		};
++
+ 		gpio@fffff41000 {
+ 			compatible = "snps,dw-apb-gpio";
+ 			reg = <0xff 0xfff41000 0x0 0x1000>;
+-- 
+2.47.0
+

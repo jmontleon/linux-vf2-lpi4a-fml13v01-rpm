@@ -1,0 +1,41 @@
+From a3abd4848198400c49d2ad263bf1db8c70c5f576 Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Fri, 1 Nov 2024 17:26:09 +0800
+Subject: [PATCH 02/27] riscv: configs: defconfig: Enable Wi-Fi
+
+The FML13V01 board supports pcie-base Wi-Fi: MT7922, MT7921,
+AX200, AX201.
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ arch/riscv/configs/defconfig | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/arch/riscv/configs/defconfig b/arch/riscv/configs/defconfig
+index b4a37345703e..4e2d75cf6fde 100644
+--- a/arch/riscv/configs/defconfig
++++ b/arch/riscv/configs/defconfig
+@@ -99,6 +99,8 @@ CONFIG_NET_CLS_CGROUP=m
+ CONFIG_NETLINK_DIAG=y
+ CONFIG_CGROUP_NET_PRIO=y
+ CONFIG_CAN=m
++CONFIG_CFG80211=m
++CONFIG_MAC80211=m
+ CONFIG_NET_9P=y
+ CONFIG_NET_9P_VIRTIO=y
+ CONFIG_PCI=y
+@@ -141,6 +143,11 @@ CONFIG_STMMAC_ETH=m
+ CONFIG_MICREL_PHY=y
+ CONFIG_MICROSEMI_PHY=y
+ CONFIG_MOTORCOMM_PHY=y
++CONFIG_IPW2100=m
++CONFIG_IWLWIFI=m
++CONFIG_IWLDVM=m
++CONFIG_IWLMVM=m
++CONFIG_MT7921E=m
+ CONFIG_INPUT_MOUSEDEV=y
+ CONFIG_KEYBOARD_SUN4I_LRADC=m
+ CONFIG_SERIAL_8250=y
+-- 
+2.48.1
+
