@@ -1,0 +1,42 @@
+From 07eb17bbe87a2ea185ad160e2c00bba6a760c7fd Mon Sep 17 00:00:00 2001
+From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+Date: Tue, 14 May 2024 11:40:38 +0200
+Subject: [PATCH 11/47] dt-bindings: gpio: dwapb: allow gpio hogs
+
+Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+---
+ .../bindings/gpio/snps,dw-apb-gpio.yaml        | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+diff --git a/Documentation/devicetree/bindings/gpio/snps,dw-apb-gpio.yaml b/Documentation/devicetree/bindings/gpio/snps,dw-apb-gpio.yaml
+index ab2afc0e4153..f7bf37df0c94 100644
+--- a/Documentation/devicetree/bindings/gpio/snps,dw-apb-gpio.yaml
++++ b/Documentation/devicetree/bindings/gpio/snps,dw-apb-gpio.yaml
+@@ -106,6 +106,24 @@ patternProperties:
+ 
+     additionalProperties: false
+ 
++    patternProperties:
++      "^.+-hog(-[0-9]+)?$":
++        type: object
++
++        additionalProperties: false
++
++        properties:
++          gpio-hog: true
++          gpios: true
++          input: true
++          output-high: true
++          output-low: true
++          line-name: true
++
++        required:
++          - gpio-hog
++          - gpios
++
+ additionalProperties: false
+ 
+ required:
+-- 
+2.51.0
+

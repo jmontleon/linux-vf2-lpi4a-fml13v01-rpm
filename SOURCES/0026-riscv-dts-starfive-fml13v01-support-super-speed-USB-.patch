@@ -1,0 +1,58 @@
+From 07216aa4d8230b974fc4d43cbfcbb04dafbf9f37 Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Mon, 4 Nov 2024 15:57:00 +0800
+Subject: [PATCH 26/47] riscv: dts: starfive: fml13v01: support super speed USB
+ device
+
+Add pcie0phy/usb_cdns3 configuration to support super speed USB
+device on the FML13V01 board.
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ .../dts/starfive/jh7110-deepcomputing-fml13v01.dts     |  5 +++++
+ arch/riscv/boot/dts/starfive/jh7110.dtsi               | 10 ++++++----
+ 2 files changed, 11 insertions(+), 4 deletions(-)
+
+diff --git a/arch/riscv/boot/dts/starfive/jh7110-deepcomputing-fml13v01.dts b/arch/riscv/boot/dts/starfive/jh7110-deepcomputing-fml13v01.dts
+index 21fa555e8232..ef6ee0dc1fe4 100644
+--- a/arch/riscv/boot/dts/starfive/jh7110-deepcomputing-fml13v01.dts
++++ b/arch/riscv/boot/dts/starfive/jh7110-deepcomputing-fml13v01.dts
+@@ -73,6 +73,11 @@ &pcie1 {
+ 	status = "okay";
+ };
+ 
++&pciephy0 {
++	starfive,sys-syscon = <&sys_syscon 0x18>;
++	starfive,stg-syscon = <&stg_syscon 0x148 0x1f4>;
++};
++
+ &sysgpio {
+ 	i2srx_pins: i2srx-0 {
+ 		clk-sd-pins {
+diff --git a/arch/riscv/boot/dts/starfive/jh7110.dtsi b/arch/riscv/boot/dts/starfive/jh7110.dtsi
+index 0ba74ef04679..6504d1c1f460 100644
+--- a/arch/riscv/boot/dts/starfive/jh7110.dtsi
++++ b/arch/riscv/boot/dts/starfive/jh7110.dtsi
+@@ -577,13 +577,15 @@ usb0: usb@10100000 {
+ 				 <&stgcrg JH7110_STGCLK_USB0_STB>,
+ 				 <&stgcrg JH7110_STGCLK_USB0_APB>,
+ 				 <&stgcrg JH7110_STGCLK_USB0_AXI>,
+-				 <&stgcrg JH7110_STGCLK_USB0_UTMI_APB>;
+-			clock-names = "lpm", "stb", "apb", "axi", "utmi_apb";
++				 <&stgcrg JH7110_STGCLK_USB0_UTMI_APB>,
++				 <&stgcrg JH7110_STGCLK_PCIE0_APB>;
++			clock-names = "lpm", "stb", "apb", "axi", "utmi_apb", "phy";
+ 			resets = <&stgcrg JH7110_STGRST_USB0_PWRUP>,
+ 				 <&stgcrg JH7110_STGRST_USB0_APB>,
+ 				 <&stgcrg JH7110_STGRST_USB0_AXI>,
+-				 <&stgcrg JH7110_STGRST_USB0_UTMI_APB>;
+-			reset-names = "pwrup", "apb", "axi", "utmi_apb";
++				 <&stgcrg JH7110_STGRST_USB0_UTMI_APB>,
++				 <&stgcrg JH7110_STGRST_PCIE0_APB>;
++			reset-names = "pwrup", "apb", "axi", "utmi_apb", "phy";
+ 			status = "disabled";
+ 
+ 			usb_cdns3: usb@0 {
+-- 
+2.51.0
+

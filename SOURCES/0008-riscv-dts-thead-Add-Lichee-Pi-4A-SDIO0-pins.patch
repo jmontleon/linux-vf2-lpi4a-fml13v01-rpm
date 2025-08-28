@@ -1,0 +1,41 @@
+From 1893731f7886f09e5760a64110d2b82adc53d8b6 Mon Sep 17 00:00:00 2001
+From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+Date: Wed, 13 Dec 2023 01:25:13 +0100
+Subject: [PATCH 08/47] riscv: dts: thead: Add Lichee Pi 4A SDIO0 pins
+
+Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+---
+ .../boot/dts/thead/th1520-lichee-module-4a.dtsi    | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+diff --git a/arch/riscv/boot/dts/thead/th1520-lichee-module-4a.dtsi b/arch/riscv/boot/dts/thead/th1520-lichee-module-4a.dtsi
+index 8e76b63e0100..bf94204968d6 100644
+--- a/arch/riscv/boot/dts/thead/th1520-lichee-module-4a.dtsi
++++ b/arch/riscv/boot/dts/thead/th1520-lichee-module-4a.dtsi
+@@ -195,9 +195,23 @@ mdio-pins {
+ 			slew-rate = <0>;
+ 		};
+ 	};
++
++	sdio0_pins: sdio0-0 {
++		detn-pins {
++			pins = "SDIO0_DETN";
++			function = "sdio";
++			bias-disable; /* external pull-up */
++			drive-strength = <1>;
++			input-enable;
++			input-schmitt-enable;
++			slew-rate = <0>;
++		};
++	};
+ };
+ 
+ &sdio0 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&sdio0_pins>;
+ 	bus-width = <4>;
+ 	max-frequency = <198000000>;
+ 	status = "okay";
+-- 
+2.51.0
+

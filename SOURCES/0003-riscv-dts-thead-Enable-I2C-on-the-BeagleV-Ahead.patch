@@ -1,0 +1,133 @@
+From 54254498c90bbcdff638ef9cf5bb8a58863b080d Mon Sep 17 00:00:00 2001
+From: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
+Date: Tue, 18 Jun 2024 09:42:40 +0200
+Subject: [PATCH 03/47] riscv: dts: thead: Enable I2C on the BeagleV-Ahead
+
+This commit enables the I2C0 controller of the TH1520, together with
+the FT24C32A EEPROM that is connected to it.
+In addition, this commit also enables the I2C controllers I2C2, I2C4
+and I2C5 as they are all three exposed on headers (P9 19 and 20 for I2C2,
+P9 17 and 18 for I2C5 and MikroBus 7 and 5 for I2C4).
+It also defined the required pinctrl nodes.
+
+Signed-off-by: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
+Reviewed-by: Drew Fustini <dfustini@tenstorrent.com>
+Link: https://lore.kernel.org/r/20240618-i2c-th1520-v3-3-3042590a16b1@bootlin.com
+[esmil: order node references alphabetically, use just bias-pull-up; ]
+Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+---
+ .../boot/dts/thead/th1520-beaglev-ahead.dts   | 84 +++++++++++++++++++
+ 1 file changed, 84 insertions(+)
+
+diff --git a/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts b/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts
+index 21c33f165ba9..caa739c0442f 100644
+--- a/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts
++++ b/arch/riscv/boot/dts/thead/th1520-beaglev-ahead.dts
+@@ -107,6 +107,36 @@ &gmac0 {
+ 	status = "okay";
+ };
+ 
++&i2c0 {
++	clock-frequency = <100000>;
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c0_pins>;
++	status = "okay";
++
++	eeprom@50 {
++		compatible = "atmel,24c32";
++		reg = <0x50>;
++	};
++};
++
++&i2c2 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c2_pins>;
++	status = "okay";
++};
++
++&i2c4 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c4_pins>;
++	status = "okay";
++};
++
++&i2c5 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c5_pins>;
++	status = "okay";
++};
++
+ &mdio0 {
+ 	phy0: ethernet-phy@1 {
+ 		reg = <1>;
+@@ -207,6 +237,19 @@ phy-interrupt-pins {
+ 		};
+ 	};
+ 
++	i2c2_pins: i2c2-0 {
++		i2c-pins {
++			pins = "I2C2_SDA",
++			       "I2C2_SCL";
++			function = "i2c";
++			bias-pull-up;
++			drive-strength = <7>;
++			input-enable;
++			input-schmitt-enable;
++			slew-rate = <0>;
++		};
++	};
++
+ 	uart0_pins: uart0-0 {
+ 		tx-pins {
+ 			pins = "UART0_TXD";
+@@ -230,6 +273,47 @@ rx-pins {
+ 	};
+ };
+ 
++&padctrl1_apsys {
++	i2c0_pins: i2c0-0 {
++		i2c-pins {
++			pins = "I2C0_SDA",
++			       "I2C0_SCL";
++			function = "i2c";
++			bias-pull-up;
++			drive-strength = <7>;
++			input-enable;
++			input-schmitt-enable;
++			slew-rate = <0>;
++		};
++	};
++
++	i2c4_pins: i2c4-0 {
++		i2c-pins {
++			pins = "GPIO0_19", /* I2C4_SDA */
++			       "GPIO0_18"; /* I2C4_SCL */
++			function = "i2c";
++			bias-pull-up;
++			drive-strength = <7>;
++			input-enable;
++			input-schmitt-enable;
++			slew-rate = <0>;
++		};
++	};
++
++	i2c5_pins: i2c5-0 {
++		i2c-pins {
++			pins = "QSPI1_D0_MOSI", /* I2C5_SDA */
++			       "QSPI1_CSN0";    /* I2C5_SCL */
++			function = "i2c";
++			bias-pull-up;
++			drive-strength = <7>;
++			input-enable;
++			input-schmitt-enable;
++			slew-rate = <0>;
++		};
++	};
++};
++
+ &sdio0 {
+ 	bus-width = <4>;
+ 	max-frequency = <198000000>;
+-- 
+2.51.0
+

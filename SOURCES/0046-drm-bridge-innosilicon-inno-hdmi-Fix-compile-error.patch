@@ -1,0 +1,54 @@
+From afa44aaa0e725b4b3434a54c938ffaee38158886 Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Mon, 31 Mar 2025 11:49:08 +0800
+Subject: [PATCH 46/47] drm: bridge: innosilicon: inno-hdmi: Fix compile error
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ drivers/gpu/drm/bridge/innosilicon/inno-hdmi.c   | 2 +-
+ drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c | 2 +-
+ include/drm/bridge/inno_hdmi.h                   | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/gpu/drm/bridge/innosilicon/inno-hdmi.c b/drivers/gpu/drm/bridge/innosilicon/inno-hdmi.c
+index 2378ce06a876..c8d312f052bb 100644
+--- a/drivers/gpu/drm/bridge/innosilicon/inno-hdmi.c
++++ b/drivers/gpu/drm/bridge/innosilicon/inno-hdmi.c
+@@ -116,7 +116,7 @@ static int inno_hdmi_connector_get_modes(struct drm_connector *connector)
+ }
+ 
+ static enum drm_mode_status
+-inno_hdmi_connector_mode_valid(struct drm_connector *connector, struct drm_display_mode *mode)
++inno_hdmi_connector_mode_valid(struct drm_connector *connector, const struct drm_display_mode *mode)
+ {
+ 	struct inno_hdmi *hdmi = connector_to_inno_hdmi(connector);
+ 
+diff --git a/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c b/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
+index 60e8fc1de7eb..caec71cbe9f7 100644
+--- a/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
++++ b/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
+@@ -289,7 +289,7 @@ static int starfive_hdmi_setup(struct inno_hdmi *hdmi,
+ }
+ 
+ static enum drm_mode_status
+-starfive_hdmi_connector_mode_valid(struct drm_connector *connector, struct drm_display_mode *mode)
++starfive_hdmi_connector_mode_valid(struct drm_connector *connector, const struct drm_display_mode *mode)
+ {
+ 	int pclk = mode->clock * 1000;
+ 	bool valid = false;
+diff --git a/include/drm/bridge/inno_hdmi.h b/include/drm/bridge/inno_hdmi.h
+index bc865f5343ce..76afaba0706f 100644
+--- a/include/drm/bridge/inno_hdmi.h
++++ b/include/drm/bridge/inno_hdmi.h
+@@ -36,7 +36,7 @@ struct inno_hdmi_plat_data {
+ 
+ 	/* Platform-specific mode validation*/
+ 	enum drm_mode_status (*mode_valid)(struct drm_connector *connector,
+-					   struct drm_display_mode *mode);
++					   const struct drm_display_mode *mode);
+ 	/* Platform-specific encoder helper funcs*/
+ 	const struct drm_encoder_helper_funcs *helper_private;
+ 
+-- 
+2.51.0
+
