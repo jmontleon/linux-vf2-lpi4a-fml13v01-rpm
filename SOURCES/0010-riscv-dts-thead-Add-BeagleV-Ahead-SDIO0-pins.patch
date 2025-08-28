@@ -1,4 +1,4 @@
-From 08fb0ef4c57f744ff5bc51721fc4e566fc58c68d Mon Sep 17 00:00:00 2001
+From 89be2e26252b411a4801f997e6ed8722789382ef Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Wed, 13 Dec 2023 01:52:54 +0100
 Subject: [PATCH 10/46] riscv: dts: thead: Add BeagleV Ahead SDIO0 pins

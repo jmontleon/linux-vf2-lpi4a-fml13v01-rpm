@@ -1,4 +1,4 @@
-From 1a6bedf0cacc52064c1c774268b920c1542b8b6d Mon Sep 17 00:00:00 2001
+From 403b8c433079c64eeaafbf32ca0a2ccbac14aa81 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 14 Oct 2024 15:23:43 +0800
 Subject: [PATCH 25/46] riscv: defconfig: Enable CONFIG_SND_SOC_ES8326

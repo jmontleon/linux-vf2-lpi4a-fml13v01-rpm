@@ -1,4 +1,4 @@
-From 845131593a34e4fcbe39eda63e12e1bee8fbacaa Mon Sep 17 00:00:00 2001
+From 9a51f406f717065d7edba67799cd35606c182a46 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 21 Sep 2023 16:00:03 +0800
 Subject: [PATCH 07/46] riscv: dts: thead: Add TH1520 PVT node

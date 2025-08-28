@@ -1,4 +1,4 @@
-From 1bc092497e0b4ab13ce2f9cd67af4ebcdef9ddb3 Mon Sep 17 00:00:00 2001
+From a8d133cb77cb165618e57ccfcb7f5bb0cf676844 Mon Sep 17 00:00:00 2001
 From: Jason Montleon <jmontleo@redhat.com>
 Date: Mon, 25 Aug 2025 11:42:22 -0400
 Subject: [PATCH 24/46] Asoc: codecs: ES8326: Add Starfive JH7110 Soc Support
