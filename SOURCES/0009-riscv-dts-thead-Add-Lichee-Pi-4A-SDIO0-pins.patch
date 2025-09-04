@@ -1,4 +1,4 @@
-From a29c45377a2fb3a6081fafe23efa58e057ec1868 Mon Sep 17 00:00:00 2001
+From aab7735a6e19cdff95c5ae68dc374982a7e88450 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Wed, 13 Dec 2023 01:25:13 +0100
 Subject: [PATCH 09/46] riscv: dts: thead: Add Lichee Pi 4A SDIO0 pins

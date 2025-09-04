@@ -1,4 +1,4 @@
-From fd921eb190ab50b1aabd1bc729abc6c805186315 Mon Sep 17 00:00:00 2001
+From 512f3c483c1aed6f7006db0467a11b362b437d7b Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 21 Sep 2023 16:08:30 +0800
 Subject: [PATCH 08/46] riscv: dts: thead: Enable Lichee Pi 4A PWM fan
