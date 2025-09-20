@@ -1,4 +1,4 @@
-From 6821baad43533d316d76e30198839ab3bdf3c951 Mon Sep 17 00:00:00 2001
+From d91f89644dd7c623e8d1fb607779664464a29e29 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Tue, 14 May 2024 11:40:38 +0200
 Subject: [PATCH 12/46] dt-bindings: gpio: dwapb: allow gpio hogs

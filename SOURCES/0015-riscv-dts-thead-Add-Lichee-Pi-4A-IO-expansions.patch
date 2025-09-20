@@ -1,4 +1,4 @@
-From 89b718ce234530d0c2fa95ebb776e2632448cefe Mon Sep 17 00:00:00 2001
+From 175126c34bb83eba5f9da02c44ee5cffc58f5937 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Wed, 13 Dec 2023 01:58:00 +0100
 Subject: [PATCH 15/46] riscv: dts: thead: Add Lichee Pi 4A IO expansions

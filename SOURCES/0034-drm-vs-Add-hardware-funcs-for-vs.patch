@@ -1,4 +1,4 @@
-From 3cbc1465940dece6f1497348dd7c18f4bdb58f0f Mon Sep 17 00:00:00 2001
+From 6595d428117db7bbd77fe5a8b80c378924def20a Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:45:13 +0800
 Subject: [PATCH 34/46] drm/vs: Add hardware funcs for vs.
