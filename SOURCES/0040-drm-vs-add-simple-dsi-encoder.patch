@@ -1,4 +1,4 @@
-From f5d844e274c41c2dd568a8803379e3dfd4344bf7 Mon Sep 17 00:00:00 2001
+From a8243777f333c735dd94e1175c115b993f5552b2 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 17:05:00 +0800
 Subject: [PATCH 40/46] drm/vs: add simple dsi encoder
