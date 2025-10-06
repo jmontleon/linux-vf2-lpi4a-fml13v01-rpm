@@ -1,4 +1,4 @@
-From a3c160ee1d2014e061b0b44c08980f0f64b39776 Mon Sep 17 00:00:00 2001
+From dce5a2a4f55e8b51ced63cc1b29f324cae21834c Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 13 May 2024 10:08:02 +0800
 Subject: [PATCH 31/46] dt-bindings: display: Add YAML schema for JH7110

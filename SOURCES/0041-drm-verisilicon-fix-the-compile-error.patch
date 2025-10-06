@@ -1,4 +1,4 @@
-From df3a8267206516f52ac38d816b21a00f38dbc58d Mon Sep 17 00:00:00 2001
+From b013cbbb7545bf897d54cc9025eb0496f84a2437 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 23 Sep 2024 19:23:23 +0800
 Subject: [PATCH 41/46] drm: verisilicon: fix the compile error

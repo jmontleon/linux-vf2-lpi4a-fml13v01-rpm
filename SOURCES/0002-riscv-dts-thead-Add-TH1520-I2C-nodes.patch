@@ -1,4 +1,4 @@
-From ec92e2937288386873b425f724bcedcfffa0c4a8 Mon Sep 17 00:00:00 2001
+From f1209a9ef41120f2c287f47832610cbc25a60de8 Mon Sep 17 00:00:00 2001
 From: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
 Date: Tue, 18 Jun 2024 09:42:39 +0200
 Subject: [PATCH 02/46] riscv: dts: thead: Add TH1520 I2C nodes
