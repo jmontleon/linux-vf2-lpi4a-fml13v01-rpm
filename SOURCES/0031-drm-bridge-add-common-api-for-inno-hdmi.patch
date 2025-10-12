@@ -1,4 +1,4 @@
-From 5d622fa69065a73c50617920f118117fbe1ae272 Mon Sep 17 00:00:00 2001
+From 08b537f392eb7aea53ef2c6bd8e4b021544e17af Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Sat, 11 May 2024 18:28:00 +0800
 Subject: [PATCH 31/47] drm/bridge: add common api for inno hdmi
@@ -24,10 +24,10 @@ Signed-off-by: keith <keith.zhao@starfivetech.com>
  create mode 100644 include/drm/bridge/inno_hdmi.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index e3286c6fe546..8bc0319ed40b 100644
+index 4aa1747cf466..fe23bb4a754f 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -7989,6 +7989,8 @@ S:	Maintained
+@@ -7986,6 +7986,8 @@ S:	Maintained
  T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
  F:	Documentation/devicetree/bindings/display/bridge/innosilicon,inno-hdmi.yaml
  F:	Documentation/devicetree/bindings/display/starfive/

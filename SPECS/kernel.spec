@@ -164,7 +164,7 @@ Summary: The Linux kernel
 #  kernel release. (This includes prepatch or "rc" releases.)
 # Set released_kernel to 0 when the upstream source tarball contains an
 #  unreleased kernel development snapshot.
-%global released_kernel 0
+%global released_kernel 1
 # Set debugbuildsenabled to 1 to build separate base and debug kernels
 #  (on supported architectures). The kernel-debug-* subpackages will
 #  contain the debug kernel.
@@ -173,18 +173,18 @@ Summary: The Linux kernel
 #  the --with-release option overrides this setting.)
 %define debugbuildsenabled 1
 %define buildid .fml13v01.lpi4.vf2
-%define specrpmversion 6.17.0
-%define specversion 6.17.0
+%define specrpmversion 6.17.2
+%define specversion 6.17.2
 %define patchversion 6.17
-%define pkgrelease 0.rc3.31
+%define pkgrelease 300
 %define kversion 6
-%define tarfile_release 6.17-rc3
+%define tarfile_release 6.17.2
 # This is needed to do merge window version magic
 %define patchlevel 17
 # This allows pkg_release to have configurable %%{?dist} tag
-%define specrelease 0.rc3.31%{?buildid}%{?dist}
+%define specrelease 300%{?buildid}%{?dist}
 # This defines the kabi tarball version
-%define kabiversion 6.17.0
+%define kabiversion 6.17.2
 
 # If this variable is set to 1, a bpf selftests build failure will cause a
 # fatal kernel package build error
@@ -343,11 +343,7 @@ Summary: The Linux kernel
 %else
 %global llvm_ias 1
 %endif
-%global clang_make_opts HOSTCC=clang CC=clang LLVM_IAS=%{llvm_ias}
-%if %{with clang_lto}
-# LLVM=1 enables use of all LLVM tools.
-%global clang_make_opts %{clang_make_opts} LLVM=1
-%endif
+%global clang_make_opts HOSTCC=clang CC=clang LLVM_IAS=%{llvm_ias} LLVM=1
 %global make_opts %{make_opts} %{clang_make_opts}
 %endif
 
@@ -808,6 +804,11 @@ BuildRequires: libbpf-devel
 BuildRequires: bpftool
 BuildRequires: clang
 
+%ifarch %{cpupowerarchs}
+# For libcpupower bindings
+BuildRequires: swig
+%endif
+
 %ifnarch s390x
 BuildRequires: pciutils-devel
 %endif
@@ -1050,6 +1051,8 @@ Source77: partial-clang_lto-aarch64-debug-snip.config
 Source80: generate_all_configs.sh
 Source81: process_configs.sh
 
+Source83: uki.sbat.template
+Source84: uki-addons.sbat.template
 Source85: kernel.sbat.template
 
 Source86: dracut-virt.conf
@@ -1439,7 +1442,7 @@ This package provides debug information for package %{package_name}-tools.
 # symlinks because of the trailing nonmatching alternation and
 # the leading .*, because of find-debuginfo.sh's buggy handling
 # of matching the pattern against the symlinks file.
-%{expand:%%global _find_debuginfo_opts %{?_find_debuginfo_opts} -p '.*%%{_bindir}/bootconfig(\.debug)?|.*%%{_bindir}/centrino-decode(\.debug)?|.*%%{_bindir}/powernow-k8-decode(\.debug)?|.*%%{_bindir}/cpupower(\.debug)?|.*%%{_libdir}/libcpupower.*|.*%%{_bindir}/turbostat(\.debug)?|.*%%{_bindir}/x86_energy_perf_policy(\.debug)?|.*%%{_bindir}/tmon(\.debug)?|.*%%{_bindir}/lsgpio(\.debug)?|.*%%{_bindir}/gpio-hammer(\.debug)?|.*%%{_bindir}/gpio-event-mon(\.debug)?|.*%%{_bindir}/gpio-watch(\.debug)?|.*%%{_bindir}/iio_event_monitor(\.debug)?|.*%%{_bindir}/iio_generic_buffer(\.debug)?|.*%%{_bindir}/lsiio(\.debug)?|.*%%{_bindir}/intel-speed-select(\.debug)?|.*%%{_bindir}/page_owner_sort(\.debug)?|.*%%{_bindir}/slabinfo(\.debug)?|.*%%{_sbindir}/intel_sdsi(\.debug)?|XXX' -o %{package_name}-tools-debuginfo.list}
+%{expand:%%global _find_debuginfo_opts %{?_find_debuginfo_opts} -p '.*%%{_bindir}/bootconfig(\.debug)?|.*%%{_bindir}/centrino-decode(\.debug)?|.*%%{_bindir}/powernow-k8-decode(\.debug)?|.*%%{_bindir}/cpupower(\.debug)?|.*%%{_libdir}/libcpupower.*|.*%%{python3_sitearch}/_raw_pylibcpupower.*|.*%%{_bindir}/turbostat(\.debug)?|.*%%{_bindir}/x86_energy_perf_policy(\.debug)?|.*%%{_bindir}/tmon(\.debug)?|.*%%{_bindir}/lsgpio(\.debug)?|.*%%{_bindir}/gpio-hammer(\.debug)?|.*%%{_bindir}/gpio-event-mon(\.debug)?|.*%%{_bindir}/gpio-watch(\.debug)?|.*%%{_bindir}/iio_event_monitor(\.debug)?|.*%%{_bindir}/iio_generic_buffer(\.debug)?|.*%%{_bindir}/lsiio(\.debug)?|.*%%{_bindir}/intel-speed-select(\.debug)?|.*%%{_bindir}/page_owner_sort(\.debug)?|.*%%{_bindir}/slabinfo(\.debug)?|.*%%{_sbindir}/intel_sdsi(\.debug)?|XXX' -o %{package_name}-tools-debuginfo.list}
 
 %package -n rtla
 %if 0%{gemini}
@@ -2155,6 +2158,8 @@ rm -f localversion-next localversion-rt
 	scripts/clang-tools 2> /dev/null
 
 # SBAT data
+sed -e s,@KVER,%{KVERREL}, -e s,@SBAT_SUFFIX,%{sbat_suffix}, %{SOURCE83} > uki.sbat
+sed -e s,@KVER,%{KVERREL}, -e s,@SBAT_SUFFIX,%{sbat_suffix}, %{SOURCE84} > uki-addons.sbat
 sed -e s,@KVER,%{KVERREL}, -e s,@SBAT_SUFFIX,%{sbat_suffix}, %{SOURCE85} > kernel.sbat
 
 # only deal with configs if we are going to build for the arch
@@ -2257,14 +2262,6 @@ cat imaca.pem >> ../certs/rhel.pem
 for i in *.config; do
   sed -i 's@CONFIG_SYSTEM_TRUSTED_KEYS=""@CONFIG_SYSTEM_TRUSTED_KEYS="certs/rhel.pem"@' $i
   sed -i 's@CONFIG_EFI_SBAT_FILE=""@CONFIG_EFI_SBAT_FILE="kernel.sbat"@' $i
-done
-%endif
-
-# Adjust FIPS module name for RHEL
-%if 0%{?rhel}
-%{log_msg "Adjust FIPS module name for RHEL"}
-for i in *.config; do
-  sed -i 's/CONFIG_CRYPTO_FIPS_NAME=.*/CONFIG_CRYPTO_FIPS_NAME="Red Hat Enterprise Linux %{rhel} - Kernel Cryptographic API"/' $i
 done
 %endif
 
@@ -2907,38 +2904,30 @@ BuildKernel() {
     else
 %if %{with_efiuki}
         %{log_msg "Setup the EFI UKI kernel"}
-
-        SBAT=$(cat <<- EOF
-	kernel-uki-virt.%{sbat_suffix},1,Red Hat,kernel-uki-virt,$KernelVer,mailto:secalert@redhat.com
-	EOF
-	)
-
-        ADDONS_SBAT=$(cat <<- EOF
-	sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-	kernel-uki-virt-addons.$SBATsuffix,1,Red Hat,kernel-uki-virt-addons,$KernelVer,mailto:secalert@redhat.com
-	EOF
-	)
-
 	KernelUnifiedImageDir="$RPM_BUILD_ROOT/lib/modules/$KernelVer"
     	KernelUnifiedImage="$KernelUnifiedImageDir/$InstallName-virt.efi"
+	KernelUnifiedInitrd="$KernelUnifiedImageDir/$InstallName-virt.img"
 
     	mkdir -p $KernelUnifiedImageDir
 
     	dracut --conf=%{SOURCE86} \
            --confdir=$(mktemp -d) \
+           --no-hostonly \
            --verbose \
            --kver "$KernelVer" \
            --kmoddir "$RPM_BUILD_ROOT/lib/modules/$KernelVer/" \
            --logfile=$(mktemp) \
-           --uefi \
-           --sbat "$SBAT" \
-           --kernel-image $(realpath $KernelImage) \
-           --kernel-cmdline 'console=tty0 console=ttyS0' \
-	   $KernelUnifiedImage
+	   $KernelUnifiedInitrd
+
+	ukify build --linux $(realpath $KernelImage) --initrd $KernelUnifiedInitrd \
+	   --sbat @uki.sbat --os-release @/etc/os-release --uname $KernelVer \
+	   --cmdline 'console=tty0 console=ttyS0' --output $KernelUnifiedImage
+
+	rm -f $KernelUnifiedInitrd
 
   KernelAddonsDirOut="$KernelUnifiedImage.extra.d"
   mkdir -p $KernelAddonsDirOut
-  python3 %{SOURCE151} %{SOURCE152} $KernelAddonsDirOut virt %{primary_target} %{_target_cpu} "$ADDONS_SBAT"
+  python3 %{SOURCE151} %{SOURCE152} $KernelAddonsDirOut virt %{primary_target} %{_target_cpu} @uki-addons.sbat
 
 %if %{signkernel}
 	%{log_msg "Sign the EFI UKI kernel"}
@@ -3276,6 +3265,8 @@ chmod +x tools/perf/check-headers.sh
 %ifarch %{cpupowerarchs}
     # link against in-tree libcpupower for idle state support
     %global rtla_make %{tools_make} LDFLAGS="%{__global_ldflags} -L../../power/cpupower" INCLUDES="-I../../power/cpupower/lib"
+    # Build libcpupower Python bindings
+    %global libcpupower_python_bindings_make %{tools_make} LDFLAGS="-L%{buildroot}%{_libdir} -lcpupower"
 %else
     %global rtla_make %{tools_make}
 %endif
@@ -3651,6 +3642,12 @@ mv cpupower.lang ../
     popd
 %endif
 chmod 0755 %{buildroot}%{_libdir}/libcpupower.so*
+%{log_msg "Build libcpupower Python bindings"}
+pushd tools/power/cpupower/bindings/python
+%{libcpupower_python_bindings_make}
+%{log_msg "Install libcpupower Python bindings"}
+%{make} INSTALL_DIR=$RPM_BUILD_ROOT%{python3_sitearch} install
+popd
 %endif
 %ifarch x86_64
    mkdir -p %{buildroot}%{_mandir}/man8
@@ -4288,6 +4285,9 @@ fi\
 %{_includedir}/cpufreq.h
 %{_includedir}/cpuidle.h
 %{_includedir}/powercap.h
+# libcpupower Python bindings
+%{python3_sitearch}/_raw_pylibcpupower.so
+%{python3_sitearch}/raw_pylibcpupower.py
 %endif
 %if %{with_ynl}
 %{_libdir}/libynl*
@@ -4496,11 +4496,177 @@ fi\
 #
 #
 %changelog
-* Mon Aug 25 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.31]
-- soc: qcom: mdt_loader: Deal with zero e_shentsize (Bjorn Andersson)
+* Sun Oct 12 2025 Justin M. Forbes <jforbes@fedoraproject.org> [6.17.2-1]
+- fedora: aarch64: Enable arm MHUv2 driver (Peter Robinson)
+- fedora: arm: Enable the NVMEM_IMX_OCOTP_ELE module (Peter Robinson)
+- Linux v6.17.2
+
+* Mon Oct 06 2025 Justin M. Forbes <jforbes@fedoraproject.org> [6.17.1-1]
+- Add Bug to BugsFixed (Justin M. Forbes)
+- gpio: usbio: Add ACPI device-id for MTL-CVF devices (Hans de Goede)
+- i2c: usbio: Add ACPI device-id for MTL-CVF devices (Hans de Goede)
+- wifi: ath11k: Add missing platform IDs for quirk table (Mark Pearson)
+- blk-mq: fix blk_mq_tags double free while nr_requests grown (Yu Kuai)
+- usb: typec: ucsi: Handle incorrect num_connectors capability (Mark Pearson)
+- Initial setup for stable Fedora releases (Justin M. Forbes)
 - arm64: dts: qcom: x1e80100-lenovo-yoga-slim7x: add Bluetooth support (Jens Glathe)
-- ALSA HDA driver configuration split for 6.17 upstream (Jaroslav Kysela)
-- redhat/configs: clang_lto: disable CONFIG_FORTIFY_KUNIT_TEST (Scott Weaver)
+- redhat: config: Enable USBIO modules (Hans de Goede)
+- i2c: Add Intel USBIO I2C driver (Israel Cepeda)
+- gpio: Add Intel USBIO GPIO driver (Israel Cepeda)
+- usb: misc: Add Intel USBIO bridge driver (Israel Cepeda)
+- media: ov08x40: Fix the horizontal flip control (Hao Yao)
+- ACPI: scan: Add Intel CVS ACPI HIDs to acpi_ignore_dep_ids[] (Hans de Goede)
+- platform/x86: int3472: Increase ov08x40 handshake GPIO delay to 45 ms (Hans de Goede)
+- platform/x86: int3472: Rework regulator enable-time handling (Hans de Goede)
+- platform/x86: int3472: Convert int3472_gpio_map to use C99 initializers (Hans de Goede)
+- powerpc/tools: drop `-o pipefail` in gcc check scripts (Jan Stancek)
+- redhat/configs: enable CONFIG_KVM_INTEL_TDX for Fedora x86 (Daniel P. Berrangé)
+- KVM/TDX: Explicitly do WBINVD when no more TDX SEAMCALLs (Kai Huang)
+- x86/virt/tdx: Update the kexec section in the TDX documentation (Kai Huang)
+- x86/virt/tdx: Remove the !KEXEC_CORE dependency (Kai Huang)
+- x86/kexec: Disable kexec/kdump on platforms with TDX partial write erratum (Kai Huang)
+- x86/virt/tdx: Mark memory cache state incoherent when making SEAMCALL (Kai Huang)
+- x86/sme: Use percpu boolean to control WBINVD during kexec (Kai Huang)
+- x86/kexec: Consolidate relocate_kernel() function parameters (Kai Huang)
+- Linux v6.17.1
+
+* Mon Sep 29 2025 Justin M. Forbes <jforbes@fedoraproject.org> [6.17.0-1]
+- Reset RHEL_RELEASE for the 6.18 cycle (Justin M. Forbes)
+- Turn on USB_FUNCTIONFS for Fedora (Justin M. Forbes)
+- redhat/configs: Disable CONFIG_EFI_MIXED in RHEL (Lenny Szubowicz)
+
+* Mon Sep 29 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-62]
+- Linux v6.17.0
+
+* Sun Sep 28 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.51a24b7deaae.61]
+- Linux v6.17.0-0.rc7.51a24b7deaae
+
+* Sat Sep 27 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.fec734e8d564.60]
+- Revert "Merge branch 'tmp2' into 'os-build'" (Justin M. Forbes)
+- Linux v6.17.0-0.rc7.fec734e8d564
+
+* Fri Sep 26 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.4ff71af020ae.59]
+- Always set LLVM=1 when building with clang (Tom Stellard)
+- redhat/configs: Move CONFIG_MITIGATION_VMSCAPE to common/generic/x86 (Waiman Long)
+- Linux v6.17.0-0.rc7.4ff71af020ae
+
+* Thu Sep 25 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.bf40f4b87761.58]
+- redhat/Makefile: Update the make target dist-configs-check to fail (Alexandra Hájková)
+- Linux v6.17.0-0.rc7.bf40f4b87761
+
+* Wed Sep 24 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.cec1e6e5d1ab.57]
+- Consolidate configs to common for 6.17 (Justin M. Forbes)
+
+* Tue Sep 23 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.cec1e6e5d1ab.56]
+- Add 1010-config-newlines-test.bats self test. (Alexandra Hájková)
+- Linux v6.17.0-0.rc7.cec1e6e5d1ab
+
+* Mon Sep 22 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.55]
+- Linux v6.17.0-0.rc7
+
+* Sun Sep 21 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.f975f08c2e89.54]
+- Linux v6.17.0-0.rc6.f975f08c2e89
+
+* Sat Sep 20 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.cd89d487374c.53]
+- Linux v6.17.0-0.rc6.cd89d487374c
+
+* Fri Sep 19 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.097a6c336d00.52]
+- os-build: Remove dead CONFIG_SCHED_DEBUG files (Phil Auld)
+- redhat/configs: automotive: Disable COMPAT_32BIT_TIME SGETMASK_SYSCALL and IA32_EMULATION configs (Dorinda Bassey)
+- Linux v6.17.0-0.rc6.097a6c336d00
+
+* Thu Sep 18 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.8b789f2b7602.51]
+- Revert "redhat/configs: automotive: Disable NetLabel subsystem support" (Dorinda Bassey)
+- Linux v6.17.0-0.rc6.8b789f2b7602
+
+* Wed Sep 17 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.5aca7966d2a7.50]
+- redhat: ark-linux-next.sh: initial commit (Scott Weaver)
+- redhat: prepare-commit-msg: initial commit (Scott Weaver)
+- redhat: ark-merge-driver: initial commit (Scott Weaver)
+- redhat/Makefile: add dist-configs-commit-mismatches (Scott Weaver)
+- Turn on PINCTRL_SM8550_LPASS_LPI for Fedora (Justin M. Forbes)
+- Linux v6.17.0-0.rc6.5aca7966d2a7
+
+* Tue Sep 16 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.46a51f4f5eda.49]
+- redhat: configs: drop TI_K3_UDMA & TI_K3_UDMA_GLUE_LAYER from RHEL (Eric Chanudet)
+- redhat: configs: move TI_SCI_PROTOCOL and TI_MESSAGE_MANAGER to common (Eric Chanudet)
+- Linux v6.17.0-0.rc6.46a51f4f5eda
+
+* Mon Sep 15 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.48]
+- Linux v6.17.0-0.rc6
+
+* Sun Sep 14 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.f83a4f2a4d8c.47]
+- Linux v6.17.0-0.rc5.f83a4f2a4d8c
+
+* Sat Sep 13 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.22f20375f5b7.46]
+- Set CONFIG_MITIGATION_VMSCAPE for Fedora (Justin M. Forbes)
+- Linux v6.17.0-0.rc5.22f20375f5b7
+
+* Fri Sep 12 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.320475fbd590.45]
+- redhat/Makefile: update dist-vr-check (Scott Weaver)
+- Linux v6.17.0-0.rc5.320475fbd590
+
+* Thu Sep 11 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.7aac71907bde.44]
+- Linux v6.17.0-0.rc5.7aac71907bde
+
+* Wed Sep 10 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.9dd1835ecda5.43]
+- gitlab-ci: add kcidb_tree_name to trees (Tales da Aparecida)
+- Fix packaging for libcpupower python binding debuginfo (Justin M. Forbes)
+- redhat/configs: automotive: enable TI K3 R5F remoteproc driver (Jared Kangas)
+- Move CONFIG_SCHED_PROXY_EXEC to the zfcpdump directory (Justin M. Forbes)
+- Set Fedora configs for 6.17 (Justin M. Forbes)
+- Linux v6.17.0-0.rc5.9dd1835ecda5
+
+* Tue Sep 09 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.f777d1112ee5.42]
+- Linux v6.17.0-0.rc5.f777d1112ee5
+
+* Mon Sep 08 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.41]
+- redhat: scripts: ignore incorrect shellcheck 2329 in trap function (Simone Tollardo)
+- Linux v6.17.0-0.rc5
+
+* Sun Sep 07 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.b236920731dd.40]
+- Linux v6.17.0-0.rc4.b236920731dd
+
+* Sat Sep 06 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.d1d10cea0895.39]
+- Turn on PHY_ROCKCHIP_SAMSUNG_DCPHY for Fedora (Justin M. Forbes)
+- Linux v6.17.0-0.rc4.d1d10cea0895
+
+* Fri Sep 05 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.d69eb204c255.38]
+- Linux v6.17.0-0.rc4.d69eb204c255
+
+* Thu Sep 04 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.08b06c30a445.37]
+- Revert "aacraid: Remove depreciated device and vendor PCI id's" (Scott Weaver)
+- rh_messages.h: add missing aacraid device (Scott Weaver)
+- rh_messages.h: update unmaintained drivers (Scott Weaver)
+- Linux v6.17.0-0.rc4.08b06c30a445
+
+* Wed Sep 03 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.e6b9dce0aeeb.36]
+- arm64: enable Tegra264 SoC components in RHEL (Marcin Juszkiewicz)
+- Linux v6.17.0-0.rc4.e6b9dce0aeeb
+
+* Mon Sep 01 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.35]
+- redhat: export only selected variables (Jan Stancek)
+- Linux v6.17.0-0.rc4
+
+* Sun Aug 31 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.c8bc81a52d5a.34]
+- Linux v6.17.0-0.rc3.c8bc81a52d5a
+
+* Sat Aug 30 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.11e7861d680c.33]
+- Linux v6.17.0-0.rc3.11e7861d680c
+
+* Fri Aug 29 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.07d9df80082b.32]
+- gitlab-ci: set HOME in maintenance jobs (Tales da Aparecida)
+- gitlab-ci: remove fetch of linux-rt-devel (Scott Weaver)
+- redhat/Makefile: auto select -z-test-pesign target for z-stream (Jan Stancek)
+- redhat/configs: Move RHEL/Fedora lockdown configs to common (Jeremy Cline)
+- Enable building libcpupower bindings for ELN/Rawhide (John B. Wyatt IV)
+- redhat: Explicitly disable 'hostonly' mode on the dracut cmdline (Vitaly Kuznetsov)
+- redhat: Directly use 'ukify' for building the UKI (Vitaly Kuznetsov)
+- redhat: Temporary stop adding 'kernel' component to SBAT (Vitaly Kuznetsov)
+- Linux v6.17.0-0.rc3.07d9df80082b
+
+* Tue Aug 26 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.fab1beda7597.31]
+- Linux v6.17.0-0.rc3.fab1beda7597
 
 * Mon Aug 25 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.30]
 - Linux v6.17.0-0.rc3

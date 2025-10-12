@@ -1,4 +1,4 @@
-From 38bc4fb95d8eaadffbe500324c041e142b1ef4df Mon Sep 17 00:00:00 2001
+From 42fff74ad6b68f4f02b0d65985eb5d77e8fa26db Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:45:13 +0800
 Subject: [PATCH 33/47] drm/vs: Add hardware funcs for vs.
@@ -23,10 +23,10 @@ Signed-off-by: keith <keith.zhao@starfivetech.com>
  create mode 100644 drivers/gpu/drm/verisilicon/vs_type.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 8bc0319ed40b..cbc28f522bec 100644
+index fe23bb4a754f..fc337eaead04 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -7990,6 +7990,7 @@ T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
+@@ -7987,6 +7987,7 @@ T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
  F:	Documentation/devicetree/bindings/display/bridge/innosilicon,inno-hdmi.yaml
  F:	Documentation/devicetree/bindings/display/starfive/
  F:	drivers/gpu/drm/bridge/innosilicon/

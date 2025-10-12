@@ -1,4 +1,4 @@
-From 7c1c23be40d7dd3a2b9e797279b6e701a6a605cb Mon Sep 17 00:00:00 2001
+From 4a3b2a613de0745d3e96b5338b8ea4441d09a9f1 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 28 Sep 2023 00:42:22 +0800
 Subject: [PATCH 12/47] usb: dwc3: add T-HEAD TH1520 usb driver
@@ -20,10 +20,10 @@ Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
  create mode 100644 drivers/usb/dwc3/dwc3-thead.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index fed6cd812d79..9aa14da0c6af 100644
+index 97d958c945e4..5c41445c70be 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -21760,6 +21760,7 @@ F:	drivers/mailbox/mailbox-th1520.c
+@@ -21761,6 +21761,7 @@ F:	drivers/mailbox/mailbox-th1520.c
  F:	drivers/net/ethernet/stmicro/stmmac/dwmac-thead.c
  F:	drivers/pinctrl/pinctrl-th1520.c
  F:	drivers/pmdomain/thead/

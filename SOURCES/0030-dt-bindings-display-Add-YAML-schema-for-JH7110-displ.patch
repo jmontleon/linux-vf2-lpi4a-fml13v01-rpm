@@ -1,4 +1,4 @@
-From e06eda1c4450761b5ede1b7adcccbbe7362792d3 Mon Sep 17 00:00:00 2001
+From a255333896facac74ea83410b25b80726aa3d5db Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 13 May 2024 10:08:02 +0800
 Subject: [PATCH 30/47] dt-bindings: display: Add YAML schema for JH7110
@@ -485,10 +485,10 @@ index 0039319e91fe..cf9b657d0e8a 100644
  
    reg:
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 9aa14da0c6af..e3286c6fe546 100644
+index 5c41445c70be..4aa1747cf466 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -7982,6 +7982,14 @@ T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
+@@ -7979,6 +7979,14 @@ T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
  F:	Documentation/devicetree/bindings/display/ste,mcde.yaml
  F:	drivers/gpu/drm/mcde/
  

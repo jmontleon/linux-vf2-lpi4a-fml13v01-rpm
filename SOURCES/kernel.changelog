@@ -1,8 +1,208 @@
-* Mon Aug 25 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.31]
-- soc: qcom: mdt_loader: Deal with zero e_shentsize (Bjorn Andersson)
+* Sun Oct 12 2025 Justin M. Forbes <jforbes@fedoraproject.org> [6.17.2-1]
+- fedora: aarch64: Enable arm MHUv2 driver (Peter Robinson)
+- fedora: arm: Enable the NVMEM_IMX_OCOTP_ELE module (Peter Robinson)
+- Linux v6.17.2
+Resolves: 
+
+* Mon Oct 06 2025 Justin M. Forbes <jforbes@fedoraproject.org> [6.17.1-1]
+- Add Bug to BugsFixed (Justin M. Forbes)
+- gpio: usbio: Add ACPI device-id for MTL-CVF devices (Hans de Goede)
+- i2c: usbio: Add ACPI device-id for MTL-CVF devices (Hans de Goede)
+- wifi: ath11k: Add missing platform IDs for quirk table (Mark Pearson)
+- blk-mq: fix blk_mq_tags double free while nr_requests grown (Yu Kuai)
+- usb: typec: ucsi: Handle incorrect num_connectors capability (Mark Pearson)
+- Initial setup for stable Fedora releases (Justin M. Forbes)
 - arm64: dts: qcom: x1e80100-lenovo-yoga-slim7x: add Bluetooth support (Jens Glathe)
-- ALSA HDA driver configuration split for 6.17 upstream (Jaroslav Kysela)
-- redhat/configs: clang_lto: disable CONFIG_FORTIFY_KUNIT_TEST (Scott Weaver)
+- redhat: config: Enable USBIO modules (Hans de Goede)
+- i2c: Add Intel USBIO I2C driver (Israel Cepeda)
+- gpio: Add Intel USBIO GPIO driver (Israel Cepeda)
+- usb: misc: Add Intel USBIO bridge driver (Israel Cepeda)
+- media: ov08x40: Fix the horizontal flip control (Hao Yao)
+- ACPI: scan: Add Intel CVS ACPI HIDs to acpi_ignore_dep_ids[] (Hans de Goede)
+- platform/x86: int3472: Increase ov08x40 handshake GPIO delay to 45 ms (Hans de Goede)
+- platform/x86: int3472: Rework regulator enable-time handling (Hans de Goede)
+- platform/x86: int3472: Convert int3472_gpio_map to use C99 initializers (Hans de Goede)
+- powerpc/tools: drop `-o pipefail` in gcc check scripts (Jan Stancek)
+- redhat/configs: enable CONFIG_KVM_INTEL_TDX for Fedora x86 (Daniel P. Berrangé)
+- KVM/TDX: Explicitly do WBINVD when no more TDX SEAMCALLs (Kai Huang)
+- x86/virt/tdx: Update the kexec section in the TDX documentation (Kai Huang)
+- x86/virt/tdx: Remove the !KEXEC_CORE dependency (Kai Huang)
+- x86/kexec: Disable kexec/kdump on platforms with TDX partial write erratum (Kai Huang)
+- x86/virt/tdx: Mark memory cache state incoherent when making SEAMCALL (Kai Huang)
+- x86/sme: Use percpu boolean to control WBINVD during kexec (Kai Huang)
+- x86/kexec: Consolidate relocate_kernel() function parameters (Kai Huang)
+- Linux v6.17.1
+Resolves: 
+
+* Mon Sep 29 2025 Justin M. Forbes <jforbes@fedoraproject.org> [6.17.0-1]
+- Reset RHEL_RELEASE for the 6.18 cycle (Justin M. Forbes)
+- Turn on USB_FUNCTIONFS for Fedora (Justin M. Forbes)
+- redhat/configs: Disable CONFIG_EFI_MIXED in RHEL (Lenny Szubowicz)
+Resolves: 
+
+* Mon Sep 29 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-62]
+- Linux v6.17.0
+Resolves: 
+
+* Sun Sep 28 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.51a24b7deaae.61]
+- Linux v6.17.0-0.rc7.51a24b7deaae
+Resolves: 
+
+* Sat Sep 27 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.fec734e8d564.60]
+- Revert "Merge branch 'tmp2' into 'os-build'" (Justin M. Forbes)
+- Linux v6.17.0-0.rc7.fec734e8d564
+Resolves: 
+
+* Fri Sep 26 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.4ff71af020ae.59]
+- Always set LLVM=1 when building with clang (Tom Stellard)
+- redhat/configs: Move CONFIG_MITIGATION_VMSCAPE to common/generic/x86 (Waiman Long)
+- Linux v6.17.0-0.rc7.4ff71af020ae
+Resolves: 
+
+* Thu Sep 25 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.bf40f4b87761.58]
+- redhat/Makefile: Update the make target dist-configs-check to fail (Alexandra Hájková)
+- Linux v6.17.0-0.rc7.bf40f4b87761
+Resolves: 
+
+* Wed Sep 24 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.cec1e6e5d1ab.57]
+- Consolidate configs to common for 6.17 (Justin M. Forbes)
+Resolves: 
+
+* Tue Sep 23 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.cec1e6e5d1ab.56]
+- Add 1010-config-newlines-test.bats self test. (Alexandra Hájková)
+- Linux v6.17.0-0.rc7.cec1e6e5d1ab
+Resolves: 
+
+* Mon Sep 22 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc7.55]
+- Linux v6.17.0-0.rc7
+Resolves: 
+
+* Sun Sep 21 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.f975f08c2e89.54]
+- Linux v6.17.0-0.rc6.f975f08c2e89
+Resolves: 
+
+* Sat Sep 20 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.cd89d487374c.53]
+- Linux v6.17.0-0.rc6.cd89d487374c
+Resolves: 
+
+* Fri Sep 19 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.097a6c336d00.52]
+- os-build: Remove dead CONFIG_SCHED_DEBUG files (Phil Auld)
+- redhat/configs: automotive: Disable COMPAT_32BIT_TIME SGETMASK_SYSCALL and IA32_EMULATION configs (Dorinda Bassey)
+- Linux v6.17.0-0.rc6.097a6c336d00
+Resolves: 
+
+* Thu Sep 18 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.8b789f2b7602.51]
+- Revert "redhat/configs: automotive: Disable NetLabel subsystem support" (Dorinda Bassey)
+- Linux v6.17.0-0.rc6.8b789f2b7602
+Resolves: 
+
+* Wed Sep 17 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.5aca7966d2a7.50]
+- redhat: ark-linux-next.sh: initial commit (Scott Weaver)
+- redhat: prepare-commit-msg: initial commit (Scott Weaver)
+- redhat: ark-merge-driver: initial commit (Scott Weaver)
+- redhat/Makefile: add dist-configs-commit-mismatches (Scott Weaver)
+- Turn on PINCTRL_SM8550_LPASS_LPI for Fedora (Justin M. Forbes)
+- Linux v6.17.0-0.rc6.5aca7966d2a7
+Resolves: 
+
+* Tue Sep 16 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.46a51f4f5eda.49]
+- redhat: configs: drop TI_K3_UDMA & TI_K3_UDMA_GLUE_LAYER from RHEL (Eric Chanudet)
+- redhat: configs: move TI_SCI_PROTOCOL and TI_MESSAGE_MANAGER to common (Eric Chanudet)
+- Linux v6.17.0-0.rc6.46a51f4f5eda
+Resolves: 
+
+* Mon Sep 15 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc6.48]
+- Linux v6.17.0-0.rc6
+Resolves: 
+
+* Sun Sep 14 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.f83a4f2a4d8c.47]
+- Linux v6.17.0-0.rc5.f83a4f2a4d8c
+Resolves: 
+
+* Sat Sep 13 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.22f20375f5b7.46]
+- Set CONFIG_MITIGATION_VMSCAPE for Fedora (Justin M. Forbes)
+- Linux v6.17.0-0.rc5.22f20375f5b7
+Resolves: 
+
+* Fri Sep 12 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.320475fbd590.45]
+- redhat/Makefile: update dist-vr-check (Scott Weaver)
+- Linux v6.17.0-0.rc5.320475fbd590
+Resolves: 
+
+* Thu Sep 11 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.7aac71907bde.44]
+- Linux v6.17.0-0.rc5.7aac71907bde
+Resolves: 
+
+* Wed Sep 10 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.9dd1835ecda5.43]
+- gitlab-ci: add kcidb_tree_name to trees (Tales da Aparecida)
+- Fix packaging for libcpupower python binding debuginfo (Justin M. Forbes)
+- redhat/configs: automotive: enable TI K3 R5F remoteproc driver (Jared Kangas)
+- Move CONFIG_SCHED_PROXY_EXEC to the zfcpdump directory (Justin M. Forbes)
+- Set Fedora configs for 6.17 (Justin M. Forbes)
+- Linux v6.17.0-0.rc5.9dd1835ecda5
+Resolves: 
+
+* Tue Sep 09 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.f777d1112ee5.42]
+- Linux v6.17.0-0.rc5.f777d1112ee5
+Resolves: 
+
+* Mon Sep 08 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc5.41]
+- redhat: scripts: ignore incorrect shellcheck 2329 in trap function (Simone Tollardo)
+- Linux v6.17.0-0.rc5
+Resolves: 
+
+* Sun Sep 07 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.b236920731dd.40]
+- Linux v6.17.0-0.rc4.b236920731dd
+Resolves: 
+
+* Sat Sep 06 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.d1d10cea0895.39]
+- Turn on PHY_ROCKCHIP_SAMSUNG_DCPHY for Fedora (Justin M. Forbes)
+- Linux v6.17.0-0.rc4.d1d10cea0895
+Resolves: 
+
+* Fri Sep 05 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.d69eb204c255.38]
+- Linux v6.17.0-0.rc4.d69eb204c255
+Resolves: 
+
+* Thu Sep 04 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.08b06c30a445.37]
+- Revert "aacraid: Remove depreciated device and vendor PCI id's" (Scott Weaver)
+- rh_messages.h: add missing aacraid device (Scott Weaver)
+- rh_messages.h: update unmaintained drivers (Scott Weaver)
+- Linux v6.17.0-0.rc4.08b06c30a445
+Resolves: 
+
+* Wed Sep 03 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.e6b9dce0aeeb.36]
+- arm64: enable Tegra264 SoC components in RHEL (Marcin Juszkiewicz)
+- Linux v6.17.0-0.rc4.e6b9dce0aeeb
+Resolves: 
+
+* Mon Sep 01 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc4.35]
+- redhat: export only selected variables (Jan Stancek)
+- Linux v6.17.0-0.rc4
+Resolves: 
+
+* Sun Aug 31 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.c8bc81a52d5a.34]
+- Linux v6.17.0-0.rc3.c8bc81a52d5a
+Resolves: 
+
+* Sat Aug 30 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.11e7861d680c.33]
+- Linux v6.17.0-0.rc3.11e7861d680c
+Resolves: 
+
+* Fri Aug 29 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.07d9df80082b.32]
+- gitlab-ci: set HOME in maintenance jobs (Tales da Aparecida)
+- gitlab-ci: remove fetch of linux-rt-devel (Scott Weaver)
+- redhat/Makefile: auto select -z-test-pesign target for z-stream (Jan Stancek)
+- redhat/configs: Move RHEL/Fedora lockdown configs to common (Jeremy Cline)
+- Enable building libcpupower bindings for ELN/Rawhide (John B. Wyatt IV)
+- redhat: Explicitly disable 'hostonly' mode on the dracut cmdline (Vitaly Kuznetsov)
+- redhat: Directly use 'ukify' for building the UKI (Vitaly Kuznetsov)
+- redhat: Temporary stop adding 'kernel' component to SBAT (Vitaly Kuznetsov)
+- Linux v6.17.0-0.rc3.07d9df80082b
+Resolves: 
+
+* Tue Aug 26 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.fab1beda7597.31]
+- Linux v6.17.0-0.rc3.fab1beda7597
 Resolves: 
 
 * Mon Aug 25 2025 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.17.0-0.rc3.30]
