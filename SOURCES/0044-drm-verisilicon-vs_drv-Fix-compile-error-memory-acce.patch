@@ -1,4 +1,4 @@
-From 1d014002a669c719010e479c667a3019dcc3085c Mon Sep 17 00:00:00 2001
+From 102c7c5b2680095a59b9fee8f9c0f28b92ae3821 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Wed, 27 Nov 2024 10:48:08 +0800
 Subject: [PATCH 44/46] drm: verisilicon: vs_drv: Fix compile error & memory

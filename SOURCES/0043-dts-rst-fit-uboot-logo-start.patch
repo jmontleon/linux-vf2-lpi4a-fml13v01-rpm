@@ -1,4 +1,4 @@
-From 1741190c0ef5c578d0b03937eb2756deb4064831 Mon Sep 17 00:00:00 2001
+From fead4536de410f270f102584bcf755e7c47e3e14 Mon Sep 17 00:00:00 2001
 From: keith zhao <keith.zhao@starfivetech.com>
 Date: Fri, 22 Nov 2024 17:15:59 +0800
 Subject: [PATCH 43/46] dts: rst: fit uboot logo start

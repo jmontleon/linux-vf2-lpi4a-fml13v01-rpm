@@ -1,4 +1,4 @@
-From b60767d5f7b8578a2dd6c0bed192bab463d75bc9 Mon Sep 17 00:00:00 2001
+From 452362b1c7d8999631c0714f125074502335d134 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:54:16 +0800
 Subject: [PATCH 37/46] drm/vs: add ctrc fun
