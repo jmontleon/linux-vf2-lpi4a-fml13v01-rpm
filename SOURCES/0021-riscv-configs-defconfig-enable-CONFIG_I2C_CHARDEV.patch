@@ -1,0 +1,28 @@
+From b83e863ec534e3d90839daa70ba860b35d63f6d6 Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Fri, 1 Nov 2024 17:38:46 +0800
+Subject: [PATCH 21/47] riscv: configs: defconfig: enable CONFIG_I2C_CHARDEV
+
+On FML13V01 board, Set CONFIG_I2C_CHARDEV=y.
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ arch/riscv/configs/defconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/riscv/configs/defconfig b/arch/riscv/configs/defconfig
+index ce31190ea5e2..315ba67d41a9 100644
+--- a/arch/riscv/configs/defconfig
++++ b/arch/riscv/configs/defconfig
+@@ -160,7 +160,7 @@ CONFIG_HW_RANDOM=y
+ CONFIG_HW_RANDOM_VIRTIO=y
+ CONFIG_HW_RANDOM_JH7110=m
+ CONFIG_I2C=y
+-CONFIG_I2C_CHARDEV=m
++CONFIG_I2C_CHARDEV=y
+ CONFIG_I2C_DESIGNWARE_CORE=y
+ CONFIG_I2C_MV64XXX=m
+ CONFIG_SPI=y
+-- 
+2.51.0
+

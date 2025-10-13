@@ -1,0 +1,42 @@
+From 4f681a0f903e9bd29cc60680caaad92d9c46d6f3 Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Mon, 10 Feb 2025 17:11:23 +0800
+Subject: [PATCH 45/47] drm: versilicon: vs_drv: Fix compile error
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ drivers/gpu/drm/verisilicon/vs_drv.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/drivers/gpu/drm/verisilicon/vs_drv.c b/drivers/gpu/drm/verisilicon/vs_drv.c
+index e0c4ae390a98..fcb99379fa54 100644
+--- a/drivers/gpu/drm/verisilicon/vs_drv.c
++++ b/drivers/gpu/drm/verisilicon/vs_drv.c
+@@ -13,7 +13,7 @@
+ #include <drm/drm_crtc.h>
+ #include <drm/drm_crtc_helper.h>
+ #include <drm/drm_fb_helper.h>
+-#include <drm/drm_client_setup.h>
++#include <drm/clients/drm_client_setup.h>
+ 
+ #include <drm/drm_file.h>
+ #include <drm/drm_gem_dma_helper.h>
+@@ -31,7 +31,6 @@
+ 
+ #define DRV_NAME	"verisilicon"
+ #define DRV_DESC	"Verisilicon DRM driver"
+-#define DRV_DATE	"20230516"
+ #define DRV_MAJOR	1
+ #define DRV_MINOR	0
+ 
+@@ -276,7 +275,6 @@ static struct drm_driver vs_drm_driver = {
+ 	.fops			= &vs_drm_fops,
+ 	.name			= DRV_NAME,
+ 	.desc			= DRV_DESC,
+-	.date			= DRV_DATE,
+ 	.major			= DRV_MAJOR,
+ 	.minor			= DRV_MINOR,
+ };
+-- 
+2.51.0
+

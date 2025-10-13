@@ -1,0 +1,33 @@
+From d67f00f7f7018c93602e980c5438ba5a86a50ae1 Mon Sep 17 00:00:00 2001
+From: Sandie Cao <sandie.cao@deepcomputing.io>
+Date: Fri, 7 Feb 2025 11:32:03 +0800
+Subject: [PATCH 44/47] riscv: defconfig: Enable USB_RTL815x Eth and MT7925E
+ Wi-Fi
+
+Signed-off-by: Sandie Cao <sandie.cao@deepcomputing.io>
+---
+ arch/riscv/configs/defconfig | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/arch/riscv/configs/defconfig b/arch/riscv/configs/defconfig
+index 645526cbc85c..93594c27f059 100644
+--- a/arch/riscv/configs/defconfig
++++ b/arch/riscv/configs/defconfig
+@@ -147,11 +147,14 @@ CONFIG_DWMAC_THEAD=m
+ CONFIG_MICREL_PHY=y
+ CONFIG_MICROSEMI_PHY=y
+ CONFIG_MOTORCOMM_PHY=y
++CONFIG_USB_RTL8150=m
++CONFIG_USB_RTL8152=m
+ CONFIG_IPW2100=m
+ CONFIG_IWLWIFI=m
+ CONFIG_IWLDVM=m
+ CONFIG_IWLMVM=m
+ CONFIG_MT7921E=m
++CONFIG_MT7925E=m
+ CONFIG_INPUT_MOUSEDEV=y
+ CONFIG_INPUT_EVDEV=y
+ CONFIG_KEYBOARD_GPIO=y
+-- 
+2.51.0
+

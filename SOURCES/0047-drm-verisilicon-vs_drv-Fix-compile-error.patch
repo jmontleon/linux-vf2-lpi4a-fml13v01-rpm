@@ -1,0 +1,28 @@
+From 533c26305e692dc5ee7028e31a69a66292d54c2c Mon Sep 17 00:00:00 2001
+From: "sixue.cheng" <sixue.cheng@deepcomputing.io>
+Date: Wed, 4 Jun 2025 11:11:44 +0800
+Subject: [PATCH 47/47] drm: verisilicon: vs_drv: Fix compile error
+
+Signed-off-by: sixue.cheng <sixue.cheng@deepcomputing.io>
+---
+ drivers/gpu/drm/verisilicon/vs_drv.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/drivers/gpu/drm/verisilicon/vs_drv.c b/drivers/gpu/drm/verisilicon/vs_drv.c
+index fcb99379fa54..d852ca733f0a 100644
+--- a/drivers/gpu/drm/verisilicon/vs_drv.c
++++ b/drivers/gpu/drm/verisilicon/vs_drv.c
+@@ -570,9 +570,7 @@ static int vs_drm_bind(struct device *dev)
+ 
+ 	drm_mode_config_reset(drm_dev);
+ 
+-	ret = drmm_kms_helper_poll_init(drm_dev);
+-	if (ret)
+-		goto err_unbind_all;
++	drmm_kms_helper_poll_init(drm_dev);
+ 
+ 	ret = drm_dev_register(drm_dev, 0);
+ 	if (ret)
+-- 
+2.51.0
+

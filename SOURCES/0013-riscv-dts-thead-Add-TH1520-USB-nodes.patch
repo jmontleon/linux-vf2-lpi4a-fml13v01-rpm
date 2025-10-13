@@ -1,0 +1,48 @@
+From 7f58fb1031e55a1ecfb97589b625b15fc693deda Mon Sep 17 00:00:00 2001
+From: Jisheng Zhang <jszhang@kernel.org>
+Date: Thu, 21 Sep 2023 13:51:56 +0800
+Subject: [PATCH 13/47] riscv: dts: thead: Add TH1520 USB nodes
+
+Signed-off-by: Jisheng Zhang <jszhang@kernel.org>
+Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+---
+ arch/riscv/boot/dts/thead/th1520.dtsi | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+
+diff --git a/arch/riscv/boot/dts/thead/th1520.dtsi b/arch/riscv/boot/dts/thead/th1520.dtsi
+index 376b2b16cef6..3827c0a4ae88 100644
+--- a/arch/riscv/boot/dts/thead/th1520.dtsi
++++ b/arch/riscv/boot/dts/thead/th1520.dtsi
+@@ -559,6 +559,29 @@ pwm: pwm@ffec01c000 {
+ 			clocks = <&clk CLK_PWM>;
+ 		};
+ 
++		misc_sysreg: misc_sysreg@ffec02c000 {
++			compatible = "thead,th1520-misc-sysreg", "syscon";
++			reg = <0xff 0xec02c000 0x0 0x1000>;
++		};
++
++		usb: usb@ffec03f000 {
++			compatible = "thead,th1520-usb";
++			reg = <0xff 0xec03f000 0x0 0x1000>;
++			thead,misc-sysreg = <&misc_sysreg>;
++			#address-cells = <2>;
++			#size-cells = <2>;
++			ranges;
++
++			usb_dwc3: usb@ffe7040000 {
++				compatible = "snps,dwc3";
++				reg = <0xff 0xe7040000 0x0 0x10000>;
++				interrupts = <68 IRQ_TYPE_LEVEL_HIGH>;
++				dr_mode = "host";
++				snps,usb3_lpm_capable;
++				status = "disabled";
++			};
++		};
++
+ 		clk: clock-controller@ffef010000 {
+ 			compatible = "thead,th1520-clk-ap";
+ 			reg = <0xff 0xef010000 0x0 0x1000>;
+-- 
+2.51.0
+
