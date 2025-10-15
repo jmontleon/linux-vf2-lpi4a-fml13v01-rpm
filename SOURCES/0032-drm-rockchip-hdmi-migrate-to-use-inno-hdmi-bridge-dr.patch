@@ -1,4 +1,4 @@
-From fe71c3896fdc1d474549249e3505b219feafc00c Mon Sep 17 00:00:00 2001
+From 9391576eb48a89b79a21ba55bb3faad95d6d88d0 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 13 May 2024 10:25:02 +0800
 Subject: [PATCH 32/47] drm/rockchip:hdmi: migrate to use inno-hdmi bridge
@@ -42,7 +42,7 @@ index 2b867cebbc12..11176db14af6 100644
  rockchipdrm-$(CONFIG_ROCKCHIP_RK3066_HDMI) += rk3066_hdmi.o
 diff --git a/drivers/gpu/drm/rockchip/inno_hdmi-rockchip.c b/drivers/gpu/drm/rockchip/inno_hdmi-rockchip.c
 new file mode 100644
-index 000000000000..69d0e913e13b
+index 000000000000..051b99a27b8b
 --- /dev/null
 +++ b/drivers/gpu/drm/rockchip/inno_hdmi-rockchip.c
 @@ -0,0 +1,517 @@
@@ -330,7 +330,7 @@ index 000000000000..69d0e913e13b
 +}
 +
 +static enum drm_mode_status rk_inno_hdmi_connector_mode_valid(struct drm_connector *connector,
-+							      struct drm_display_mode *mode)
++							      const struct drm_display_mode *mode)
 +{
 +	struct inno_hdmi *hdmi = connector_to_inno_hdmi(connector);
 +	struct rk_inno_hdmi *rk_hdmi = dev_get_drvdata(hdmi->dev);

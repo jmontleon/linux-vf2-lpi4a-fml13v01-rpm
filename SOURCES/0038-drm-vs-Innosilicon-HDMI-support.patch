@@ -1,4 +1,4 @@
-From 2b58cfa5f055d6baf52cbabc0c9a0cb554b774e7 Mon Sep 17 00:00:00 2001
+From 465f5952b073e01f2c76886604989e9dc0d59513 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 17:01:33 +0800
 Subject: [PATCH 38/47] drm/vs: Innosilicon HDMI support
@@ -48,7 +48,7 @@ index 88a07a308e31..2d02b4a3a567 100644
  obj-$(CONFIG_DRM_VERISILICON_DC8200) += vs_drm.o
 diff --git a/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c b/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
 new file mode 100644
-index 000000000000..f27b04ef5690
+index 000000000000..3697e65be34e
 --- /dev/null
 +++ b/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
 @@ -0,0 +1,481 @@
@@ -343,7 +343,7 @@ index 000000000000..f27b04ef5690
 +}
 +
 +static enum drm_mode_status
-+starfive_hdmi_connector_mode_valid(struct drm_connector *connector, struct drm_display_mode *mode)
++starfive_hdmi_connector_mode_valid(struct drm_connector *connector, const struct drm_display_mode *mode)
 +{
 +	int pclk = mode->clock * 1000;
 +	bool valid = false;

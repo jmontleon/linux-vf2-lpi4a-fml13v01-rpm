@@ -1,4 +1,4 @@
-From b72f72f6432dab33e18109a2da6911798d705ec8 Mon Sep 17 00:00:00 2001
+From 0d9449345a23a6c95d8b2be09d630d655152e8cd Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 23 Sep 2024 19:23:23 +0800
 Subject: [PATCH 40/47] drm: verisilicon: fix the compile error
@@ -13,7 +13,7 @@ Signed-off-by: keith <keith.zhao@starfivetech.com>
  3 files changed, 9 insertions(+), 8 deletions(-)
 
 diff --git a/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c b/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
-index f27b04ef5690..60e8fc1de7eb 100644
+index 3697e65be34e..caec71cbe9f7 100644
 --- a/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
 +++ b/drivers/gpu/drm/verisilicon/inno_hdmi-starfive.c
 @@ -449,11 +449,11 @@ static int starfive_hdmi_probe(struct platform_device *pdev)

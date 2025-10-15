@@ -1,4 +1,4 @@
-From a80ec8ebbf6703006a2bd5d336051263e33483b2 Mon Sep 17 00:00:00 2001
+From 8009a8438e6c02e86a5e6921a434ed3592d7f747 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Sun, 31 Dec 2023 22:22:30 +0100
 Subject: [PATCH 18/47] riscv: dts: thead: Add Lichee Pi 4A bluetooth

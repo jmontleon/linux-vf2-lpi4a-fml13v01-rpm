@@ -1,4 +1,4 @@
-From ba9d7b54591c3602137b9ce02ee28e5d6965d363 Mon Sep 17 00:00:00 2001
+From 96e385284139e038fb9d0bb92a4a89dd3739a31a Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 10 Feb 2025 17:11:23 +0800
 Subject: [PATCH 45/47] drm: versilicon: vs_drv: Fix compile error
