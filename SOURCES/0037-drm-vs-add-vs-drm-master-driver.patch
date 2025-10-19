@@ -1,4 +1,4 @@
-From b2eb59d5580d45a7541fe0fc7c9f1ad32b9dba55 Mon Sep 17 00:00:00 2001
+From b0669f402abc43118901da09aae4fc0894255641 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:57:33 +0800
 Subject: [PATCH 37/47] drm/vs: add vs drm master driver
