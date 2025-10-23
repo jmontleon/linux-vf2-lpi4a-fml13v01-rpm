@@ -1,4 +1,4 @@
-From 432c551b8c7020862db081125291cf96596b2b46 Mon Sep 17 00:00:00 2001
+From 296fb9f8bff8ebc5abfbda4f045d8adf705c1f85 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Tue, 5 Nov 2024 11:34:32 +0800
 Subject: [PATCH 28/47] driver: hid: i2c-hid: support i2c-hid touchpad
