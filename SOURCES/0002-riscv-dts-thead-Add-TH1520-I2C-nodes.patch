@@ -1,4 +1,4 @@
-From f24b73b8d24447f60eb8d609b5bb8f85c5f0f751 Mon Sep 17 00:00:00 2001
+From 3d652e2d72441b1987a194cbacaf5d0aaf8b253e Mon Sep 17 00:00:00 2001
 From: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
 Date: Tue, 18 Jun 2024 09:42:39 +0200
 Subject: [PATCH 02/47] riscv: dts: thead: Add TH1520 I2C nodes
@@ -106,5 +106,5 @@ index 03f1d7319049..6777984ec09e 100644
  			compatible = "snps,dw-apb-timer";
  			reg = <0xff 0xffc33000 0x0 0x14>;
 -- 
-2.51.0
+2.51.1
 

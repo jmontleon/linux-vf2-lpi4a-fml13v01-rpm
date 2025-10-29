@@ -1,4 +1,4 @@
-From 2e0c219c7e20a781a93b3cfe470032f40746ff2d Mon Sep 17 00:00:00 2001
+From 93d88f790abaea1b0104afa742cfcc845854aeaa Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 28 Sep 2023 00:42:21 +0800
 Subject: [PATCH 10/47] dt-bindings: usb: Add T-HEAD TH1520 USB controller
@@ -95,5 +95,5 @@ index 000000000000..afb618eb5013
 +          };
 +    };
 -- 
-2.51.0
+2.51.1
 

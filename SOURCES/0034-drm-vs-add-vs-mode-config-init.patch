@@ -1,4 +1,4 @@
-From 997c9c31874f647f230bc98b12c9621ae9e6d707 Mon Sep 17 00:00:00 2001
+From a407643ee04220113ff8417b7b1a156bea822eeb Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:47:52 +0800
 Subject: [PATCH 34/47] drm/vs: add vs mode config init
@@ -85,5 +85,5 @@ index 000000000000..bd04f81d2ad2
 +void vs_mode_config_init(struct drm_device *dev);
 +#endif /* __VS_FB_H__ */
 -- 
-2.51.0
+2.51.1
 

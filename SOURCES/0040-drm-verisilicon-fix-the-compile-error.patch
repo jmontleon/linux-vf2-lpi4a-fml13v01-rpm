@@ -1,4 +1,4 @@
-From 4fd9dd7ba5a1d83c617f41c6161c29cea57f5733 Mon Sep 17 00:00:00 2001
+From 692ceea19a6a6f1820a9e0047c0187497f6b603f Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 23 Sep 2024 19:23:23 +0800
 Subject: [PATCH 40/47] drm: verisilicon: fix the compile error
@@ -88,5 +88,5 @@ index d0b1755d77d2..d7859d91e170 100644
  
  static const struct of_device_id simple_encoder_dt_match[] = {
 -- 
-2.51.0
+2.51.1
 

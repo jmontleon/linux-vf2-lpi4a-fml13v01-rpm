@@ -1,4 +1,4 @@
-From 37e86148d2b375e3403c40d896f13a067d2dd6db Mon Sep 17 00:00:00 2001
+From a4be0ebd3ea09467dc9d55cccda9b1fb3c30080e Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 21 Sep 2023 13:51:56 +0800
 Subject: [PATCH 13/47] riscv: dts: thead: Add TH1520 USB nodes
@@ -44,5 +44,5 @@ index 7171eee2e272..13b8d60e43cc 100644
  			compatible = "thead,th1520-clk-ap";
  			reg = <0xff 0xef010000 0x0 0x1000>;
 -- 
-2.51.0
+2.51.1
 

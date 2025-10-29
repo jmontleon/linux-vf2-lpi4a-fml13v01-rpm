@@ -1,4 +1,4 @@
-From ada0961e8481029c62fa436d33e72a6c50329c7a Mon Sep 17 00:00:00 2001
+From 0bdba25bf710be77789d74e2c85a1c52b5d929f3 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 21 Sep 2023 14:00:40 +0800
 Subject: [PATCH 06/47] riscv: dts: thead: Add TH1520 PWM node
@@ -29,5 +29,5 @@ index 6777984ec09e..7171eee2e272 100644
  			compatible = "thead,th1520-clk-ap";
  			reg = <0xff 0xef010000 0x0 0x1000>;
 -- 
-2.51.0
+2.51.1
 

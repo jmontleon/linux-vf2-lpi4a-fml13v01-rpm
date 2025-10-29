@@ -1,4 +1,4 @@
-From 9a635b01f7a6f14921e7884cf7d19a034d8f3c19 Mon Sep 17 00:00:00 2001
+From 401c881197276f567201b2de767ba574b9c44c8e Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 5 Oct 2023 21:05:19 +0800
 Subject: [PATCH 05/47] pwm: add T-HEAD PWM driver
@@ -327,5 +327,5 @@ index 000000000000..f6633b30f2b8
 +MODULE_DESCRIPTION("T-HEAD pwm driver");
 +MODULE_LICENSE("GPL v2");
 -- 
-2.51.0
+2.51.1
 

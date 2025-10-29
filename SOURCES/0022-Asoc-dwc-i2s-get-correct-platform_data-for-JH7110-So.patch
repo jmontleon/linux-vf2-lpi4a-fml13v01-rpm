@@ -1,4 +1,4 @@
-From 49f04f3b672002dbf07e0c4a86a4936601117c07 Mon Sep 17 00:00:00 2001
+From 8c621b10eedbff88a5a4b1f291dd67eb3dca85bf Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 14 Oct 2024 14:49:49 +0800
 Subject: [PATCH 22/47] Asoc: dwc: i2s: get correct platform_data for JH7110
@@ -38,5 +38,5 @@ index 28001e9857d9..259ec0ebff58 100644
  	if (!dev)
  		return -ENOMEM;
 -- 
-2.51.0
+2.51.1
 

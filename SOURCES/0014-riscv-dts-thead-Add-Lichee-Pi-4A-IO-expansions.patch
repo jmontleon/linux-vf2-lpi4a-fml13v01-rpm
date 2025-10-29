@@ -1,4 +1,4 @@
-From f32377525cf3aa4bbc7ac2a22ef54ce190e38e88 Mon Sep 17 00:00:00 2001
+From 416ef4735bc6e8caa43084f369d27b33ade6e9d3 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Wed, 13 Dec 2023 01:58:00 +0100
 Subject: [PATCH 14/47] riscv: dts: thead: Add Lichee Pi 4A IO expansions
@@ -152,5 +152,5 @@ index b0e33a297aae..148e939d65a1 100644
  	pinctrl-names = "default";
  	pinctrl-0 = <&uart0_pins>;
 -- 
-2.51.0
+2.51.1
 

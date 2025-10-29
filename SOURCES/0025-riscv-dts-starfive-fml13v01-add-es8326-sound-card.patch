@@ -1,4 +1,4 @@
-From 0912e74a2cb0980f3a8f4547a460faeca96dc48b Mon Sep 17 00:00:00 2001
+From 30bc4105a9374c6bc444dabdfa122666d5179d5b Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 4 Nov 2024 13:45:07 +0800
 Subject: [PATCH 25/47] riscv: dts: starfive: fml13v01: add es8326 sound card
@@ -117,5 +117,5 @@ index f2857d021d68..21fa555e8232 100644
  		clkreq-pins {
  			pinmux = <GPIOMUX(29, GPOUT_LOW,
 -- 
-2.51.0
+2.51.1
 

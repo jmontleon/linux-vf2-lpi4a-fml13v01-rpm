@@ -1,4 +1,4 @@
-From 5173539136eef4440d55c9e59cfd1b8b5245d1e6 Mon Sep 17 00:00:00 2001
+From 0f20dd69e0beea1319fe1e770e2edf5820866fde Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 17:05:00 +0800
 Subject: [PATCH 39/47] drm/vs: add simple dsi encoder
@@ -282,5 +282,5 @@ index 000000000000..73e356bfeb2c
 +extern struct platform_driver simple_encoder_driver;
 +#endif /* __VS_SIMPLE_ENC_H_ */
 -- 
-2.51.0
+2.51.1
 
