@@ -1,4 +1,4 @@
-From a407643ee04220113ff8417b7b1a156bea822eeb Mon Sep 17 00:00:00 2001
+From d1a1061994f2e21564b9882384d2b0d59325911e Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:47:52 +0800
 Subject: [PATCH 34/47] drm/vs: add vs mode config init
