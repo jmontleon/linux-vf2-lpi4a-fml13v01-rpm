@@ -1,4 +1,4 @@
-From edb114eb455b910fe9ee09e27daa36a4f9bc29f6 Mon Sep 17 00:00:00 2001
+From b98695f404d1de58d1de98af09d4593c05c7c287 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 21 Sep 2023 14:00:40 +0800
 Subject: [PATCH 06/47] riscv: dts: thead: Add TH1520 PWM node

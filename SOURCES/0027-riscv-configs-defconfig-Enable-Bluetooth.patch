@@ -1,4 +1,4 @@
-From a085e1aa5dab2a01fb07c5b6f47021e8b9f3676a Mon Sep 17 00:00:00 2001
+From e25d9d3721a5c439583124d06ea74bc0e4e481f3 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Tue, 5 Nov 2024 10:51:08 +0800
 Subject: [PATCH 27/47] riscv: configs: defconfig: Enable Bluetooth

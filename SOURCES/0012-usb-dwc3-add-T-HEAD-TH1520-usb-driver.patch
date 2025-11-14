@@ -1,4 +1,4 @@
-From 07c5def1b2a12e38ae15661892e0f231b559b571 Mon Sep 17 00:00:00 2001
+From 8f56427331f61e48588d95d23c601e9018e39792 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 28 Sep 2023 00:42:22 +0800
 Subject: [PATCH 12/47] usb: dwc3: add T-HEAD TH1520 usb driver
