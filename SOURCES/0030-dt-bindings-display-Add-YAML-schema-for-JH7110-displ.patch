@@ -1,7 +1,7 @@
-From 79613c1a50072947a3f47c2b2eec64d46d9a871a Mon Sep 17 00:00:00 2001
+From 2c24f19f8b573d35c303e64d94a375bfce514d2f Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 13 May 2024 10:08:02 +0800
-Subject: [PATCH 30/47] dt-bindings: display: Add YAML schema for JH7110
+Subject: [PATCH 30/53] dt-bindings: display: Add YAML schema for JH7110
  display pipeline
 
 JH7110 SoC display pipeline includes a display controller and hdmi.
@@ -485,10 +485,10 @@ index 0039319e91fe..cf9b657d0e8a 100644
  
    reg:
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 54c86cf663e6..ab6aff46b9cf 100644
+index e884681475b9..8645746c2530 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -8118,6 +8118,14 @@ T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
+@@ -8126,6 +8126,14 @@ T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
  F:	Documentation/devicetree/bindings/display/ste,mcde.yaml
  F:	drivers/gpu/drm/mcde/
  
@@ -504,5 +504,5 @@ index 54c86cf663e6..ab6aff46b9cf 100644
  M:	Michael Trimarchi <michael@amarulasolutions.com>
  S:	Maintained
 -- 
-2.51.0
+2.51.1
 

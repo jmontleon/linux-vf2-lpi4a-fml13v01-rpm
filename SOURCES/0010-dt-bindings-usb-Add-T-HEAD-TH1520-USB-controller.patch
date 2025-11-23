@@ -1,7 +1,7 @@
-From f26085f10a418077137aede4a3479218e0d757ac Mon Sep 17 00:00:00 2001
+From c2aafd0f70816d048d1338ca51c619a573a675d8 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 28 Sep 2023 00:42:21 +0800
-Subject: [PATCH 10/47] dt-bindings: usb: Add T-HEAD TH1520 USB controller
+Subject: [PATCH 10/53] dt-bindings: usb: Add T-HEAD TH1520 USB controller
 
 T-HEAD TH1520 platform's USB has a wrapper module around
 the DesignWare USB3 DRD controller. Add binding information doc for
@@ -95,5 +95,5 @@ index 000000000000..afb618eb5013
 +          };
 +    };
 -- 
-2.51.0
+2.51.1
 

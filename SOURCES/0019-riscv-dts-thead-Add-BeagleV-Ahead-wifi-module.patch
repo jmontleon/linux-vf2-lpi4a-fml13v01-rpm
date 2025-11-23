@@ -1,7 +1,7 @@
-From ed3e27b8b8f7dd9b6c8de9fd0f87e3a977f7c27d Mon Sep 17 00:00:00 2001
+From 270b2ae0196fd85b638a771dac347e3d12b24def Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Sun, 12 May 2024 17:28:58 +0200
-Subject: [PATCH 19/47] riscv: dts: thead: Add BeagleV Ahead wifi module
+Subject: [PATCH 19/53] riscv: dts: thead: Add BeagleV Ahead wifi module
 
 Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 ---
@@ -85,5 +85,5 @@ index d293152afe10..48b7a1ebbf1e 100644
  	pinctrl-names = "default";
  	pinctrl-0 = <&uart0_pins>;
 -- 
-2.51.0
+2.51.1
 

@@ -1,7 +1,7 @@
-From bb7585c3727c731da84c1a793dd42c3678d80ef2 Mon Sep 17 00:00:00 2001
+From fa4d95a34affc197bca74095e20ea74eca786638 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 17:01:33 +0800
-Subject: [PATCH 38/47] drm/vs: Innosilicon HDMI support
+Subject: [PATCH 38/53] drm/vs: Innosilicon HDMI support
 
 add inno hdmi driver which binds to vs display controller
 and this driver uses the commom api from the inno hdmi
@@ -720,5 +720,5 @@ index d9f6efa7c8f9..c3c08ed5f8ac 100644
 +
  #endif /* __VS_DRV_H__ */
 -- 
-2.51.0
+2.51.1
 

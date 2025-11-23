@@ -1,7 +1,7 @@
-From 61a13b875b0a7debe2d32c3f379e58b174bddd8b Mon Sep 17 00:00:00 2001
+From 1e4e9d4a45bc0e6d2d19b7e0f2782fa2a0aa0515 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 13 May 2024 10:25:02 +0800
-Subject: [PATCH 32/47] drm/rockchip:hdmi: migrate to use inno-hdmi bridge
+Subject: [PATCH 32/53] drm/rockchip:hdmi: migrate to use inno-hdmi bridge
  driver
 
 Add the ROCKCHIP inno hdmi driver that uses the Inno DesignWare
@@ -565,5 +565,5 @@ index 000000000000..051b99a27b8b
 +	},
 +};
 -- 
-2.51.0
+2.51.1
 

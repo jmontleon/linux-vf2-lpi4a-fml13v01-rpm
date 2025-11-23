@@ -1,7 +1,7 @@
-From 12edf1dae8539c69ce96ab325d7c060764783678 Mon Sep 17 00:00:00 2001
+From 532ff2418fb09e7a34337d0ed6f6bd9c7d74474f Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Sat, 11 May 2024 18:28:00 +0800
-Subject: [PATCH 31/47] drm/bridge: add common api for inno hdmi
+Subject: [PATCH 31/53] drm/bridge: add common api for inno hdmi
 
 Add INNO common api so that it can be used by vendor
 drivers which implement vendor specific extensions to Innosilicon HDMI.
@@ -24,10 +24,10 @@ Signed-off-by: keith <keith.zhao@starfivetech.com>
  create mode 100644 include/drm/bridge/inno_hdmi.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index ab6aff46b9cf..5db646be31fd 100644
+index 8645746c2530..1ce63b6763be 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -8125,6 +8125,8 @@ S:	Maintained
+@@ -8133,6 +8133,8 @@ S:	Maintained
  T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
  F:	Documentation/devicetree/bindings/display/bridge/innosilicon,inno-hdmi.yaml
  F:	Documentation/devicetree/bindings/display/starfive/
@@ -851,5 +851,5 @@ index 000000000000..bc865f5343ce
 +
 +#endif /* __INNO_COMMON_HDMI__ */
 -- 
-2.51.0
+2.51.1
 

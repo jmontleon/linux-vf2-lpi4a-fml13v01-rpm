@@ -1,7 +1,7 @@
-From e69a5ca8be053cb3770c14080084c2e57b7c510b Mon Sep 17 00:00:00 2001
+From 159f87ccaceecf0b519aec978e67dbc96851c121 Mon Sep 17 00:00:00 2001
 From: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
 Date: Tue, 18 Jun 2024 09:42:40 +0200
-Subject: [PATCH 03/47] riscv: dts: thead: Enable I2C on the BeagleV-Ahead
+Subject: [PATCH 03/53] riscv: dts: thead: Enable I2C on the BeagleV-Ahead
 
 This commit enables the I2C0 controller of the TH1520, together with
 the FT24C32A EEPROM that is connected to it.
@@ -129,5 +129,5 @@ index 21c33f165ba9..caa739c0442f 100644
  	bus-width = <4>;
  	max-frequency = <198000000>;
 -- 
-2.51.0
+2.51.1
 

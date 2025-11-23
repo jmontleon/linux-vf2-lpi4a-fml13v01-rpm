@@ -1,0 +1,76 @@
+From 3799bca1edba48ae6a69480e0acf2d247ebeecff Mon Sep 17 00:00:00 2001
+From: Hal Feng <hal.feng@starfivetech.com>
+Date: Thu, 20 Nov 2025 16:29:45 +0800
+Subject: [PATCH 51/53] riscv: dts: starfive: Add VisionFive 2 Lite board
+ device tree
+
+VisionFive 2 Lite is a mini SBC based on the StarFive JH7110S SoC.
+
+Board features:
+- JH7110S SoC
+- 4/8 GiB LPDDR4 DRAM
+- AXP15060 PMIC
+- 40 pin GPIO header
+- 1x USB 3.0 host port
+- 3x USB 2.0 host port
+- 1x M.2 M-Key (size: 2242)
+- 1x MicroSD slot (optional non-removable 64GiB eMMC)
+- 1x QSPI Flash
+- 1x I2C EEPROM
+- 1x 1Gbps Ethernet port
+- SDIO-based Wi-Fi & UART-based Bluetooth
+- 1x HDMI port
+- 1x 2-lane DSI
+- 1x 2-lane CSI
+
+VisionFive 2 Lite schematics: https://doc-en.rvspace.org/VisionFive2Lite/PDF/VF2_LITE_V1.10_TF_20250818_SCH.pdf
+VisionFive 2 Lite Quick Start Guide: https://doc-en.rvspace.org/VisionFive2Lite/VisionFive2LiteQSG/index.html
+More documents: https://doc-en.rvspace.org/Doc_Center/visionfive_2_lite.html
+
+Signed-off-by: Hal Feng <hal.feng@starfivetech.com>
+Acked-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
+---
+ arch/riscv/boot/dts/starfive/Makefile         |  2 ++
+ .../jh7110s-starfive-visionfive-2-lite.dts    | 20 +++++++++++++++++++
+ 2 files changed, 22 insertions(+)
+ create mode 100644 arch/riscv/boot/dts/starfive/jh7110s-starfive-visionfive-2-lite.dts
+
+diff --git a/arch/riscv/boot/dts/starfive/Makefile b/arch/riscv/boot/dts/starfive/Makefile
+index 62b659f89ba7..f53109253d41 100644
+--- a/arch/riscv/boot/dts/starfive/Makefile
++++ b/arch/riscv/boot/dts/starfive/Makefile
+@@ -15,3 +15,5 @@ dtb-$(CONFIG_ARCH_STARFIVE) += jh7110-milkv-marscm-lite.dtb
+ dtb-$(CONFIG_ARCH_STARFIVE) += jh7110-pine64-star64.dtb
+ dtb-$(CONFIG_ARCH_STARFIVE) += jh7110-starfive-visionfive-2-v1.2a.dtb
+ dtb-$(CONFIG_ARCH_STARFIVE) += jh7110-starfive-visionfive-2-v1.3b.dtb
++
++dtb-$(CONFIG_ARCH_STARFIVE) += jh7110s-starfive-visionfive-2-lite.dtb
+diff --git a/arch/riscv/boot/dts/starfive/jh7110s-starfive-visionfive-2-lite.dts b/arch/riscv/boot/dts/starfive/jh7110s-starfive-visionfive-2-lite.dts
+new file mode 100644
+index 000000000000..ac5e66027bad
+--- /dev/null
++++ b/arch/riscv/boot/dts/starfive/jh7110s-starfive-visionfive-2-lite.dts
+@@ -0,0 +1,20 @@
++// SPDX-License-Identifier: GPL-2.0 OR MIT
++/*
++ * Copyright (C) 2025 StarFive Technology Co., Ltd.
++ * Copyright (C) 2025 Hal Feng <hal.feng@starfivetech.com>
++ */
++
++/dts-v1/;
++#include "jh7110s-starfive-visionfive-2-lite.dtsi"
++
++/ {
++	model = "StarFive VisionFive 2 Lite";
++	compatible = "starfive,visionfive-2-lite", "starfive,jh7110s";
++};
++
++&mmc0 {
++	bus-width = <4>;
++	cd-gpios = <&sysgpio 41 GPIO_ACTIVE_HIGH>;
++	disable-wp;
++	cap-sd-highspeed;
++};
+-- 
+2.51.1
+

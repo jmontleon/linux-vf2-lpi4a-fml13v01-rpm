@@ -1,7 +1,7 @@
-From 6e984c9ca3c103034bfe0f3dc93c02befc971273 Mon Sep 17 00:00:00 2001
+From 77de6b9f04c142edd0cf90fbbc249a28ae3c01d2 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 14 Oct 2024 15:23:43 +0800
-Subject: [PATCH 24/47] riscv: defconfig: Enable CONFIG_SND_SOC_ES8326
+Subject: [PATCH 24/53] riscv: defconfig: Enable CONFIG_SND_SOC_ES8326
 
 Add es8326 support for StarFive JH7110 soc framework mainboard.
 
@@ -23,5 +23,5 @@ index 315ba67d41a9..d2d3a64b5504 100644
  CONFIG_SND_SIMPLE_CARD=m
  CONFIG_USB=y
 -- 
-2.51.0
+2.51.1
 

@@ -1,7 +1,7 @@
-From a12bed4757ae0be3a0dfef41c1423f1697e28319 Mon Sep 17 00:00:00 2001
+From 230c46a43734c4427cd92c41c04ea81895a27534 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Thu, 28 Dec 2023 15:47:17 +0100
-Subject: [PATCH 16/47] riscv: dts: thead: Enable Lichee Pi 4A UART1/3
+Subject: [PATCH 16/53] riscv: dts: thead: Enable Lichee Pi 4A UART1/3
 
 Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 ---
@@ -83,5 +83,5 @@ index 51bbe7ae73cd..50a4a13ff562 100644
  	status = "okay";
  	vbus-supply = <&vcc5v_usb>;
 -- 
-2.51.0
+2.51.1
 

@@ -1,7 +1,7 @@
-From ed8ce8bcdc257754ea743a88c35eb73e9c812cd0 Mon Sep 17 00:00:00 2001
+From 683946504a945881ee01916a98a73665f8bb64e1 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:54:16 +0800
-Subject: [PATCH 36/47] drm/vs: add ctrc fun
+Subject: [PATCH 36/53] drm/vs: add ctrc fun
 
 add crtc funs and helper funs
 
@@ -298,5 +298,5 @@ index 000000000000..b1e588bb780d
 +
 +#endif /* __VS_CRTC_H__ */
 -- 
-2.51.0
+2.51.1
 

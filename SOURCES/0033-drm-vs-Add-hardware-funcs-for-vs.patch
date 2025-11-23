@@ -1,7 +1,7 @@
-From 1ff68200700aa911843a6119a48013e6c8e132c0 Mon Sep 17 00:00:00 2001
+From b330f4cd54e10fed83ec5fda9700e70f02925575 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:45:13 +0800
-Subject: [PATCH 33/47] drm/vs: Add hardware funcs for vs.
+Subject: [PATCH 33/53] drm/vs: Add hardware funcs for vs.
 
 add hardware base api for vs drm
 
@@ -23,10 +23,10 @@ Signed-off-by: keith <keith.zhao@starfivetech.com>
  create mode 100644 drivers/gpu/drm/verisilicon/vs_type.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 5db646be31fd..f707c180c90a 100644
+index 1ce63b6763be..9e233dd9b887 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -8126,6 +8126,7 @@ T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
+@@ -8134,6 +8134,7 @@ T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
  F:	Documentation/devicetree/bindings/display/bridge/innosilicon,inno-hdmi.yaml
  F:	Documentation/devicetree/bindings/display/starfive/
  F:	drivers/gpu/drm/bridge/innosilicon/
@@ -48,7 +48,7 @@ index 7e6bc0b3a589..41363da2cc59 100644
  	tristate "DRM Support for Hyper-V synthetic video device"
  	depends on DRM && PCI && HYPERV_VMBUS
 diff --git a/drivers/gpu/drm/Makefile b/drivers/gpu/drm/Makefile
-index 4b2f7d794275..247111bc5c47 100644
+index da2565e6de71..bcb13207f469 100644
 --- a/drivers/gpu/drm/Makefile
 +++ b/drivers/gpu/drm/Makefile
 @@ -232,6 +232,7 @@ obj-y			+= solomon/
@@ -1745,5 +1745,5 @@ index 000000000000..30ccc2eda48b
 +
 +#endif /* __VS_TYPE_H__ */
 -- 
-2.51.0
+2.51.1
 

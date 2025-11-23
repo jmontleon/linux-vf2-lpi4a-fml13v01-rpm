@@ -1,7 +1,7 @@
-From 4ea5e19e3e6f2ac3b8e6358776c8c5f33e621ef5 Mon Sep 17 00:00:00 2001
+From 0c4a4d062a5a32fb2603de96b734fc580edc8860 Mon Sep 17 00:00:00 2001
 From: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
 Date: Tue, 18 Jun 2024 09:42:39 +0200
-Subject: [PATCH 02/47] riscv: dts: thead: Add TH1520 I2C nodes
+Subject: [PATCH 02/53] riscv: dts: thead: Add TH1520 I2C nodes
 
 Add nodes for the six I2C on the T-Head TH1520 RISCV SoC.
 
@@ -106,5 +106,5 @@ index e680d1a7c821..d2f5ee656cd6 100644
  			compatible = "snps,dw-apb-timer";
  			reg = <0xff 0xffc33000 0x0 0x14>;
 -- 
-2.51.0
+2.51.1
 

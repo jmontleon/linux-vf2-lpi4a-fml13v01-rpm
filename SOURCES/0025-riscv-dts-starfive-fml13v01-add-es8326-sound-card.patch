@@ -1,7 +1,7 @@
-From 9fa86e0861611f6afb07b362fe0b5f071acb4390 Mon Sep 17 00:00:00 2001
+From c6878022b6dd4a93b5048dd2c09e2092583d4f0e Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 4 Nov 2024 13:45:07 +0800
-Subject: [PATCH 25/47] riscv: dts: starfive: fml13v01: add es8326 sound card
+Subject: [PATCH 25/53] riscv: dts: starfive: fml13v01: add es8326 sound card
 
 The fml13v01 board:
 Add i2srx/i2stx1 nodes and pins configuration.
@@ -117,5 +117,5 @@ index f2857d021d68..21fa555e8232 100644
  		clkreq-pins {
  			pinmux = <GPIOMUX(29, GPOUT_LOW,
 -- 
-2.51.0
+2.51.1
 

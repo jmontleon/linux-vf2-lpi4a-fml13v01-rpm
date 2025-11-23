@@ -1,7 +1,7 @@
-From dee619fe1b4447763e01348e7ed143d73141b706 Mon Sep 17 00:00:00 2001
+From f6d5247056e0f3afa36577569fc12356f235262a Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:51:49 +0800
-Subject: [PATCH 35/47] drm/vs: add vs plane api
+Subject: [PATCH 35/53] drm/vs: add vs plane api
 
 add plane funs and helper funs
 add vs drm common struct and funs
@@ -655,5 +655,5 @@ index 000000000000..0416146226a8
 +					unsigned int possible_crtcs);
 +#endif /* __VS_PLANE_H__ */
 -- 
-2.51.0
+2.51.1
 

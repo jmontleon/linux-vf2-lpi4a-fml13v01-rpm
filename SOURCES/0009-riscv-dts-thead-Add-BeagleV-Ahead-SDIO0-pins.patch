@@ -1,7 +1,7 @@
-From c68dee2ccb5359c45b5962f4c048507ef56c2ebd Mon Sep 17 00:00:00 2001
+From 2f59ee9c3f92b52dea35883449390fccf01e10d7 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Wed, 13 Dec 2023 01:52:54 +0100
-Subject: [PATCH 09/47] riscv: dts: thead: Add BeagleV Ahead SDIO0 pins
+Subject: [PATCH 09/53] riscv: dts: thead: Add BeagleV Ahead SDIO0 pins
 
 Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 ---
@@ -41,5 +41,5 @@ index caa739c0442f..d293152afe10 100644
  	max-frequency = <198000000>;
  	status = "okay";
 -- 
-2.51.0
+2.51.1
 

@@ -1,0 +1,35 @@
+From f2f2edc67efe8f907d3f4187c2aa554913cb2fb1 Mon Sep 17 00:00:00 2001
+From: Hal Feng <hal.feng@starfivetech.com>
+Date: Thu, 20 Nov 2025 16:29:42 +0800
+Subject: [PATCH 48/53] dt-bindings: PCI: starfive,jh7110-pcie: Add
+ enable-gpios property
+
+Add enable-gpios property for controlling the PCI bus device power.
+This property had been supported in the driver but not added in the
+dt-bindings.
+
+Acked-by: Conor Dooley <conor.dooley@microchip.com>
+Fixes: 22fe32239770 ("dt-bindings: PCI: Add StarFive JH7110 PCIe controller")
+Signed-off-by: Hal Feng <hal.feng@starfivetech.com>
+---
+ .../devicetree/bindings/pci/starfive,jh7110-pcie.yaml         | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/Documentation/devicetree/bindings/pci/starfive,jh7110-pcie.yaml b/Documentation/devicetree/bindings/pci/starfive,jh7110-pcie.yaml
+index 5f432452c815..f254c7111837 100644
+--- a/Documentation/devicetree/bindings/pci/starfive,jh7110-pcie.yaml
++++ b/Documentation/devicetree/bindings/pci/starfive,jh7110-pcie.yaml
+@@ -60,6 +60,10 @@ properties:
+     description:
+       The phandle to System Register Controller syscon node.
+ 
++  enable-gpios:
++    description: GPIO used to enable the PCI bus device power
++    maxItems: 1
++
+   perst-gpios:
+     description: GPIO controlled connection to PERST# signal
+     maxItems: 1
+-- 
+2.51.1
+

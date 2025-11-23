@@ -1,7 +1,7 @@
-From 93a6c6f7cdc821a8d8ad7f3c43da8d22ea46b50b Mon Sep 17 00:00:00 2001
+From 2c74928dd257484ab421c552e0f44596f981357e Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 28 Sep 2023 00:42:22 +0800
-Subject: [PATCH 12/47] usb: dwc3: add T-HEAD TH1520 usb driver
+Subject: [PATCH 12/53] usb: dwc3: add T-HEAD TH1520 usb driver
 
 Adds TH1520 Glue layer to support USB controller on T-HEAD TH1520 SoC.
 There is a DesignWare USB3 DRD core in TH1520 SoCs, the dwc3 core is
@@ -20,10 +20,10 @@ Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
  create mode 100644 drivers/usb/dwc3/dwc3-thead.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 46126ce2f968..54c86cf663e6 100644
+index e64b94e6b5a9..e884681475b9 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -22180,6 +22180,7 @@ F:	drivers/net/ethernet/stmicro/stmmac/dwmac-thead.c
+@@ -22212,6 +22212,7 @@ F:	drivers/net/ethernet/stmicro/stmmac/dwmac-thead.c
  F:	drivers/pinctrl/pinctrl-th1520.c
  F:	drivers/pmdomain/thead/
  F:	drivers/power/reset/th1520-aon-reboot.c
@@ -169,5 +169,5 @@ index 000000000000..0cef1f474338
 +MODULE_DESCRIPTION("DesignWare DWC3 T-HEAD Glue Driver");
 +MODULE_AUTHOR("Jisheng Zhang <jszhang@kernel.org>");
 -- 
-2.51.0
+2.51.1
 
