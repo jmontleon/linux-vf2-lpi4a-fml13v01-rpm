@@ -1,7 +1,7 @@
 From 2b9cd4ff706d4d24e602bcce10fbaf34f935899a Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Thu, 28 Dec 2023 15:47:17 +0100
-Subject: [PATCH 16/47] riscv: dts: thead: Enable Lichee Pi 4A UART1/3
+Subject: [PATCH 16/53] riscv: dts: thead: Enable Lichee Pi 4A UART1/3
 
 Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 ---

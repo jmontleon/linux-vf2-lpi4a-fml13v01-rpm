@@ -1,7 +1,7 @@
 From 52f516de7824fb558d6f38f1e0807bcfea5eb230 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Sat, 11 May 2024 18:28:00 +0800
-Subject: [PATCH 31/47] drm/bridge: add common api for inno hdmi
+Subject: [PATCH 31/53] drm/bridge: add common api for inno hdmi
 
 Add INNO common api so that it can be used by vendor
 drivers which implement vendor specific extensions to Innosilicon HDMI.

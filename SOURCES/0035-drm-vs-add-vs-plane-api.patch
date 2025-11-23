@@ -1,7 +1,7 @@
 From d0d9829d77c55bdf7f3b3f651aabd1ebf127c2c8 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:51:49 +0800
-Subject: [PATCH 35/47] drm/vs: add vs plane api
+Subject: [PATCH 35/53] drm/vs: add vs plane api
 
 add plane funs and helper funs
 add vs drm common struct and funs

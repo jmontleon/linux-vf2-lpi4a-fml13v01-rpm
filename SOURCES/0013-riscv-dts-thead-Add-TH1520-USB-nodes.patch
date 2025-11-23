@@ -1,7 +1,7 @@
 From 077c77a181724916c665d96c4ffcfcc9b5f15997 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 21 Sep 2023 13:51:56 +0800
-Subject: [PATCH 13/47] riscv: dts: thead: Add TH1520 USB nodes
+Subject: [PATCH 13/53] riscv: dts: thead: Add TH1520 USB nodes
 
 Signed-off-by: Jisheng Zhang <jszhang@kernel.org>
 Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>

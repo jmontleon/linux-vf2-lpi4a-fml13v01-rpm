@@ -1,7 +1,7 @@
 From c3976c81cd6aeba387e4db2916060e326dd1fe4f Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Fri, 1 Nov 2024 17:38:46 +0800
-Subject: [PATCH 21/47] riscv: configs: defconfig: enable CONFIG_I2C_CHARDEV
+Subject: [PATCH 21/53] riscv: configs: defconfig: enable CONFIG_I2C_CHARDEV
 
 On FML13V01 board, Set CONFIG_I2C_CHARDEV=y.
 

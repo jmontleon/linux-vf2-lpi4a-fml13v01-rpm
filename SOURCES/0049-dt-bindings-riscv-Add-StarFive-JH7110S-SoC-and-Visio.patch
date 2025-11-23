@@ -1,0 +1,44 @@
+From d78318d558ff8f8b17e9c35a4ab0053ca8f78b53 Mon Sep 17 00:00:00 2001
+From: Hal Feng <hal.feng@starfivetech.com>
+Date: Thu, 20 Nov 2025 16:29:43 +0800
+Subject: [PATCH 49/53] dt-bindings: riscv: Add StarFive JH7110S SoC and
+ VisionFive 2 Lite board
+
+Add device tree bindings for the StarFive JH7110S SoC
+and the VisionFive 2 Lite board equipped with it.
+
+JH7110S SoC is an industrial SoC which can run at -40~85 degrees centigrade
+and up to 1.25GHz. Its CPU cores and peripherals are the same as
+those of the JH7110 SoC.
+
+VisionFive 2 Lite boards have SD card version (default) and eMMC version,
+which are called "VisionFive 2 Lite" and "VisionFive 2 Lite eMMC"
+respectively.
+
+Reviewed-by: Heinrich Schuchardt <heinrich.schuchardt@canonical.com>
+Signed-off-by: Hal Feng <hal.feng@starfivetech.com>
+Acked-by: Rob Herring (Arm) <robh@kernel.org>
+---
+ Documentation/devicetree/bindings/riscv/starfive.yaml | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/Documentation/devicetree/bindings/riscv/starfive.yaml b/Documentation/devicetree/bindings/riscv/starfive.yaml
+index 7ef85174353d..37707b298a8b 100644
+--- a/Documentation/devicetree/bindings/riscv/starfive.yaml
++++ b/Documentation/devicetree/bindings/riscv/starfive.yaml
+@@ -33,6 +33,12 @@ properties:
+               - starfive,visionfive-2-v1.3b
+           - const: starfive,jh7110
+ 
++      - items:
++          - enum:
++              - starfive,visionfive-2-lite
++              - starfive,visionfive-2-lite-emmc
++          - const: starfive,jh7110s
++
+ additionalProperties: true
+ 
+ ...
+-- 
+2.51.1
+

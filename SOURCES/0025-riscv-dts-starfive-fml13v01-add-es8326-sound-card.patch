@@ -1,7 +1,7 @@
 From b421e523a497a4dc487435ca3d7a1d023d1a8ee1 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 4 Nov 2024 13:45:07 +0800
-Subject: [PATCH 25/47] riscv: dts: starfive: fml13v01: add es8326 sound card
+Subject: [PATCH 25/53] riscv: dts: starfive: fml13v01: add es8326 sound card
 
 The fml13v01 board:
 Add i2srx/i2stx1 nodes and pins configuration.

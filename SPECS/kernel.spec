@@ -1213,6 +1213,12 @@ Patch10044: 0044-riscv-defconfig-Enable-USB_RTL815x-Eth-and-MT7925E-W.patch
 Patch10045: 0045-drm-versilicon-vs_drv-Fix-compile-error.patch
 Patch10046: 0046-drm-bridge-innosilicon-inno-hdmi-Fix-compile-error.patch
 Patch10047: 0047-drm-verisilicon-vs_drv-Fix-compile-error.patch
+Patch10048: 0048-dt-bindings-PCI-starfive-jh7110-pcie-Add-enable-gpio.patch
+Patch10049: 0049-dt-bindings-riscv-Add-StarFive-JH7110S-SoC-and-Visio.patch
+Patch10050: 0050-riscv-dts-starfive-Add-common-board-dtsi-for-VisionF.patch
+Patch10051: 0051-riscv-dts-starfive-Add-VisionFive-2-Lite-board-devic.patch
+Patch10052: 0052-riscv-dts-starfive-Add-VisionFive-2-Lite-eMMC-board-.patch
+Patch10053: 0053-cpufreq-dt-platdev-Add-JH7110S-SOC-to-the-allowlist.patch
 
 
 
@@ -2118,6 +2124,12 @@ ApplyOptionalPatch 0044-riscv-defconfig-Enable-USB_RTL815x-Eth-and-MT7925E-W.pat
 ApplyOptionalPatch 0045-drm-versilicon-vs_drv-Fix-compile-error.patch
 ApplyOptionalPatch 0046-drm-bridge-innosilicon-inno-hdmi-Fix-compile-error.patch
 ApplyOptionalPatch 0047-drm-verisilicon-vs_drv-Fix-compile-error.patch
+ApplyOptionalPatch 0048-dt-bindings-PCI-starfive-jh7110-pcie-Add-enable-gpio.patch
+ApplyOptionalPatch 0049-dt-bindings-riscv-Add-StarFive-JH7110S-SoC-and-Visio.patch
+ApplyOptionalPatch 0050-riscv-dts-starfive-Add-common-board-dtsi-for-VisionF.patch
+ApplyOptionalPatch 0051-riscv-dts-starfive-Add-VisionFive-2-Lite-board-devic.patch
+ApplyOptionalPatch 0052-riscv-dts-starfive-Add-VisionFive-2-Lite-eMMC-board-.patch
+ApplyOptionalPatch 0053-cpufreq-dt-platdev-Add-JH7110S-SOC-to-the-allowlist.patch
 
 
 

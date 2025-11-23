@@ -1,7 +1,7 @@
 From c08dff92407d2c613fade7b355fa7a4305959564 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 5 Oct 2023 21:05:18 +0800
-Subject: [PATCH 04/47] dt-bindings: pwm: Add T-HEAD PWM controller
+Subject: [PATCH 04/53] dt-bindings: pwm: Add T-HEAD PWM controller
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

@@ -1,7 +1,7 @@
 From f7abf4fb80ff9554028122b76506b078c47907dc Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Tue, 5 Nov 2024 11:34:32 +0800
-Subject: [PATCH 28/47] driver: hid: i2c-hid: support i2c-hid touchpad
+Subject: [PATCH 28/53] driver: hid: i2c-hid: support i2c-hid touchpad
 
 The FML13V01 board supports i2c-hid touchpad.
 
