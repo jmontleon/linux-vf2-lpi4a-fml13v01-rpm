@@ -1,4 +1,4 @@
-From 8841b086310a2349bf6504d5361245f8fc704657 Mon Sep 17 00:00:00 2001
+From d4292e1f3590299904d2112e2e424f9656628089 Mon Sep 17 00:00:00 2001
 From: Kevin Xie <kevin.xie@starfivetech.com>
 Date: Tue, 27 Feb 2024 18:35:21 +0800
 Subject: [PATCH 01/53] PCI: starfive: Offload the NVMe timeout workaround to
@@ -77,5 +77,5 @@ index 3caf53c6c082..0aa2d3230897 100644
  	plda->events_bitmap = GENMASK(PLDA_INT_EVENT_NUM - 1, 0)
  			     & ~BIT(PLDA_AXI_DOORBELL)
 -- 
-2.51.1
+2.52.0
 

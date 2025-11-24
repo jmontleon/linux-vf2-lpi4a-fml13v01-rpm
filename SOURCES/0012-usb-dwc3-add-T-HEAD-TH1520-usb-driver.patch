@@ -1,4 +1,4 @@
-From 8f56427331f61e48588d95d23c601e9018e39792 Mon Sep 17 00:00:00 2001
+From b3aee2da99315fc66dfc873c883709efb0199d69 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 28 Sep 2023 00:42:22 +0800
 Subject: [PATCH 12/53] usb: dwc3: add T-HEAD TH1520 usb driver
@@ -169,5 +169,5 @@ index 000000000000..0cef1f474338
 +MODULE_DESCRIPTION("DesignWare DWC3 T-HEAD Glue Driver");
 +MODULE_AUTHOR("Jisheng Zhang <jszhang@kernel.org>");
 -- 
-2.51.1
+2.52.0
 

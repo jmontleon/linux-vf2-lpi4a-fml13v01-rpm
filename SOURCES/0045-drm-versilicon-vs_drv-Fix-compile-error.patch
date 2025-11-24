@@ -1,4 +1,4 @@
-From e62eef2654eb53672edbb3f47e85e5b5d1839a49 Mon Sep 17 00:00:00 2001
+From e800195f45b55b439ac03f242477b35f18c3c7a6 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 10 Feb 2025 17:11:23 +0800
 Subject: [PATCH 45/53] drm: versilicon: vs_drv: Fix compile error
@@ -38,5 +38,5 @@ index e0c4ae390a98..fcb99379fa54 100644
  	.minor			= DRV_MINOR,
  };
 -- 
-2.51.1
+2.52.0
 

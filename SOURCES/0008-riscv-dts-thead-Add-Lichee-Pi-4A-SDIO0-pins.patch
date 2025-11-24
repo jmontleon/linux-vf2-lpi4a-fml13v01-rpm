@@ -1,4 +1,4 @@
-From cbc09908f654b6b2f2c86d18139db327d0422ccc Mon Sep 17 00:00:00 2001
+From 8cb953ebf5088078c98b39f6d7d617ac37410477 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Wed, 13 Dec 2023 01:25:13 +0100
 Subject: [PATCH 08/53] riscv: dts: thead: Add Lichee Pi 4A SDIO0 pins
@@ -37,5 +37,5 @@ index 8e76b63e0100..bf94204968d6 100644
  	max-frequency = <198000000>;
  	status = "okay";
 -- 
-2.51.1
+2.52.0
 

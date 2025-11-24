@@ -1,4 +1,4 @@
-From 1ad6af989570df00f667f8c19cbe23a3c91df052 Mon Sep 17 00:00:00 2001
+From 20af883f8d297027c4d785734c22036d07f2b1a9 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 14 Oct 2024 15:23:43 +0800
 Subject: [PATCH 24/53] riscv: defconfig: Enable CONFIG_SND_SOC_ES8326
@@ -23,5 +23,5 @@ index b54cd69a8424..5ad035367c6b 100644
  CONFIG_SND_SIMPLE_CARD=m
  CONFIG_USB=y
 -- 
-2.51.1
+2.52.0
 

@@ -1,4 +1,4 @@
-From 5d66431605da8172025e25e142dfdb3da1b362c8 Mon Sep 17 00:00:00 2001
+From d56f4f92c4252e98d40d563ccb0ff9cc41f7d57c Mon Sep 17 00:00:00 2001
 From: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
 Date: Tue, 18 Jun 2024 09:42:40 +0200
 Subject: [PATCH 03/53] riscv: dts: thead: Enable I2C on the BeagleV-Ahead
@@ -129,5 +129,5 @@ index 21c33f165ba9..caa739c0442f 100644
  	bus-width = <4>;
  	max-frequency = <198000000>;
 -- 
-2.51.1
+2.52.0
 

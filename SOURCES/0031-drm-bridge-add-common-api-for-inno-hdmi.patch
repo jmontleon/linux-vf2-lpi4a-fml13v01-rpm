@@ -1,4 +1,4 @@
-From 52f516de7824fb558d6f38f1e0807bcfea5eb230 Mon Sep 17 00:00:00 2001
+From b6a8e17ee793a36252536804d4d018ce6df0d0b7 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Sat, 11 May 2024 18:28:00 +0800
 Subject: [PATCH 31/53] drm/bridge: add common api for inno hdmi
@@ -851,5 +851,5 @@ index 000000000000..bc865f5343ce
 +
 +#endif /* __INNO_COMMON_HDMI__ */
 -- 
-2.51.1
+2.52.0
 

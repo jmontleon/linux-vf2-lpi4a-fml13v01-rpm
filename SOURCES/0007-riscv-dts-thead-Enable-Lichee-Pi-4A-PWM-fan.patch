@@ -1,4 +1,4 @@
-From 90c1e1d06426a57c98da1917d207a5b1ecbb6db6 Mon Sep 17 00:00:00 2001
+From a90c7bcfbf4af6d24a4533fbae2cd5ba168ae3b2 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 21 Sep 2023 16:08:30 +0800
 Subject: [PATCH 07/53] riscv: dts: thead: Enable Lichee Pi 4A PWM fan
@@ -91,5 +91,5 @@ index 4020c727f09e..b0e33a297aae 100644
  		tx-pins {
  			pins = "UART0_TXD";
 -- 
-2.51.1
+2.52.0
 

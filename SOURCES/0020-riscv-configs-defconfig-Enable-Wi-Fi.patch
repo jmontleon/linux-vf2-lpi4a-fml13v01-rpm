@@ -1,4 +1,4 @@
-From 2b3c1c230ee38c4fdf3abb63d76f5edfd2addc76 Mon Sep 17 00:00:00 2001
+From df5a60d1f0de259deeb4ff2975aeba83e29a1588 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Fri, 1 Nov 2024 17:26:09 +0800
 Subject: [PATCH 20/53] riscv: configs: defconfig: Enable Wi-Fi
@@ -37,5 +37,5 @@ index 7b5eed17611a..a77993210823 100644
  CONFIG_KEYBOARD_SUN4I_LRADC=m
  CONFIG_SERIAL_8250=y
 -- 
-2.51.1
+2.52.0
 

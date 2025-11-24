@@ -1,4 +1,4 @@
-From 59246b987ea9a3f491df4199a980a10b2765fc4c Mon Sep 17 00:00:00 2001
+From eac35b08ce53fedc6e10cdb81053782ba9bc55e0 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Sun, 31 Dec 2023 22:22:30 +0100
 Subject: [PATCH 18/53] riscv: dts: thead: Add Lichee Pi 4A bluetooth
@@ -101,5 +101,5 @@ index 30a5183f35e7..8eeb40d35990 100644
  	status = "okay";
  	vbus-supply = <&vcc5v_usb>;
 -- 
-2.51.1
+2.52.0
 

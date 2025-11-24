@@ -1,4 +1,4 @@
-From 59e930cfe80b92b6b853caa94ae4ba7f3a29f110 Mon Sep 17 00:00:00 2001
+From 7d81d5a4b2123f6e1df2676c52d6811cc6ddb165 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 31 Mar 2025 11:49:08 +0800
 Subject: [PATCH 46/53] drm: bridge: innosilicon: inno-hdmi: Fix compile error
@@ -36,5 +36,5 @@ index bc865f5343ce..76afaba0706f 100644
  	const struct drm_encoder_helper_funcs *helper_private;
  
 -- 
-2.51.1
+2.52.0
 
