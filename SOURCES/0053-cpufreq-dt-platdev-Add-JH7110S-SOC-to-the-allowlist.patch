@@ -1,4 +1,4 @@
-From 46eddd8eac131e9535aaa66d7626c25b0cb5a9f6 Mon Sep 17 00:00:00 2001
+From a5851e1bcd3f3d5019c06f43f186dc19b472e948 Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 16 Oct 2025 16:00:48 +0800
 Subject: [PATCH 53/53] cpufreq: dt-platdev: Add JH7110S SOC to the allowlist
