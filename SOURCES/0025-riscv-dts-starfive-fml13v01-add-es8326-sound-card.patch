@@ -1,4 +1,4 @@
-From 44fe3bfd2b0d8d979e52bc9ffafd9c8cc67167c4 Mon Sep 17 00:00:00 2001
+From 6c0810ace1c1b901e955ef80f5807f50c3c624b8 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 4 Nov 2024 13:45:07 +0800
 Subject: [PATCH 25/53] riscv: dts: starfive: fml13v01: add es8326 sound card

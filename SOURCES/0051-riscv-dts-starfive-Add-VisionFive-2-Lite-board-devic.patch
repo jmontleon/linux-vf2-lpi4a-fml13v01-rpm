@@ -1,4 +1,4 @@
-From 8d53da96f5d753f3b202f0113d51f31d2703e1a8 Mon Sep 17 00:00:00 2001
+From 55f8594b4dc1f3b4ef12d09414b4761146a14854 Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:45 +0800
 Subject: [PATCH 51/53] riscv: dts: starfive: Add VisionFive 2 Lite board
