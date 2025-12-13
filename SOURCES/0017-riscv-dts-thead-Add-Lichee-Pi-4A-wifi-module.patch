@@ -1,4 +1,4 @@
-From 27dee94fb38404dbe0a5efab3c51ec1a009bb994 Mon Sep 17 00:00:00 2001
+From 63c3cb549a593e0132291598e47dc5e6df65e531 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Sun, 31 Dec 2023 22:22:30 +0100
 Subject: [PATCH 17/53] riscv: dts: thead: Add Lichee Pi 4A wifi module
@@ -47,5 +47,5 @@ index 50a4a13ff562..30a5183f35e7 100644
  	pinctrl-names = "default";
  	pinctrl-0 = <&uart0_pins>;
 -- 
-2.51.1
+2.52.0
 

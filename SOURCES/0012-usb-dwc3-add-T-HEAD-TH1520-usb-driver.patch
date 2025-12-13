@@ -1,4 +1,4 @@
-From 2c74928dd257484ab421c552e0f44596f981357e Mon Sep 17 00:00:00 2001
+From f4b3b9d2be536c3cc264f45adbece4326bd149c0 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 28 Sep 2023 00:42:22 +0800
 Subject: [PATCH 12/53] usb: dwc3: add T-HEAD TH1520 usb driver
@@ -20,10 +20,10 @@ Signed-off-by: Emil Renner Berthing <emil.renner.berthing@canonical.com>
  create mode 100644 drivers/usb/dwc3/dwc3-thead.c
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index e64b94e6b5a9..e884681475b9 100644
+index e8f06145fb54..a43645ef9429 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -22212,6 +22212,7 @@ F:	drivers/net/ethernet/stmicro/stmmac/dwmac-thead.c
+@@ -22216,6 +22216,7 @@ F:	drivers/net/ethernet/stmicro/stmmac/dwmac-thead.c
  F:	drivers/pinctrl/pinctrl-th1520.c
  F:	drivers/pmdomain/thead/
  F:	drivers/power/reset/th1520-aon-reboot.c
@@ -169,5 +169,5 @@ index 000000000000..0cef1f474338
 +MODULE_DESCRIPTION("DesignWare DWC3 T-HEAD Glue Driver");
 +MODULE_AUTHOR("Jisheng Zhang <jszhang@kernel.org>");
 -- 
-2.51.1
+2.52.0
 

@@ -1,4 +1,4 @@
-From 049e3429f6cc548eb98e4546a87b0a52aea29972 Mon Sep 17 00:00:00 2001
+From b17eeb8752f844c422cbc0e4d68f90953e3cf292 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 5 Oct 2023 21:05:18 +0800
 Subject: [PATCH 04/53] dt-bindings: pwm: Add T-HEAD PWM controller
@@ -70,5 +70,5 @@ index 000000000000..e75d8e9f24c5
 +        #pwm-cells = <3>;
 +    };
 -- 
-2.51.1
+2.52.0
 

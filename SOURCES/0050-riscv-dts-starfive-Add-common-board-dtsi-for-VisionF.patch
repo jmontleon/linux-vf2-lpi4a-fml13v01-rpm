@@ -1,4 +1,4 @@
-From c813242f7b609b7089b704e70225f9fb5c914c41 Mon Sep 17 00:00:00 2001
+From 346975822f502ce87820ca8120ee5489e51d4212 Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:44 +0800
 Subject: [PATCH 50/53] riscv: dts: starfive: Add common board dtsi for
@@ -711,5 +711,5 @@ index 000000000000..aa375c4a3fa3
 +	cpu-supply = <&vdd_cpu>;
 +};
 -- 
-2.51.1
+2.52.0
 

@@ -1,4 +1,4 @@
-From f2f2edc67efe8f907d3f4187c2aa554913cb2fb1 Mon Sep 17 00:00:00 2001
+From f13f3422489999b8d226dfaf4ccea38fc399fff8 Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:42 +0800
 Subject: [PATCH 48/53] dt-bindings: PCI: starfive,jh7110-pcie: Add
@@ -31,5 +31,5 @@ index 5f432452c815..f254c7111837 100644
      description: GPIO controlled connection to PERST# signal
      maxItems: 1
 -- 
-2.51.1
+2.52.0
 

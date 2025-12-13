@@ -1,4 +1,4 @@
-From f6d5247056e0f3afa36577569fc12356f235262a Mon Sep 17 00:00:00 2001
+From accfd9072b6ae3821c5f582f58a409f5e66dda5f Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:51:49 +0800
 Subject: [PATCH 35/53] drm/vs: add vs plane api
@@ -655,5 +655,5 @@ index 000000000000..0416146226a8
 +					unsigned int possible_crtcs);
 +#endif /* __VS_PLANE_H__ */
 -- 
-2.51.1
+2.52.0
 

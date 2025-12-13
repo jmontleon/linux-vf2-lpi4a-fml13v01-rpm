@@ -1,4 +1,4 @@
-From 532ff2418fb09e7a34337d0ed6f6bd9c7d74474f Mon Sep 17 00:00:00 2001
+From 995ad24969ac7fa86748ddb1b2bad0f3c8027f37 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Sat, 11 May 2024 18:28:00 +0800
 Subject: [PATCH 31/53] drm/bridge: add common api for inno hdmi
@@ -24,7 +24,7 @@ Signed-off-by: keith <keith.zhao@starfivetech.com>
  create mode 100644 include/drm/bridge/inno_hdmi.h
 
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 8645746c2530..1ce63b6763be 100644
+index fa4ae46e676d..0e2ad62bc4aa 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -8133,6 +8133,8 @@ S:	Maintained
@@ -851,5 +851,5 @@ index 000000000000..bc865f5343ce
 +
 +#endif /* __INNO_COMMON_HDMI__ */
 -- 
-2.51.1
+2.52.0
 

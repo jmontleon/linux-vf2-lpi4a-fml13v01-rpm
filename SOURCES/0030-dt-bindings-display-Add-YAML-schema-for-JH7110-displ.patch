@@ -1,4 +1,4 @@
-From 2c24f19f8b573d35c303e64d94a375bfce514d2f Mon Sep 17 00:00:00 2001
+From a829d793cef63af6a508cdb9a39c37e7d729f499 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 13 May 2024 10:08:02 +0800
 Subject: [PATCH 30/53] dt-bindings: display: Add YAML schema for JH7110
@@ -485,7 +485,7 @@ index 0039319e91fe..cf9b657d0e8a 100644
  
    reg:
 diff --git a/MAINTAINERS b/MAINTAINERS
-index e884681475b9..8645746c2530 100644
+index a43645ef9429..fa4ae46e676d 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -8126,6 +8126,14 @@ T:	git https://gitlab.freedesktop.org/drm/misc/kernel.git
@@ -504,5 +504,5 @@ index e884681475b9..8645746c2530 100644
  M:	Michael Trimarchi <michael@amarulasolutions.com>
  S:	Maintained
 -- 
-2.51.1
+2.52.0
 
