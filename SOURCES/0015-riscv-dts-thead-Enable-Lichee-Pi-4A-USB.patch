@@ -1,4 +1,4 @@
-From 84c5cb418f660144bc44f568ad9081a67b7dae34 Mon Sep 17 00:00:00 2001
+From 97f155768156d8b3b2731dca2a057dd32366749a Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 21 Sep 2023 13:56:37 +0800
 Subject: [PATCH 15/53] riscv: dts: thead: Enable Lichee Pi 4A USB

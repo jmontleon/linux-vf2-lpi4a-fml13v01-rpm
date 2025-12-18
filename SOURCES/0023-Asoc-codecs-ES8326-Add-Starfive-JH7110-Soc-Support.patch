@@ -1,4 +1,4 @@
-From 97866f40afacf9c82b7bf24e3b8faa07a1f8c01b Mon Sep 17 00:00:00 2001
+From e7ce8db4fe2686da4c618c0cae63ae12576d4667 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 14 Oct 2024 15:13:33 +0800
 Subject: [PATCH 23/53] Asoc: codecs: ES8326: Add Starfive JH7110 Soc Support
