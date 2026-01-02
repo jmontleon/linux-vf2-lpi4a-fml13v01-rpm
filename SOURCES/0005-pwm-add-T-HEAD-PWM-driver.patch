@@ -1,7 +1,7 @@
-From f6f4b03b7f23ff54baf0df4ab1356d088e59f1f0 Mon Sep 17 00:00:00 2001
+From c60315c06177345b12d24bc906ad152d8d0cb067 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 5 Oct 2023 21:05:19 +0800
-Subject: [PATCH 05/53] pwm: add T-HEAD PWM driver
+Subject: [PATCH 05/52] pwm: add T-HEAD PWM driver
 
 T-HEAD SoCs such as the TH1520 contain a PWM controller used
 to control the LCD backlight, fan and so on. Add driver for it.

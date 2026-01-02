@@ -1,7 +1,7 @@
-From 32b78563c7c8a50071fe329f171fbb6c7020cf2e Mon Sep 17 00:00:00 2001
+From 7b22d380b550c1edb51e1ee6f8394d64bb3b4481 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:45:13 +0800
-Subject: [PATCH 33/53] drm/vs: Add hardware funcs for vs.
+Subject: [PATCH 33/52] drm/vs: Add hardware funcs for vs.
 
 add hardware base api for vs drm
 

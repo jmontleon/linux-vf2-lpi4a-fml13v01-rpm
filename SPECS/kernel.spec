@@ -173,18 +173,18 @@ Summary: The Linux kernel
 #  the --with-release option overrides this setting.)
 %define debugbuildsenabled 1
 %define buildid .vf2.lpi4a.fml13v01
-%define specrpmversion 6.18.1
-%define specversion 6.18.1
+%define specrpmversion 6.18.3
+%define specversion 6.18.3
 %define patchversion 6.18
 %define pkgrelease 200
 %define kversion 6
-%define tarfile_release 6.18.1
+%define tarfile_release 6.18.3
 # This is needed to do merge window version magic
 %define patchlevel 18
 # This allows pkg_release to have configurable %%{?dist} tag
 %define specrelease 200%{?buildid}%{?dist}
 # This defines the kabi tarball version
-%define kabiversion 6.18.1
+%define kabiversion 6.18.3
 
 # If this variable is set to 1, a bpf selftests build failure will cause a
 # fatal kernel package build error
@@ -1227,7 +1227,6 @@ Patch10049: 0049-dt-bindings-riscv-Add-StarFive-JH7110S-SoC-and-Visio.patch
 Patch10050: 0050-riscv-dts-starfive-Add-common-board-dtsi-for-VisionF.patch
 Patch10051: 0051-riscv-dts-starfive-Add-VisionFive-2-Lite-board-devic.patch
 Patch10052: 0052-riscv-dts-starfive-Add-VisionFive-2-Lite-eMMC-board-.patch
-Patch10053: 0053-cpufreq-dt-platdev-Add-JH7110S-SOC-to-the-allowlist.patch
 
 
 
@@ -2080,6 +2079,7 @@ cp -a %{SOURCE1} .
 
 %{log_msg "Start of patch applications"}
 %if !%{nopatches}
+
 ApplyOptionalPatch patch-%{patchversion}-redhat.patch
 
 
@@ -2138,7 +2138,6 @@ ApplyOptionalPatch 0049-dt-bindings-riscv-Add-StarFive-JH7110S-SoC-and-Visio.pat
 ApplyOptionalPatch 0050-riscv-dts-starfive-Add-common-board-dtsi-for-VisionF.patch
 ApplyOptionalPatch 0051-riscv-dts-starfive-Add-VisionFive-2-Lite-board-devic.patch
 ApplyOptionalPatch 0052-riscv-dts-starfive-Add-VisionFive-2-Lite-eMMC-board-.patch
-ApplyOptionalPatch 0053-cpufreq-dt-platdev-Add-JH7110S-SOC-to-the-allowlist.patch
 
 
 
@@ -4635,6 +4634,15 @@ fi\
 #
 #
 %changelog
+* Fri Jan 02 2026 Justin M. Forbes <jforbes@fedoraproject.org> [6.18.3-0]
+- Config update due to stable patches (Justin M. Forbes)
+- wifi: iwlwifi: Fix firmware version handling (Ville Syrjälä)
+- Linux v6.18.3
+
+* Thu Dec 18 2025 Justin M. Forbes <jforbes@fedoraproject.org> [6.18.2-0]
+- Add new configs for 6.18.2 (Justin M. Forbes)
+- Linux v6.18.2
+
 * Sat Dec 13 2025 Justin M. Forbes <jforbes@fedoraproject.org> [6.18.1-0]
 - Initial setup for stable Fedora releases (Justin M. Forbes)
 - Reset RHEL_RELEASE for the 6.19 cycle (Justin M. Forbes)

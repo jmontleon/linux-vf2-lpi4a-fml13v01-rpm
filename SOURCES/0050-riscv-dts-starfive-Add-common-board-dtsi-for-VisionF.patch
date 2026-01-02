@@ -1,7 +1,7 @@
-From 346975822f502ce87820ca8120ee5489e51d4212 Mon Sep 17 00:00:00 2001
+From 619a41f26172172a885a692b48e095933c800f8d Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:44 +0800
-Subject: [PATCH 50/53] riscv: dts: starfive: Add common board dtsi for
+Subject: [PATCH 50/52] riscv: dts: starfive: Add common board dtsi for
  VisionFive 2 Lite variants
 
 Add common board dtsi for use by VisionFive 2 Lite variants.

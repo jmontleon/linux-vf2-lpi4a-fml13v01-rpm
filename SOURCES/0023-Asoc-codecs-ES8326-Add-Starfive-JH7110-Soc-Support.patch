@@ -1,7 +1,7 @@
-From a6c1add02262cf13353787e7065fa6c847502b92 Mon Sep 17 00:00:00 2001
+From c58c3fd1c15ae060b9eaeae200a2d50d6308a497 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 14 Oct 2024 15:13:33 +0800
-Subject: [PATCH 23/53] Asoc: codecs: ES8326: Add Starfive JH7110 Soc Support
+Subject: [PATCH 23/52] Asoc: codecs: ES8326: Add Starfive JH7110 Soc Support
 
 On Startfive JH7110 Soc, it uses an input gpio to work as Headphone detect
 interrupt, and uses an output gpio to control speaker on/off.

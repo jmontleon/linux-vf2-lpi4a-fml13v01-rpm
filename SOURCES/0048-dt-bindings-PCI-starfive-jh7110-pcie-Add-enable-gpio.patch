@@ -1,7 +1,7 @@
-From f13f3422489999b8d226dfaf4ccea38fc399fff8 Mon Sep 17 00:00:00 2001
+From d7786b28d512e0d5916e7f9ed62670cdb38b808a Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:42 +0800
-Subject: [PATCH 48/53] dt-bindings: PCI: starfive,jh7110-pcie: Add
+Subject: [PATCH 48/52] dt-bindings: PCI: starfive,jh7110-pcie: Add
  enable-gpios property
 
 Add enable-gpios property for controlling the PCI bus device power.

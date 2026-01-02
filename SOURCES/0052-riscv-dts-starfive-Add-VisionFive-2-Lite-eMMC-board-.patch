@@ -1,7 +1,7 @@
-From cf011f4489a1b3d6d693df92f0105733ad701e26 Mon Sep 17 00:00:00 2001
+From 4a77229e3f06e3a49fb6983b892fcdf0dde35740 Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:46 +0800
-Subject: [PATCH 52/53] riscv: dts: starfive: Add VisionFive 2 Lite eMMC board
+Subject: [PATCH 52/52] riscv: dts: starfive: Add VisionFive 2 Lite eMMC board
  device tree
 
 VisionFive 2 Lite eMMC board uses a non-removable onboard 64GiB eMMC

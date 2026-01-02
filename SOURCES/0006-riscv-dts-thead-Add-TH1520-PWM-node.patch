@@ -1,7 +1,7 @@
-From dc7f6aa6f69d2102301a5b5948e487b5f2669221 Mon Sep 17 00:00:00 2001
+From 9cb0f6d544bf099929b3c45050b8fd663364d7cc Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 21 Sep 2023 14:00:40 +0800
-Subject: [PATCH 06/53] riscv: dts: thead: Add TH1520 PWM node
+Subject: [PATCH 06/52] riscv: dts: thead: Add TH1520 PWM node
 
 Signed-off-by: Jisheng Zhang <jszhang@kernel.org>
 [esmil: use proper PWM clock]

@@ -1,7 +1,7 @@
-From e3a58c0278e38148510ae6382e516027cccd93bc Mon Sep 17 00:00:00 2001
+From b0a9e9ec016aaff9df591cc5433f010b1f1a7c0c Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:45 +0800
-Subject: [PATCH 51/53] riscv: dts: starfive: Add VisionFive 2 Lite board
+Subject: [PATCH 51/52] riscv: dts: starfive: Add VisionFive 2 Lite board
  device tree
 
 VisionFive 2 Lite is a mini SBC based on the StarFive JH7110S SoC.

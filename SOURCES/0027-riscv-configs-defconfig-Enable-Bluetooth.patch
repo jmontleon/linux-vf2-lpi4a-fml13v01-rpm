@@ -1,7 +1,7 @@
-From 88c06ae68f08c084d2094fc30b68cd535251245d Mon Sep 17 00:00:00 2001
+From 4bbd24a5f1413fae22ed605419f60b1233bcba62 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Tue, 5 Nov 2024 10:51:08 +0800
-Subject: [PATCH 27/53] riscv: configs: defconfig: Enable Bluetooth
+Subject: [PATCH 27/52] riscv: configs: defconfig: Enable Bluetooth
 
 Enable Bluetooth for the FML13V01 board.
 WiFi & Bluetooth Model: MT7922, MT7921, AX200, AX201.

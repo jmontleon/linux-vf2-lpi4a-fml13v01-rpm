@@ -1,7 +1,7 @@
-From a829d793cef63af6a508cdb9a39c37e7d729f499 Mon Sep 17 00:00:00 2001
+From 4966ce97e2962095992a31d9feda0b0735411854 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 13 May 2024 10:08:02 +0800
-Subject: [PATCH 30/53] dt-bindings: display: Add YAML schema for JH7110
+Subject: [PATCH 30/52] dt-bindings: display: Add YAML schema for JH7110
  display pipeline
 
 JH7110 SoC display pipeline includes a display controller and hdmi.

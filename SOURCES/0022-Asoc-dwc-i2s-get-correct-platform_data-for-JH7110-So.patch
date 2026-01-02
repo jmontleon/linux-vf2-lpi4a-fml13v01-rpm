@@ -1,7 +1,7 @@
-From cd70cc5731f2149c53aee8e638d0b12387178a77 Mon Sep 17 00:00:00 2001
+From 96804d9810942c44c061ede8b433abc8b36c9040 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 14 Oct 2024 14:49:49 +0800
-Subject: [PATCH 22/53] Asoc: dwc: i2s: get correct platform_data for JH7110
+Subject: [PATCH 22/52] Asoc: dwc: i2s: get correct platform_data for JH7110
  Soc
 
 Fix bug on StarFive JH7110 Soc:

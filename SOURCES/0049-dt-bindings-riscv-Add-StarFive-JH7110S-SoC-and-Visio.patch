@@ -1,7 +1,7 @@
-From 2999c88c801b6d309e90aff8240621bda464d10c Mon Sep 17 00:00:00 2001
+From 5023a826adf74b73fe60b10245c355e6db31cc37 Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:43 +0800
-Subject: [PATCH 49/53] dt-bindings: riscv: Add StarFive JH7110S SoC and
+Subject: [PATCH 49/52] dt-bindings: riscv: Add StarFive JH7110S SoC and
  VisionFive 2 Lite board
 
 Add device tree bindings for the StarFive JH7110S SoC

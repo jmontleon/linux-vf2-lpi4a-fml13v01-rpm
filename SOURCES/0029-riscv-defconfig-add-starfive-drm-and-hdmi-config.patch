@@ -1,7 +1,7 @@
-From 38e6b2970e37705b44feb648d181e3d870f0fb02 Mon Sep 17 00:00:00 2001
+From 51178ff6ffa7bb9afc750d9329f965bd7e08498f Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Fri, 27 Sep 2024 14:28:13 +0800
-Subject: [PATCH 29/53] riscv: defconfig: add starfive drm and hdmi config
+Subject: [PATCH 29/52] riscv: defconfig: add starfive drm and hdmi config
 
 Add CONFIG_DRM_VERISILICON_DC8200 for starfive jh7110 DRM,
 and add CONFIG_DRM_INNO_STARFIVE_HDMI for starfive hdmi.

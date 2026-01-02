@@ -1,7 +1,7 @@
-From b31c472256688c8f683338a4029826adc0c67b9a Mon Sep 17 00:00:00 2001
+From a49e962482fce6f3f18033215da8f11ccc25689e Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Fri, 1 Nov 2024 17:26:09 +0800
-Subject: [PATCH 20/53] riscv: configs: defconfig: Enable Wi-Fi
+Subject: [PATCH 20/52] riscv: configs: defconfig: Enable Wi-Fi
 
 The FML13V01 board supports pcie-base Wi-Fi: MT7922, MT7921,
 AX200, AX201.

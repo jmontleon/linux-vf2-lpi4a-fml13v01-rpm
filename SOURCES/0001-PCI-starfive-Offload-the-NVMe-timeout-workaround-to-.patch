@@ -1,7 +1,7 @@
-From 74ca239e5e93bf8654fc116789e25171dec50237 Mon Sep 17 00:00:00 2001
+From 54b5107242b5cf9494aeea2cb7c762836d770890 Mon Sep 17 00:00:00 2001
 From: Kevin Xie <kevin.xie@starfivetech.com>
 Date: Tue, 27 Feb 2024 18:35:21 +0800
-Subject: [PATCH 01/53] PCI: starfive: Offload the NVMe timeout workaround to
+Subject: [PATCH 01/52] PCI: starfive: Offload the NVMe timeout workaround to
  host drivers.
 
 As the Starfive JH7110 hardware can't keep two inbound post write in
