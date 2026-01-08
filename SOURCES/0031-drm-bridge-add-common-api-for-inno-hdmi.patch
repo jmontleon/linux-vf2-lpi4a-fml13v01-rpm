@@ -1,4 +1,4 @@
-From 77cea7c0fcf2e19ee3085cf89a5552c566007171 Mon Sep 17 00:00:00 2001
+From ed478e7eed06b8c82524d7e7edb88ce63b241f89 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Sat, 11 May 2024 18:28:00 +0800
 Subject: [PATCH 31/52] drm/bridge: add common api for inno hdmi
