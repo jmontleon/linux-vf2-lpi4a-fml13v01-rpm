@@ -1,4 +1,4 @@
-From d217809ceeb5404899d9a2b7543fc94d9d958dcf Mon Sep 17 00:00:00 2001
+From 0e15d5aa4e35b6fa97521e02acba7ad892bf3a3f Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Fri, 1 Nov 2024 17:38:46 +0800
 Subject: [PATCH 21/52] riscv: configs: defconfig: enable CONFIG_I2C_CHARDEV

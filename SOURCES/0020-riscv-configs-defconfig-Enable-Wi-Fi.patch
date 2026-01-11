@@ -1,4 +1,4 @@
-From f42faba80e5d23487d7331040ec3297f86df960d Mon Sep 17 00:00:00 2001
+From 6812503f52547348390146f886146db9e58438fd Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Fri, 1 Nov 2024 17:26:09 +0800
 Subject: [PATCH 20/52] riscv: configs: defconfig: Enable Wi-Fi

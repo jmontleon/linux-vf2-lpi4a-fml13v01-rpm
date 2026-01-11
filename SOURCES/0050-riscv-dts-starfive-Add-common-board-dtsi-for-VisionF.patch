@@ -1,4 +1,4 @@
-From 823a6082bd95b37d8996ef22c96faff0342c9c24 Mon Sep 17 00:00:00 2001
+From 1515973fa3c0ee7b03d4230d6def6bf9a0b44312 Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:44 +0800
 Subject: [PATCH 50/52] riscv: dts: starfive: Add common board dtsi for

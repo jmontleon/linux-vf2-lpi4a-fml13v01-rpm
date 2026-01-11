@@ -1,4 +1,4 @@
-From 7dfabc9530411a0bdc85d01bb8f389ce9ed35310 Mon Sep 17 00:00:00 2001
+From de53e2904cf3646103cf5d006f5f632ff6baf65e Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:42 +0800
 Subject: [PATCH 48/52] dt-bindings: PCI: starfive,jh7110-pcie: Add
