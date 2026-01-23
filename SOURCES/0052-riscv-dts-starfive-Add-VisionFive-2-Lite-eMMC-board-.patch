@@ -1,4 +1,4 @@
-From 1554ef70ad8d4b63f88f3eff70d2e5bb11bf9753 Mon Sep 17 00:00:00 2001
+From eb80386a1dde992477c42c473a0b15ec92329792 Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:46 +0800
 Subject: [PATCH 52/52] riscv: dts: starfive: Add VisionFive 2 Lite eMMC board
