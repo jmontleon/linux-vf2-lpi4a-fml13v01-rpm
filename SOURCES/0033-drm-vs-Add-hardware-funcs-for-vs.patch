@@ -1,4 +1,4 @@
-From 918ef714723305ce7dddddba023c2de8594b17ca Mon Sep 17 00:00:00 2001
+From a3c1e2d3d9fee5b299152238afa7954c7367abb2 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:45:13 +0800
 Subject: [PATCH 33/52] drm/vs: Add hardware funcs for vs.
@@ -35,7 +35,7 @@ index 0e2ad62bc4aa..7a33c62c7e0c 100644
  
  DRM DRIVER FOR SYNAPTICS R63353 PANELS
 diff --git a/drivers/gpu/drm/Kconfig b/drivers/gpu/drm/Kconfig
-index 7e6bc0b3a589..41363da2cc59 100644
+index ed85d0ceee3b..a0917595d11c 100644
 --- a/drivers/gpu/drm/Kconfig
 +++ b/drivers/gpu/drm/Kconfig
 @@ -398,6 +398,8 @@ source "drivers/gpu/drm/imagination/Kconfig"
@@ -48,10 +48,10 @@ index 7e6bc0b3a589..41363da2cc59 100644
  	tristate "DRM Support for Hyper-V synthetic video device"
  	depends on DRM && PCI && HYPERV_VMBUS
 diff --git a/drivers/gpu/drm/Makefile b/drivers/gpu/drm/Makefile
-index da2565e6de71..bcb13207f469 100644
+index 742f0d590c5a..9380746065ec 100644
 --- a/drivers/gpu/drm/Makefile
 +++ b/drivers/gpu/drm/Makefile
-@@ -232,6 +232,7 @@ obj-y			+= solomon/
+@@ -234,6 +234,7 @@ obj-y			+= solomon/
  obj-$(CONFIG_DRM_SPRD) += sprd/
  obj-$(CONFIG_DRM_LOONGSON) += loongson/
  obj-$(CONFIG_DRM_POWERVR) += imagination/
