@@ -1,4 +1,4 @@
-From d39f6b2624db59b743fd7833ef3f266d11a70c43 Mon Sep 17 00:00:00 2001
+From 7321fbcfda84559fc5e437b039db836d7460d1c1 Mon Sep 17 00:00:00 2001
 From: keith zhao <keith.zhao@starfivetech.com>
 Date: Fri, 22 Nov 2024 17:15:59 +0800
 Subject: [PATCH 42/52] dts: rst: fit uboot logo start
@@ -31,5 +31,5 @@ index 90f0d0be0707..1941176b9d0b 100644
  
  		hdmi: hdmi@29590000 {
 -- 
-2.52.0
+2.53.0
 

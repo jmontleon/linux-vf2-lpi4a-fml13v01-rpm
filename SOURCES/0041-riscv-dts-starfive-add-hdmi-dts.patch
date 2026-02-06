@@ -1,4 +1,4 @@
-From 31ba4c1dab6d2c7c3018ee52ce4a8de9150912b2 Mon Sep 17 00:00:00 2001
+From 56f922b29ef1699bd1fd4516412d07f69ec871a4 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Fri, 17 May 2024 21:17:42 +0800
 Subject: [PATCH 41/52] riscv: dts: starfive: add hdmi dts
@@ -242,5 +242,5 @@ index ea872f6d8ede..90f0d0be0707 100644
  			compatible = "starfive,jh7110-voutcrg";
  			reg = <0x0 0x295c0000 0x0 0x10000>;
 -- 
-2.52.0
+2.53.0
 

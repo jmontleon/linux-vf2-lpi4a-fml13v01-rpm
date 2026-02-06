@@ -1,4 +1,4 @@
-From 7aa7246169a58695c9a4c2d5dd3d768a3a74405b Mon Sep 17 00:00:00 2001
+From f8b31fe12342b51ad7a8f6da874cb33908734a1f Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 16:57:33 +0800
 Subject: [PATCH 37/52] drm/vs: add vs drm master driver
@@ -751,5 +751,5 @@ index 000000000000..c22fd2199fe2
 +MODULE_DESCRIPTION("VeriSilicon DRM Driver");
 +MODULE_LICENSE("GPL");
 -- 
-2.52.0
+2.53.0
 

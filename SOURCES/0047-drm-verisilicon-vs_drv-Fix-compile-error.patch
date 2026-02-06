@@ -1,4 +1,4 @@
-From ebae389a583e3772594518053351b0ae35419106 Mon Sep 17 00:00:00 2001
+From 9e7a2c109faacbfcefa4ff58dadd610880fae7b1 Mon Sep 17 00:00:00 2001
 From: "sixue.cheng" <sixue.cheng@deepcomputing.io>
 Date: Wed, 4 Jun 2025 11:11:44 +0800
 Subject: [PATCH 47/52] drm: verisilicon: vs_drv: Fix compile error
@@ -24,5 +24,5 @@ index fcb99379fa54..d852ca733f0a 100644
  	ret = drm_dev_register(drm_dev, 0);
  	if (ret)
 -- 
-2.52.0
+2.53.0
 
