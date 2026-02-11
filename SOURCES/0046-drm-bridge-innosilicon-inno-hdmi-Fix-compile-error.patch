@@ -1,4 +1,4 @@
-From b2290459dc3b675fb4aef7bd9de29ae5d056ae2b Mon Sep 17 00:00:00 2001
+From 7d913044d48ad7a561c13178a4d6db01f0168949 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 31 Mar 2025 11:49:08 +0800
 Subject: [PATCH 46/52] drm: bridge: innosilicon: inno-hdmi: Fix compile error

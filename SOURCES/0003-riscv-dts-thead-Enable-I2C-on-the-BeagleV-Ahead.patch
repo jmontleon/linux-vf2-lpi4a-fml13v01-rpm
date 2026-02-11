@@ -1,4 +1,4 @@
-From 49ffaacd73357e1e922af01eefe79dc8de803156 Mon Sep 17 00:00:00 2001
+From 38e0336db0f1840f72b851c0761dde3e8627db66 Mon Sep 17 00:00:00 2001
 From: Thomas Bonnefille <thomas.bonnefille@bootlin.com>
 Date: Tue, 18 Jun 2024 09:42:40 +0200
 Subject: [PATCH 03/52] riscv: dts: thead: Enable I2C on the BeagleV-Ahead
