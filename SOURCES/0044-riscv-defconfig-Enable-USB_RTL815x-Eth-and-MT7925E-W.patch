@@ -1,4 +1,4 @@
-From 51ffd8160763b6c90d470542fd36f509b06ad916 Mon Sep 17 00:00:00 2001
+From db42e1d6f7082d7824fd5950980cfc1ee2a696b8 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Fri, 7 Feb 2025 11:32:03 +0800
 Subject: [PATCH 44/52] riscv: defconfig: Enable USB_RTL815x Eth and MT7925E

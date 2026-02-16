@@ -1,4 +1,4 @@
-From 1d5043636bed203d2b6c8abacced96cfb8ee7862 Mon Sep 17 00:00:00 2001
+From 4b39e9aab3a36d48f482b9505ab900d51eb89d36 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Fri, 17 May 2024 21:17:42 +0800
 Subject: [PATCH 41/52] riscv: dts: starfive: add hdmi dts

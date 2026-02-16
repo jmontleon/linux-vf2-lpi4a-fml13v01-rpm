@@ -1,4 +1,4 @@
-From 542bc0f96161c390b0c7ee28ed029bad0c0e8c23 Mon Sep 17 00:00:00 2001
+From 9794ad0bd1901b12ed64ee6f44efa9df11dd58fc Mon Sep 17 00:00:00 2001
 From: Hal Feng <hal.feng@starfivetech.com>
 Date: Thu, 20 Nov 2025 16:29:43 +0800
 Subject: [PATCH 49/52] dt-bindings: riscv: Add StarFive JH7110S SoC and
