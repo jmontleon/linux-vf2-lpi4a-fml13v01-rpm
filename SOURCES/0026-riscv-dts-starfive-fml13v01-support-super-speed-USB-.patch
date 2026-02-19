@@ -1,4 +1,4 @@
-From d6a55215a280a8fcaf10f0fff389d6d958e78fce Mon Sep 17 00:00:00 2001
+From 7b215d9a3fe822c9b06b2fec640958b714a0a6be Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 4 Nov 2024 15:57:00 +0800
 Subject: [PATCH 26/52] riscv: dts: starfive: fml13v01: support super speed USB

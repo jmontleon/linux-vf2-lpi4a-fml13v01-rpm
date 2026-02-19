@@ -1,4 +1,4 @@
-From 37cfce9fcbeb3eec1e34102be943fcd475067634 Mon Sep 17 00:00:00 2001
+From f3dbfe05961f707adea424e5d2922cd515ab9003 Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Mon, 13 May 2024 10:25:02 +0800
 Subject: [PATCH 32/52] drm/rockchip:hdmi: migrate to use inno-hdmi bridge

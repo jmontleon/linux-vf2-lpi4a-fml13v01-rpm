@@ -1,4 +1,4 @@
-From 34f1e065600e404b071015f4ba926960f693880a Mon Sep 17 00:00:00 2001
+From 44a714439aaa142d878c0db87aca501a8fd405d2 Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Sun, 31 Dec 2023 22:22:30 +0100
 Subject: [PATCH 17/52] riscv: dts: thead: Add Lichee Pi 4A wifi module
