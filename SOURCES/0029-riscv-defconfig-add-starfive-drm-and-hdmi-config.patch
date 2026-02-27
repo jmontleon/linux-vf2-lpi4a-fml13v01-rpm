@@ -1,4 +1,4 @@
-From 8fca897b5ee52e97e3650fd15aad254f03a90e42 Mon Sep 17 00:00:00 2001
+From 4c900103c28110539d493f6e32b7bd9e18ba7ee5 Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Fri, 27 Sep 2024 14:28:13 +0800
 Subject: [PATCH 29/52] riscv: defconfig: add starfive drm and hdmi config
