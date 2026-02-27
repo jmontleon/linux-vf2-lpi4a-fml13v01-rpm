@@ -1,4 +1,4 @@
-From 9d6941f1f00883664a8d1ae82def100ada928a05 Mon Sep 17 00:00:00 2001
+From d00bf2f1c329b954498d58bd8f76695e679b5b6b Mon Sep 17 00:00:00 2001
 From: Emil Renner Berthing <emil.renner.berthing@canonical.com>
 Date: Sun, 12 May 2024 17:28:58 +0200
 Subject: [PATCH 19/52] riscv: dts: thead: Add BeagleV Ahead wifi module

@@ -1,4 +1,4 @@
-From 01d32488cec1849ada364605e42d375264b458c1 Mon Sep 17 00:00:00 2001
+From 2f017e5b3d1ce4d205d6c39d68f11fd26f3a0899 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 21 Sep 2023 13:51:56 +0800
 Subject: [PATCH 13/52] riscv: dts: thead: Add TH1520 USB nodes

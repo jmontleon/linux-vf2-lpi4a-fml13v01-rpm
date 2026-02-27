@@ -1,4 +1,4 @@
-From 533a2d11053af8cbed8dbbe8f180d3c379a6e97f Mon Sep 17 00:00:00 2001
+From daca007fe47611635638037052ae52a1472c225b Mon Sep 17 00:00:00 2001
 From: keith <keith.zhao@starfivetech.com>
 Date: Tue, 14 May 2024 17:01:33 +0800
 Subject: [PATCH 38/52] drm/vs: Innosilicon HDMI support

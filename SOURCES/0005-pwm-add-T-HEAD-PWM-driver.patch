@@ -1,4 +1,4 @@
-From 371edb4389ceb48601f4449ed7a39c13500a42e3 Mon Sep 17 00:00:00 2001
+From dcd7aef77272017604bfc43b2afef631b02476f5 Mon Sep 17 00:00:00 2001
 From: Jisheng Zhang <jszhang@kernel.org>
 Date: Thu, 5 Oct 2023 21:05:19 +0800
 Subject: [PATCH 05/52] pwm: add T-HEAD PWM driver
