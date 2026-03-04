@@ -1,4 +1,4 @@
-From 6282932ac0ff61c4b837de6209904b6fb776d641 Mon Sep 17 00:00:00 2001
+From 68c41fca9d16d238e5251287154f2213b4b623aa Mon Sep 17 00:00:00 2001
 From: Sandie Cao <sandie.cao@deepcomputing.io>
 Date: Mon, 14 Oct 2024 14:49:49 +0800
 Subject: [PATCH 22/52] Asoc: dwc: i2s: get correct platform_data for JH7110
